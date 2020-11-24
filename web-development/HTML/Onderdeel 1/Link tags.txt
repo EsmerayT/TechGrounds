@@ -1,0 +1,12 @@
+In onze footer willen we graag linken naar de TechGrounds website. Onderzoek hoe een link tag werkt.
+17. Voeg een link tag toe en reproduceer het volgende resultaat in de footer.
+
+Deze site is gemaakt vanuit de <a href="https://www.techgrounds.com/">TechGrounds Academy</a></p>
+
+Zodra een gebruiker op de link klikt wordt de pagina weergegeven in de huidige browser window. Door gebruik te maken van attributen kan de link geopend worden in bijvoorbeeld een nieuw tabblad. Voorbeelden van HTML attributen zijn bijvoorbeeld een image tag die een “alt” attribuut heeft.
+
+18. Onderzoek welke 4 attributen een link tag kan hebben, leg uit wat deze doen en voeg deze als voorbeeld toe op je website.
+href	    URL geeft de locatie aan van het gelinkte document
+hreflang	Geeft de taal aan van de text van het gelinkte document
+media	    Geeft aan of wat voor aparaat het gelinkte document getoont wordt
+type	    Geeft aan wat voor media type het gelinkte document is

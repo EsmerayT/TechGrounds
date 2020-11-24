@@ -1,0 +1,45 @@
+Semantics
+9. Sinds de komst van HTML5 zijn er elementen die betekenissen hebben. Wat wordt er bedoeld met HTML semantics? Waarom is het gebruik van semantics belangrijk? Wat zijn semantische elementen? 
+    Semantics geeft een doel aan een stuk code.
+    Het legt enkel de nadruk op de overeenkomst tussen de naam van het element en de inhoud ervan. 
+    Aan de inhoud van de elementen wordt een betekenisvolle naam gegeven.
+
+    De naam van een semantisch element drukt duidelijk zijn betekenis uit, zowel voor de ontwikkelaar als voor de browser.
+    
+Voorbeelden hiervan zijn:
+
+<article>
+<aside>
+<details>
+<figcaption>
+<figure>
+<footer>
+<header>
+<main>
+<mark>
+<nav>
+<section>
+<summary>
+<time>
+
+De voordelen van semantische html:
+
+snellere laadtijd: omdat de code eenvoudiger is doordat enkel html elementen worden gebruikt en dus minder attributen om de inhoud in te delen is er minder dataverkeer;
+betere toegankelijkheid: screenreaders en andere alternatieve browsers kunnen beter overweg met semantisch opgemaakte html-documenten omdat ze de 'betekenis' van de inhoud uit de tags kunnen afleiden;
+mobiel: responsive design is stukken gemakkelijker met semantische elementen;
+betere ranking: spiders kunnen semantische webpagina's beter en nauwkeuriger indexeren. Een spider ziet namelijk geen opmaak en is dan ook niet in staat daaruit het belang van woorden, zinnen of teksten te halen;
+de vormgeving in CSS is nauwkeuriger en flexibeler;
+HTML-code is eenvoudiger en overzichtelijk
+
+Lees meer over semantics markup
+
+10. Wat voor content zou je in de volgende elementen gebruiken?
+Geef in je antwoord voor elk element een toelichting.
+● <header> inleidende inhoud
+● <footer> voestuk document
+● <main> inhoud van een document
+● <nav> navigatiebalk
+● <section> een artikel
+● <aside> extra informatie
+● <article> een artikel
+

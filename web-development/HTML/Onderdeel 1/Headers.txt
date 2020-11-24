@@ -1,0 +1,25 @@
+Headers
+Het gebruik van headers is belangrijk voor zoekmachines en de gebruikers van je website.
+
+11. Onderzoek en leg uit waarom headers zowel belangrijk zijn voor zoekmachines als voor de gebruikers.
+    
+    Het is belangrijk dat je headers informatief zijn. Door header tags te gebruiken creeer je kwalitatief betere teksten die eenvoudiger te lezen zijn. 
+    Goede teksten zijn weer beter voor de lezer en daarom beter voor je SEO.
+
+    Header tags vervullen nog steeds een belangrijke rol voor jouw gebruikers en voor je SEO (zoekmachine optimalisatie). 
+    Google gebruikt deze tag namelijk om te bepalen waar de pagina over gaat.
+    Het gebruik van Headers geeft aan welke delen van de content belangrijk zijn en geven aan hoe ze onderling met elkaar verbonden zijn. Het is belangrijk dat je headers informatief zijn. 
+    Door header tags te gebruiken creeer je kwalitatief betere teksten die eenvoudiger te lezen zijn. 
+    Goede teksten zijn weer beter voor de lezer en daarom beter voor je SEO.
+
+Voor het aanmaken van een text-header, in het Nederlands een subkop of kop, kan je gebruik maken van een Header tag. Je kunt verschillende grootte koppen creëren.
+12. Onderzoek hoe je een text-header aanmaakt en reproduceer het volgende resultaat:
+<header>Headings opdracht</header>
+<h1>Heading 1</h1>
+<h2>Heading 2</h2>
+<h3>Heading 3</h3>
+<h4>Heading 4</h4>
+<h5>Heading 5</h5>
+<h6>Heading 6</h6>
+
+

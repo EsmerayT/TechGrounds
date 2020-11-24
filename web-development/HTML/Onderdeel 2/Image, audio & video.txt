@@ -1,0 +1,58 @@
+1. Bijhetinladenvaneenbestandishetnoodzakelijkomdelocatievanhet bestand aan te geven. Dit kan op 2 manieren:
+● Absolute path
+● Relative path
+Wat houden deze 2 paths in?
+
+Voorbeeld absolute path
+https://RealHosting.nl/contact/
+
+Voorbeeld relative path
+/contact
+
+In het voorbeeld is te zien dat het absolute path de volledige path weergeeft en niet alleen het bestandnaam, zoals bij relative path is te zien.
+
+
+Een image element is voor het inladen van een afbeelding. Afbeeldingen kunnen van verschillende formaat zijn. Bijvoorbeeld, een afbeelding kan een JPG formaat zijn.
+2. Zoek uit welke formaat afbeeldingen er nog meer kan zijn.
+    - JPG
+    - gif
+    - png
+Een afbeelding tonen is afhankelijk van of de browser het ondersteunt.
+
+3. Zoek uit welke browserser zijn en maak een lijst van je antwoord.
+    <li>
+        <ol>Mozilla Firefox</ol>
+        <ol>Google Chrome</ol>
+        <ol>Apple Safari</ol>
+        <ol>Microsoft Edge</ol>
+        <ol>Internet Explorer</ol>
+        <ol>Opera Browser</ol>
+        <ol>Samsung Internet</ol>
+        <ol>UC Browser</ol>
+    </li>
+
+4. Onderzoek hoe het plaatsen van een foto gedaan wordt en plaats deze boven en onderaan je website door zowel gebruik te maken van de absolute path en relative path.
+    ZIE ONDERDEEL1 > HTML.HTML
+
+Aan de img element kan je ook de alt attribute gebruiken.
+5. Wat houdt de alt attribute in?En waarom is het handig om de alt attribuut te gebruiken?
+    Deze wordt gebruikt om een text weer te geven, wanneer de afbeelding niet wordt getoond.
+    Dus een beschrijving van de afbeelding. En heeft invloed op de SEO van je website.
+
+
+In de sound folder staat een explosion.mp3 bestand.
+6. Laadt dit bestand in als een audio op het scherm.
+ZIE ONDERDEEL1 > HTML.HTML
+Extra: Maak het leuker door de audio op repeat te zetten.
+Tip: gebruik controls attribute om audio af te spelen.
+
+Een audio bestand heeft verschillende formaten. Niet alle formaten worden ondersteund door de browser. Hiervoor is een oplossing voor.
+7. Speel een audio bestand af  met <source> tag.Leg uit wat hier het voordeel van is.
+    Meerdere bronbestanden kunnen vastgelegd worden met behulp van het <source> element om verschillende formaten in verschillende browsers te ondersteunen voor geluid of beeld.
+
+8. Zoek een willekeurig video en sla dit op in je computer.Laadt dit bestand in als een video op het scherm.
+Tip: De video is veel groter dan het scherm. Zoek uit welke attribuut je voor de video element kan gebruiken om de grootte van de video aan te passen.
+Een video bestand heeft verschillende formaten. Niet alle formaten worden ondersteund door de browser. Hiervoor is een oplossing voor.
+Speel een video bestand af met <source> tag. Leg uit wat hier het voordeel van is.
+
+Met de tag <source> kunt u alternatieve video- / audio- / afbeeldingsbestanden specificeren waaruit de browser kan kiezen, op basis van browserondersteuning of viewport-breedte.

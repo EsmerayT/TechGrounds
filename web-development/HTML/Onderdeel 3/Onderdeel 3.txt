@@ -1,0 +1,8 @@
+6. We hebben nu geleerd hoe je dropdown list,radiobuttons en checkboxes maak. 
+    Dit zijn 3 verschillende manieren om de gebruiker een keuze te laten maken. 
+    Benoem voor dropdown list, radio buttons en checkboxes een situatie waar je in kan gebruiken en leg dat uit?
+
+    Samenstellen van een burger
+    dropdown list: soort broodje
+    radio buttons: kaas of geen kaas
+    Checkboxes: extra toppings

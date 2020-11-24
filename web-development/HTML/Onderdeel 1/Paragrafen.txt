@@ -1,0 +1,33 @@
+Paragrafen
+
+13. Onderzoek wat een paragraaf tag is en hoe hij gebruikt wordt. Geef hier een voorbeeld bij.
+    Het <p> element is één van de meest gebruikte bouwstenen in HTML. Deze tag definieert een alineascheiding in gewone tekst. 
+    Na deze tag, creëert de browser automatisch wat ruimte boven en onder de inhoud. 
+    Deze ruimte wordt toegepast door de ingebouwde style sheets van de browser.
+    
+    Voorbeeld:
+    <p>Deze tekst vormt een paragraaf.</p>
+    <p>Deze tekst vormt een paragraaf.</p>
+
+14. Onderzoek en leg het verschil tussen het stoppen van alle tekst in één paragraaf tag, en het opsplitsen van de tekst in meerdere tags uit.
+    Het <br> element (line break) begint een nieuwe regel. Dit element is nuttig wanneer de tekst op een bepaalde plaats afgebroken moet worden. 
+    Je kunt de <br> tag ook binnen een paragraaf gebruiken.
+    
+    Voorbeeld:
+    <!DOCTYPE html>
+    <html>
+    <body>
+    <p>Deze tekst vormt een paragraaf<br>en gaat verder op een nieuwe regel.</p>
+    </body>
+    </html>
+
+15. Reproduceer het volgende resultaat door gebruik te maken van text-headers en de paragraaf tags.
+
+    <header>Mijn eerste website<header>
+
+    <h1>Mijn eerste sub-kop</h1>
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
+
+    <h1>Mijn tweede sub-kop</h1>
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>

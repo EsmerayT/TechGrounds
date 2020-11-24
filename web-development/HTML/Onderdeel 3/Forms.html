@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color:lightgrey;">
+    <fieldset>
+    <legend>Persoonsgegevens</legend><br>
+    <form action="/action_page.php">
+        <label for="Achternaam">Achternaam:</label>
+        <input type="text" id="Achternaam" name="fname" value="Achternaam"><br><br>
+        
+        <label for="Voornaam">Voornaam:</label>
+        <input type="text" id="Voornaam" name="Voornaam" value="Voornaam"><br><br>
+        
+        <label for="Geboortedatum">Geboortedatum:</label>
+        <input type="date" id="Geboortedatum" name="Geboortedatum"><br><br>
+
+        <label for="man">M:</label>
+        <input type="radio" id="man name="gender" value="male">
+        <label for="vrouw">V:</label>
+        <input type="radio" id="vrouw" name="gender" value="female"><br><br>
+
+        <label for="Postcode">Postcode:</label>
+        <input type="text" id="Postcode" name="Postcode" value="Postcode"><br><br>
+
+        <label for="Adres">Adres:</label>
+        <input type="text" id="Adres" name="Adres" value="Adres"><br><br>
+
+        <label for="cars">Burgerlijke staat:</label>
+        <select name="cars" id="cars">
+          <option value="volvo">gehuwd</option>
+          <option value="saab">ongehuwd</option>
+          <option value="opel">gescheiden</option>
+          <option value="audi">verweduwd</option>
+        </select>
+    </fieldset>
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+        <br>
+    </form> 
+    <br>
+    <hr>
+    <br>
+    <fieldset>
+        <legend>Reserveringsformulier</legend><br>
+        <form action="/action_page.php">
+            <label for="Achternaam">Achternaam:</label>
+            <input type="text" id="Achternaam"  value="Achternaam"><br><br>
+            
+            <label for="Voornaam">Voornaam:</label>
+            <input type="text" id="Voornaam" name="Voornaam" value="Voornaam"><br><br>
+    
+            <label for="man">lidmaatschap:</label>
+            <label for="man">JA</label>
+            <input type="radio" id="man name="gender" value="male">
+            <label for="vrouw">NEE</label>
+            <input type="radio" id="vrouw" name="gender" value="female"><br><br>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email"><br><br>
+
+            <label for="sport">Type sport:</label>
+            <input type="checkbox" id="tafeltennis" name="tafeltennis" value="tafeltennis">
+            <label for="vehicle1">Tafeltennis</label>
+            <input type="checkbox" id="badminton" name="badminton" value="badminton">
+            <label for="vehicle2">Badminton</label>
+            <input type="checkbox" id="squash" name="squash" value="squash">
+            <label for="vehicle3">Squash</label><br><br>
+
+            <label for="birthdaytime">Datum en tijd:</label>
+            <input type="datetime-local" id="birthdaytime" name="birthdaytime"><br><br>
+
+        </fieldset>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </form> 
+  
+    
+</body>
+</html>
