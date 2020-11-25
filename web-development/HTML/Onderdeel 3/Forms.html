@@ -1,46 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body style="background-color:lightgrey;">
     <fieldset>
-    <legend>Persoonsgegevens</legend><br>
-    <form action="/action_page.php">
-        <label for="Achternaam">Achternaam:</label>
-        <input type="text" id="Achternaam" name="fname" value="Achternaam"><br><br>
-        
-        <label for="Voornaam">Voornaam:</label>
-        <input type="text" id="Voornaam" name="Voornaam" value="Voornaam"><br><br>
-        
-        <label for="Geboortedatum">Geboortedatum:</label>
-        <input type="date" id="Geboortedatum" name="Geboortedatum"><br><br>
+        <legend>Persoonsgegevens</legend><br>
+        <form action="/action_page.php">
+            <label for="">Achternaam:</label>
+            <input placeholder="Achternaam" type="text" id="" name="fname"><br><br>
 
-        <label for="man">M:</label>
-        <input type="radio" id="man name="gender" value="male">
-        <label for="vrouw">V:</label>
-        <input type="radio" id="vrouw" name="gender" value="female"><br><br>
+            <label for="Voornaam">Voornaam:</label>
+            <input placeholder="Voornaam" id="Voornaam" name="Voornaam"><br><br>
 
-        <label for="Postcode">Postcode:</label>
-        <input type="text" id="Postcode" name="Postcode" value="Postcode"><br><br>
+            <label for="Geboortedatum">Geboortedatum:</label>
+            <input type="date" id="Geboortedatum" name="Geboortedatum"><br><br>
 
-        <label for="Adres">Adres:</label>
-        <input type="text" id="Adres" name="Adres" value="Adres"><br><br>
+            <label for="man">M:</label>
+            <input type="radio" id="man" name="gender" value="male">
+            <label for="vrouw">V:</label>
+            <input type="radio" id="vrouw" name="gender" value="female"><br><br>
 
-        <label for="cars">Burgerlijke staat:</label>
-        <select name="cars" id="cars">
-          <option value="volvo">gehuwd</option>
-          <option value="saab">ongehuwd</option>
-          <option value="opel">gescheiden</option>
-          <option value="audi">verweduwd</option>
-        </select>
+            <label for="Postcode">Postcode:</label>
+            <input placeholder="Postcode" type="text" id="Postcode" name="Postcode"><br><br>
+
+            <label for="Adres">Adres:</label>
+            <input placeholder="Adres" id="Adres" name="Adres"><br><br>
+
+            <label for="staat">Burgerlijke staat:</label>
+            <select name="staat" id="staat">
+                <option value=""></option>
+                <option value="gehuwd">gehuwd</option>
+                <option value="ongehuwd">ongehuwd</option>
+                <option value="gescheiden">gescheiden</option>
+                <option value="verweduwd">verweduwd</option>
+            </select>
     </fieldset>
-        <input type="submit" value="Submit">
-        <input type="reset" value="Reset">
-        <br>
-    </form> 
+    <input type="submit" value="Submit">
+    <input type="reset" value="Reset">
+    <br>
+    </form>
     <br>
     <hr>
     <br>
@@ -48,36 +51,59 @@
         <legend>Reserveringsformulier</legend><br>
         <form action="/action_page.php">
             <label for="Achternaam">Achternaam:</label>
-            <input type="text" id="Achternaam"  value="Achternaam"><br><br>
-            
+            <input placeholder="Achternaam" type="text" id="Achternaam"><br><br>
+
             <label for="Voornaam">Voornaam:</label>
-            <input type="text" id="Voornaam" name="Voornaam" value="Voornaam"><br><br>
-    
+            <input placeholder="Voornaam" type="text" id="Voornaam" name="Voornaam"><br><br>
+
             <label for="man">lidmaatschap:</label>
-            <label for="man">JA</label>
-            <input type="radio" id="man name="gender" value="male">
-            <label for="vrouw">NEE</label>
-            <input type="radio" id="vrouw" name="gender" value="female"><br><br>
+            <label for="ja">JA</label>
+            <input type="radio" id="ja" name="lidmaatschap" value="ja">
+            <label for="nee">NEE</label>
+            <input type="radio" id="nee" name="lidmaatschap" value="nee"><br><br>
 
             <label for="email">E-mail:</label>
             <input type="email" id="email" name="email"><br><br>
 
             <label for="sport">Type sport:</label>
             <input type="checkbox" id="tafeltennis" name="tafeltennis" value="tafeltennis">
-            <label for="vehicle1">Tafeltennis</label>
+            <label for="sport1">Tafeltennis</label>
             <input type="checkbox" id="badminton" name="badminton" value="badminton">
-            <label for="vehicle2">Badminton</label>
+            <label for="sport2">Badminton</label>
             <input type="checkbox" id="squash" name="squash" value="squash">
-            <label for="vehicle3">Squash</label><br><br>
+            <label for="sport3">Squash</label><br><br>
 
             <label for="birthdaytime">Datum en tijd:</label>
             <input type="datetime-local" id="birthdaytime" name="birthdaytime"><br><br>
 
-        </fieldset>
-            <input type="submit" value="Submit">
-            <input type="reset" value="Reset">
-        </form> 
-  
-    
+            <input type="checkbox" id="tafeltennis" name="tafeltennis" value="tafeltennis">
+            <label for="sport">Ik ga akkoord met de reserveringsvoorwaarden</label><br><br>
+    </fieldset>
+    <input type="submit" value="Submit">
+    </form>
+
+    <hr>
+
+    <div class="container">
+        <form id="contact" action="" method="post">
+            <h3>Stuur me een berichtje :)</h3>
+            <fieldset>
+                <input placeholder="Naam" type="text">
+            </fieldset>
+            <fieldset>
+                <input placeholder="E-mail" type="email">
+            </fieldset>
+            <fieldset>
+                <input placeholder="Telefoon nummer" type="tel">
+            </fieldset>
+            <fieldset>
+                <textarea placeholder="Bericht...." rows="10" cols="40"></textarea>
+            </fieldset>
+            <fieldset>
+                <button name="versturen" type="versturen" id="contact-submit"
+                    data-submit="...Sending">Versturen</button>
+            </fieldset>
+        </form>
 </body>
+
 </html>
