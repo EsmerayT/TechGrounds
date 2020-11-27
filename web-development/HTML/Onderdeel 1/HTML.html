@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="HTML.css">
+    <title>HTML</title>
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <div class="navbar">
+        <div class="dropdown">
+            <button class="dropbtn">Intro HTML
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="#">Semantics</a>
+                <a href="#">Headers</a>
+                <a href="#">Paragrafen</a>
+                <a href="#">Horizontal rule</a>
+                <a href="#">Link tags</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">HTML Elementen
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="#">Links</a>
+                <a href="#">Media</a>
+                <a href="#">Section</a>
+                <a href="#">Div</a>
+                <a href="#">Link tags</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Forms & Tabellen
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="#">HTML Forms</a>
+                <a href="#">HTML Form elementen</a>
+                <a href="#">HTML Form Input types</a>
+                <a href="#">HTML Tabellen</a>
+                <a href="#">HTML Forms & Tables</a>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <section id="Intro">
+            <h2>Intro</h2>
+            <h4>1. Wat is het verschil tussen het internet en het world wide web?</h4>
+            <p>Het internet is het digitale netwerk waarop de meeste computers aangesloten zijn.
+                Daarbij moet je denken aan de kabels, de glasvezels, de netwerkapparatuur, de communicatiesatellieten.
+            </p>
+
+            <p>Daar kun je van alles overheen sturen. Www is een toepassing die daar gebruik van maakt.
+                E-mail gaat ook over het internet en dat is geen www. Ook internettelefonie (bv. Skype) is geen www. En
+                zo zijn er nog heel wat te noemen.
+                Www is alleen maar de manier om webpagina's via links met elkaar te koppelen. Al wordt www vaak HET
+                internet genoemd maar dat is eigenlijk fout.</p>
+
+            <p><mark>Dus: internet is het fysieke netwerk en www is één van de toepassingen die je er overheen
+                    stuurt.</mark></p>
+
+            <br>
+            <hr>
+            <br>
+
+            <h4>2. Wat is het verschil tussen HTML, CSS en JavaScript?</h4>
+            <p><mark>HTML</mark> is een uitwisselingsformaat waarmee de structuur van een website wordt beschreven.<br>
+                <mark>CSS</mark> is een taal die wordt gebruikt om het design van een webpagina te beschrijven.<br>
+                <mark>JavaScript </mark> is een taal die wordt gebruikt om interactieve elementen aan een webpagina toe
+                te voegen.</p>
+
+            <br>
+            <hr>
+            <br>
+
+            <h4>3. Wat is een HTML tag en een HTML element? Hoe open je een HTML tag en hoe sluit je een HTML tag. Maak
+                hiervoor voorbeelden en leg uit.</h4>
+
+            <p>HTML tags geven bepaalde informatie over de informatie die tussen de tags staat. Een voorbeeld is de tag
+                die wordt gebruikt om een alinea mee aan te duiden.
+                Toegepast in een pagina, zou de alinea er als volgt uit kunnen zien:</p>
+            <br>
+            <figure>
+                <code>&lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.&lt;p&gt;</code>
+            </figure>
+            <br>
+
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+                Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,
+                ultricies nec, pellentesque eu, pretium quis, sem.</p>
+
+            <p>Zoals je ziet, wordt een alinea eigenlijk bepaald door een paar tags: een openingstag een eindtag. Voor
+                en eindtag wordt het symbool ‘/’ gebruikt.</p>
+
+            <br>
+            <hr>
+            <br>
+
+            <h4>4. HTML gebruikt basis tags om structuur op te bouwen. De &lt;html&gt;, &lt;head&gt; en
+                &lt;body&gt;.<br> Geef voor elke element aan waarvoor het dient.</h4>
+            <p>De tags van een webpagina mogen niet zomaar in een willekeurige volgorde staan. Hier zijn structuur eisen
+                voor gedefinineerd. Hoewel er veel elementen optioneel zijn, heeft elke pagina grofweg de volgende
+                opbouw:</p>
+
+            <img src="./src_html/structuur.png" alt="">
+
+            <br>
+            <p>Zoals je ziet, begint het document met de text
+                <!DOCTYPE html>. Dit geeft aan dat het om een HTML-document gaat.
+                Vervolgens wordt de basistag, &lt;html&gt; geopend. In deze tag staat de rest van de pagina.
+                De rest van de pagina is verdeeld in twee onderdelen: &lt;head&gt;en &lt;body&gt;
+                De &lt;head&gt; wordt gebruikt om aanvullende informatie over de pagina mee te geven. In een
+                &lt;head&gt; wordt in ieder geval de titel van de pagina vermeld in zijn eigen <title> element.
+                    De &lt;body&gt; beschrijft de daadwerkelijke inhoud van de pagina. De volledige paginastructuur
+                    zaols de eindgebruiker deze ziet, komt dus tussen deze twee &lt;body&gt;&lt;/body&gt; tags te staan.
+            </p>
+
+            <br>
+            <hr>
+            <br>
+
+            <h4>5. Op HTML elementen kun je attributen gebruiken. Wat zijn HTML attributen ? Geef minimaal 5 attributen
+                en maak voorbeelden waar je de attributen in toepast.</h4>
+            <p>Elementen geven structuur aan een HTML-document en vertelt de browser hoe je wilt dat je website wordt
+                gepresenteerd.
+                (bijvoorbeeld het element <br> informeert de browser om een nieuwe regel te beginnen.) In sommige
+                elementen kan je meer informatie toevoegen.
+                Deze aanvullende informatie wordt een attribuut genoemd. Attributen worden altijd geschreven in de
+                start-tag en worden gevolgd door een gelijk teken.
+                Het attribuut gegevens komen tussen aanhalingstekens te staan. Zie het onderstaande voorbeelden.</p>
+
+            De style Attribute
+            Deze wordt gebruikt om een een style aan een element toe te voegen, denk aan kleur, font, grootte en meer..
+            <h2 style="background-color: #ff0000;">Mijn eerste HTML pagina.</h2>
+
+            De href attribute
+            Deze wordt gebruikt om de de URL weer te geven waar de link naartoe gaat.
+            <a href="https://www.techgrounds.nl"></a>
+
+            De src attribute
+            Deze wordt gebruikt het path aan te geven naar de afbeelding die getoond wordt.
+            <img src="img_girl.jpg">
+
+            De width and height Attribute
+            De <img> tag heeft ook width en height attribute nodig, deze geven de breedte en hoogte van de afbeelding
+            aan (in pixels).
+
+            De alt attribute
+            Deze wordt gebruikt om een text weer te geven, wanneer de afbeelding niet wordt getoond.
+            <img src="img_girl.jpg" alt="Girl with a jacket">
+
+
+
+</body>
+
+</html>
