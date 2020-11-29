@@ -113,6 +113,8 @@ Intro
   </body>
 </html>
 
+De basis is goed, maar de body had opgedeeld kunnen worden in 
+
 Deze code heeft een goede structuur, omdat het document begint met de text <!DOCTYPE html>. Dit geeft aan dat het om een HTML-document gaat.
 Vervolgens wordt de basistag, <html> geopend. In deze tag staat de rest van de pagina.
 De rest van de pagina is verdeeld in twee onderdelen: <head> en <body>
