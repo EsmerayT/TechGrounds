@@ -4,43 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>HTML</title>
+    <link rel="stylesheet" href="css.css">
+    <title>CSS</title>
 </head>
 
 <body>
 
     <div class="sidenav">
-        <button class="home">Week 1</button>
-        <button class="dropdown-btn">Intro HTML
+        <button class="home">Week 2</button>
+        <button class="dropdown-btn">CSS
             <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-container">
-            <a href="#Semantics">Semantics</a>
-            <a href="#Headers">Headers</a>
-            <a href="#Paragrafen">Paragrafen</a>
-            <a href="#Horizontal">Horizontal rule</a>
-            <a href="#Link">Link tags</a>
-        </div>
-        <button class="dropdown-btn">HTML Elementen
-            <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-container">
-            <a href="#Links">Links</a>
-            <a href="#Media">Media</a>
-            <a href="#Section">Section</a>
-            <a href="#Div">Div</a>
-            <a href="#Ltags">Link tags</a>
-        </div>
-        <button class="dropdown-btn">Forms & Tabellen
-            <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-container">
-            <a href="#HTML_Form">HTML Form</a>
-            <a href="#Elementen">HTML Form elementen</a>
-            <a href="#Input">HTML Form Input types</a>
-            <a href="#Tabellen">HTML Tabellen</a>
-            <a href="#Forms_Tables">HTML Forms & Tables</a>
+            <a href="#S_V"> Selectors & Visual rules</a>
+            <a href="#Boxmodel"> Het box model</a>
+            <a href="#D_P">Display & positioning
+            </a>
+            <a href="#Pseudo">Pseudo elements</a>
+            <a href="#Flexbox">Flexbox</a>
+            <a href="#T_A">Transitions / Animations</a>
+            <a href="#Media_queries">Media queries</a>
         </div>
     </div>
 
@@ -49,41 +32,53 @@
             <img class="logo"
                 src="https://techgrounds.nl/wp-content/uploads/2020/10/cropped-TG_Logo.d5934b2d-1-300x53.png"
                 alt="TechGroundsLogo">
-            <h1>&lt;HTML&gt;</h1>
-            <h2>Intro HTML, Elementen, Forms & Tabellen</h2>
+            <h1>CSS</h1>
+            <h2>Cascading Style Sheets</h2>
         </header>
 
     </div>
 
-    <section id="Intro">
+    <section id="#S_V">
 
-        <h3>INTRO HTML</h3>
+        <h3>Selectors & Visual rules</h3>
 
         <!--VRAAG 1-->
 
-        <h4>1. Wat is het verschil tussen het internet en het world wide web?</h4>
-        <p>Het internet is het digitale netwerk waarop de meeste computers aangesloten zijn.
-            <br>Daarbij moet je denken aan de kabels, de glasvezels, de netwerkapparatuur, de communicatiesatellieten.
+        <h4>1. Je kunt op 3 verschillende manieren CSS in je HTML inladen. Op welke 3 manieren kun je dat doen? Leg ook voor elke wijze uit wat het precies inhoud.</h4>
+        <p>Stijlen kunnen op 3 verschillende manieren aan HTML gekoppeld worden:<br>
+            Via een inline stijl, of intern met behulp van een stijlblok in de head van het document of een extern stijlblad.
         </p>
+        <p>Inline - met behulp van een stijl attribuut in HTML-elementen.<br>
+            Intern - met behulp van een style element in de head van het document.<br>
+            Extern - met behulp van één of meer externe CSS-bestanden.<br>
+            </p>
 
-        <p>Daar kun je van alles overheen sturen. Www is een toepassing die daar gebruik van maakt.
-            <br>E-mail gaat ook over het internet en dat is geen www. Ook internettelefonie (bv. Skype) is geen www.
-            <br>En zo zijn er nog heel wat te noemen.
-            Www is alleen maar de manier om webpagina's via links met elkaar te koppelen. Al wordt www vaak HET
-            internet genoemd maar dat is eigenlijk fout.</p>
+            <figure>
+                <figcaption>
+                    <xmp>
+                        p {
+                            color: red;
+                         }
+                    </xmp>
+                </figcaption>
+            </figure>
 
-        <p><mark>Dus: internet is het fysieke netwerk en www is één van de toepassingen die je er overheen
-                stuurt.</mark></p>
+            <pre>
+                p {
+                    color: red;
+                 }
+            </pre>
+
 
         <hr>
 
         <!-- VRAAG 2-->
 
-        <h4>2. Wat is het verschil tussen HTML, CSS en JavaScript?</h4>
-        <p><mark>HTML</mark> is een uitwisselingsformaat waarmee de structuur van een website wordt beschreven.</p>
-        <p> <mark>CSS</mark> is een taal die wordt gebruikt om het design van een webpagina te beschrijven.</p>
-        <p><mark>JavaScript </mark> is een taal die wordt gebruikt om interactieve elementen aan een webpagina toe
-            te voegen.</p>
+        <h4>2. CSS pas je toe met een bepaalde syntax. Hoe ziet zo'n syntax eruit? Kun je ook uitleggen wat elk element uit de syntax betekent?</h4>
+        <p>CSS bestaat uit de ‘selector’, de ‘property’ en de ‘waarde’.</p>
+        <p><mark>Selector</mark>Dit onderdeel duidt aan waar de opgemaakte tekst of stijlblok zich bevindt.</p>
+        <p> <mark>Property</mark>Met eigenschappen kunt u een HTML-elementstijlen een bijvoorbeeld: color</p>
+        <p><mark>Value</mark>Dit is de stijlwaarde die per eigenschap vele verschillende gedaantes kan aannemen bijvoorbeeld: red</p>
 
         <hr>
 
@@ -96,7 +91,7 @@
             die wordt gebruikt om een alinea mee aan te duiden.
             Toegepast in een pagina, zou de alinea er als volgt uit kunnen zien:</p>
 
-        <figure><img src="./src_html/paragraaf.png" alt="paragraaf"></figure>
+        <figure><img src="./src/src_html/paragraaf.png" alt="paragraaf"></figure>
 
 
         <p><mark>Zoals je ziet, wordt een alinea eigenlijk bepaald door een paar tags: een openingstag een
@@ -113,7 +108,7 @@
             voor gedefinineerd. Hoewel er veel elementen optioneel zijn, heeft elke pagina grofweg de volgende
             opbouw:</p>
 
-        <figure><img src="./src_html/structuur.png" alt="structuur"></figure>
+        <figure><img src="./src/src_html/structuur.png" alt="structuur"></figure>
 
         <br>
         <p>Zoals je ziet, begint het document met de text
@@ -140,7 +135,7 @@
             Attributen worden altijd geschreven in de start-tag en worden gevolgd door een gelijk teken. Het attribuut
             gegevens komen tussen aanhalingstekens te staan. Zie het onderstaande voorbeelden.</p>
 
-        <figure><img src="./src_html/attribute.png" alt="attribute"></figure>
+        <figure><img src="./src/src_html/attribute.png" alt="attribute"></figure>
 
         <!-- VRAAG 6 -->
 
@@ -151,7 +146,7 @@
         <p>Anders werkt de pagina/applicatie niet goed als de HTML structuur niet goed is opgebouwd,
             <br>de browser die de eindgebruiker gebruikt weergeeft de pagina niet of de applicatie werkt niet. </p>
 
-        <figure><img src="./src_html/struc.png" alt="structuur"></figure>
+        <figure><img src="./src/src_html/struc.png" alt="structuur"></figure>
 
         <p>De code in de vraag heeft de basis structuur van een HTML document, alleen inhoudelijk heeft het weinig
             structuur van de body. Daarbij kan je meer header tags en paragraaf tags en mogelijk tabellen toevoegen om
@@ -178,7 +173,7 @@
 
         <p>Je kan de meeste elementen binnen in elkaar zetten. Bijvoorbeeld zoals in dit voorbeeld:</p>
 
-        <figure><img src="./src_html/nesting.png" alt="nesting"></figure>
+        <figure><img src="./src/src_html/nesting.png" alt="nesting"></figure>
 
         <p>Je hebt hier een a element dat in een p element zit. En dat p element zit dan weer in het body element van de
             pagina. Dat noemen we ‘nesten’.</p>
@@ -275,7 +270,7 @@
             Deze ruimte wordt toegepast door de ingebouwde style sheets van de browser.
         </p>
 
-        <figure><img src="./src_html/par.png" alt="paragraaf"></figure>
+        <figure><img src="./src/src_html/par.png" alt="paragraaf"></figure>
 
         <!-- VRAAG 14 -->
 
@@ -285,7 +280,7 @@
             bepaalde plaats afgebroken moet worden.
             Je kunt de &lt;br&gt; tag ook binnen een paragraaf gebruiken.</p>
 
-        <figure><img src="./src_html/br.png" alt="line break"></figure>
+        <figure><img src="./src/src_htmlbr.png" alt="line break"></figure>
 
         <!-- VRAAG 15 -->
 
@@ -314,7 +309,9 @@
 
     <section id="Link">
         <h3>LINK TAGS</h3>
+
         <!-- VRAAG 17-->
+
         <h4>In onze footer willen we graag linken naar de TechGrounds website. Onderzoek hoe een link tag werkt.<br>
             17. Voeg een link tag toe en reproduceer het volgende resultaat in de footer.
         </h4>
@@ -326,6 +323,8 @@
                 te maken van attributen kan de link geopend worden in bijvoorbeeld een nieuw tabblad.</mark> Voorbeelden
             van HTML
             attributen zijn bijvoorbeeld een image tag die een “alt” attribuut heeft.</p>
+
+        <!-- VRAAG 18-->
 
         <h4>18. Onderzoek welke 4 attributen een link tag kan hebben, leg uit wat deze doen en voeg deze als voorbeeld
             toe op je website.</h4>
@@ -347,6 +346,24 @@
             <td>Geeft aan wat voor media type het gelinkte document is</td>
         </table>
 
+    </section>
+
+    <section id="Links">
+        <h3>HTML ELEMENTEN</h3>
+        <h3>LINKS</h3>
+        <p>HTML links zijn hyperlinks. Dit betekent dat de gebruiker door middel van een klik
+            van het ene document naar een ander document toe kan springen. Standaard
+            verandert de muispijl ook naar een muishand. <mark>Een link hoeft niet altijd tekst te zijn,
+            het kan ook een afbeelding zijn.</mark>De belangrijkste attribuut van een a element is de href attribuut. Dit definieert de
+            bestemming van de link.</p>
+
+            <p>Een veelgebruikte attribuut voor de link tag is de target attribuut. <mark>Met de target
+                attribuut kun je specificeren op welke manieren de webbrowser de link zal openen.</mark>
+                Als je deze attribuut niet definieert zal de browser de webpagina openen in de
+                huidige browser window. Als je dit wilt wijzigen kun je de target attribuut aanpassen.
+                Hieronder enkele voorbeelden met hoe je dit doet en de resultaten hiervan: <a href="./opdrachten_html/Links.html">voorbeelden</a></p>
+
+            <figure><img src="./src/src_html/target.png" alt="target attribute"></figure>
     </section>
 
 

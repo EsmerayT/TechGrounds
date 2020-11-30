@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>HTML</title>
+</head>
+
+<body>
+
+    <div class="sidenav">
+        <button class="home">Week 1</button>
+        <button class="dropdown-btn">Intro HTML
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+            <a href="#Semantics">Semantics</a>
+            <a href="#Headers">Headers</a>
+            <a href="#Paragrafen">Paragrafen</a>
+            <a href="#Horizontal">Horizontal rule</a>
+            <a href="#Link">Link tags</a>
+        </div>
+        <button class="dropdown-btn">HTML Elementen
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+            <a href="#Links">Links</a>
+            <a href="#Media">Media</a>
+            <a href="#Section">Section</a>
+            <a href="#Div">Div</a>
+            <a href="#Ltags">Link tags</a>
+        </div>
+        <button class="dropdown-btn">Forms & Tabellen
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+            <a href="#HTML_Form">HTML Form</a>
+            <a href="#Elementen">HTML Form elementen</a>
+            <a href="#Input">HTML Form Input types</a>
+            <a href="#Tabellen">HTML Tabellen</a>
+            <a href="#Forms_Tables">HTML Forms & Tables</a>
+        </div>
+    </div>
+
+    <div class="main">
+        <header>
+            <img class="logo"
+                src="https://techgrounds.nl/wp-content/uploads/2020/10/cropped-TG_Logo.d5934b2d-1-300x53.png"
+                alt="TechGroundsLogo">
+            <h1>&lt;HTML&gt;</h1>
+            <h2>Intro HTML, Elementen, Forms & Tabellen</h2>
+        </header>
+
+    </div>
+
+    <section id="Intro">
+
+        <h3>INTRO HTML</h3>
+
+        <!--VRAAG 1-->
+
+        <h4>1. Wat is het verschil tussen het internet en het world wide web?</h4>
+        <p>Het internet is het digitale netwerk waarop de meeste computers aangesloten zijn.
+            <br>Daarbij moet je denken aan de kabels, de glasvezels, de netwerkapparatuur, de communicatiesatellieten.
+        </p>
+
+        <p>Daar kun je van alles overheen sturen. Www is een toepassing die daar gebruik van maakt.
+            <br>E-mail gaat ook over het internet en dat is geen www. Ook internettelefonie (bv. Skype) is geen www.
+            <br>En zo zijn er nog heel wat te noemen.
+            Www is alleen maar de manier om webpagina's via links met elkaar te koppelen. Al wordt www vaak HET
+            internet genoemd maar dat is eigenlijk fout.</p>
+
+        <p><mark>Dus: internet is het fysieke netwerk en www is één van de toepassingen die je er overheen
+                stuurt.</mark></p>
+
+        <hr>
+
+        <!-- VRAAG 2-->
+
+        <h4>2. Wat is het verschil tussen HTML, CSS en JavaScript?</h4>
+        <p><mark>HTML</mark> is een uitwisselingsformaat waarmee de structuur van een website wordt beschreven.</p>
+        <p> <mark>CSS</mark> is een taal die wordt gebruikt om het design van een webpagina te beschrijven.</p>
+        <p><mark>JavaScript </mark> is een taal die wordt gebruikt om interactieve elementen aan een webpagina toe
+            te voegen.</p>
+
+        <hr>
+
+        <!-- VRAAG 3-->
+
+        <h4>3. Wat is een HTML tag en een HTML element? Hoe open je een HTML tag en hoe sluit je een HTML tag.
+            <br>Maak hiervoor voorbeelden en leg uit.</h4>
+
+        <p>HTML tags geven bepaalde informatie over de informatie die tussen de tags staat. Een voorbeeld is de tag
+            die wordt gebruikt om een alinea mee aan te duiden.
+            Toegepast in een pagina, zou de alinea er als volgt uit kunnen zien:</p>
+
+        <figure><img src="./src/paragraaf.png" alt="paragraaf"></figure>
+
+
+        <p><mark>Zoals je ziet, wordt een alinea eigenlijk bepaald door een paar tags: een openingstag een
+                eindtag.</mark> Voor
+            en eindtag wordt het symbool ‘/’ gebruikt.</p>
+
+        <hr>
+
+        <!-- VRAAG 4 -->
+
+        <h4>4. HTML gebruikt basis tags om structuur op te bouwen. De &lt;html&gt;, &lt;head&gt; en
+            &lt;body&gt;.<br> Geef voor elke element aan waarvoor het dient.</h4>
+        <p>De tags van een webpagina mogen niet zomaar in een willekeurige volgorde staan. Hier zijn structuur eisen
+            voor gedefinineerd. Hoewel er veel elementen optioneel zijn, heeft elke pagina grofweg de volgende
+            opbouw:</p>
+
+        <figure><img src="./src/structuur.png" alt="structuur"></figure>
+
+        <br>
+        <p>Zoals je ziet, begint het document met de text
+            <mark>&lt;!DOCTYPE html&gt;.</mark> Dit geeft aan dat het om een HTML-document gaat.
+            Vervolgens wordt de basistag, <mark>&lt;html&gt;</mark> geopend. In deze tag staat de rest van de pagina.
+            De rest van de pagina is verdeeld in twee onderdelen: &lt;head&gt;en &lt;body&gt;
+            De <mark>&lt;head&gt;</mark> wordt gebruikt om aanvullende informatie over de pagina mee te geven. In een
+            &lt;head&gt; wordt in ieder geval de titel van de pagina vermeld in zijn eigen <mark>&lt;title&gt;</mark>
+            element.
+            De <mark>&lt;body&gt;</mark> beschrijft de daadwerkelijke inhoud van de pagina. De volledige paginastructuur
+            zaols de eindgebruiker deze ziet, komt dus tussen deze twee &lt;body&gt;&lt;/body&gt; tags te staan.
+        </p>
+
+        <!-- VRAAG 5 -->
+
+        <hr>
+
+        <h4>5. Op HTML elementen kun je attributen gebruiken. Wat zijn HTML attributen ?
+            <br>Geef minimaal 5 attributen en maak voorbeelden waar je de attributen in toepast.</h4>
+        <p>Elementen geven structuur aan een HTML-document en vertelt de browser hoe je wilt dat je website wordt
+            gepresenteerd.(bijvoorbeeld het element informeert de browser om een nieuwe regel te beginnen.) <br><mark>
+                In sommige elementen kan je meer informatie toevoegen. Deze aanvullende informatie wordt een attribuut
+                genoemd.</mark>
+            Attributen worden altijd geschreven in de start-tag en worden gevolgd door een gelijk teken. Het attribuut
+            gegevens komen tussen aanhalingstekens te staan. Zie het onderstaande voorbeelden.</p>
+
+        <figure><img src="./src/attribute.png" alt="attribute"></figure>
+
+        <!-- VRAAG 6 -->
+
+        <hr>
+
+        <h4>6. Waarom is een goede HTML Structuur belangrijk? Is deze code een goede structuur? Leg uit.</h4>
+
+        <p>Anders werkt de pagina/applicatie niet goed als de HTML structuur niet goed is opgebouwd,
+            <br>de browser die de eindgebruiker gebruikt weergeeft de pagina niet of de applicatie werkt niet. </p>
+
+        <figure><img src="./src/struc.png" alt="structuur"></figure>
+
+        <p>De code in de vraag heeft de basis structuur van een HTML document, alleen inhoudelijk heeft het weinig
+            structuur van de body. Daarbij kan je meer header tags en paragraaf tags en mogelijk tabellen toevoegen om
+            het overzichtelijk te maken.</p>
+
+        <!-- VRAAG 7 -->
+
+        <hr>
+
+        <h4>7. Wat is het verschil tussen inline en block elementen?</h4>
+
+        <p> <mark>Een block element begint altijd op een nieuwe regel</mark> en neemt de volle breedte van het
+            browservenster
+            in.<br>Het strekt zich uit naar links en rechts uit zo ver als het kan.</p>
+        <p><mark>Een inline element start niet op een nieuwe regel</mark> en beslaat slechts zo veel breedte als het
+            nodig heeft
+            om wat erin staat weer te geven.</p>
+
+        <!-- VRAAG 8 -->
+
+        <hr>
+
+        <h4>8. Wat betekent nesting? Codeer een voorbeeld met nesting erin. </h4>
+
+        <p>Je kan de meeste elementen binnen in elkaar zetten. Bijvoorbeeld zoals in dit voorbeeld:</p>
+
+        <figure><img src="./src/nesting.png" alt="nesting"></figure>
+
+        <p>Je hebt hier een a element dat in een p element zit. En dat p element zit dan weer in het body element van de
+            pagina. Dat noemen we ‘nesten’.</p>
+
+        <hr>
+
+    </section>
+
+    <section id="Semantics">
+        <h3>SEMANTICS</h3>
+
+        <!-- VRAAG 9 -->
+        <h4>9. Sinds de komst van HTML5 zijn er elementen die betekenissen hebben. Wat wordt er bedoeld met HTML
+            semantics? Waarom is het gebruik van semantics belangrijk? Wat zijn semantische elementen? </h4>
+        <p><mark>Semantics geeft een doel aan een stuk code.</mark>
+            Het legt enkel de nadruk op de overeenkomst tussen de naam van het element en de inhoud ervan.
+            Aan de inhoud van de elementen wordt een betekenisvolle naam gegeven.</p>
+        <p><mark>De naam van een semantisch element drukt duidelijk zijn betekenis uit,</mark> zowel voor de
+            ontwikkelaar als voor de
+            browser.</p>
+        <p>De voordelen van semantische html:<br>
+
+            <mark>snellere laadtijd:</mark> omdat de code eenvoudiger is doordat enkel html elementen worden gebruikt en
+            dus minder attributen om de inhoud in te delen is er minder dataverkeer;
+            <mark>betere toegankelijkheid:</mark> screenreaders en andere alternatieve browsers kunnen beter
+            overweg met semantisch opgemaakte html-documenten omdat ze de 'betekenis' van de inhoud uit de tags kunnen
+            afleiden;
+            <mark>mobiel:</mark> responsive design is stukken gemakkelijker met semantische elementen;
+            <mark>betere ranking:</mark> spiders kunnen semantische webpagina's beter en nauwkeuriger indexeren.
+            Een spider ziet namelijk geen opmaak en is dan ook niet in staat daaruit het belang van woorden, zinnen of
+            teksten te halen;
+            de vormgeving in CSS is nauwkeuriger en flexibeler;
+            <mark>HTML-code is eenvoudiger en overzichtelijk</mark></p>
+
+        <hr>
+
+        <!-- VRAAG 10-->
+
+        <h4>10. Wat voor content zou je in de volgende elementen gebruiken?
+            Geef in je antwoord voor elk element een toelichting.</h4>
+        <p>&lt;header&gt; een container voor introductie content of een navigatie balk.</p>
+        <p>&lt;footer&gt; een container voor een voetstuk van de document of section.</p>
+        <p>&lt;main&gt; een container voor de algemene content van de document.</p>
+        <p>&lt;nav&gt; een container voor de navigatie van de pagina met bijvoorbeeld links naar andere pagina's.</p>
+        <p>&lt;section&gt; een container voor een sectie stuk over een onderdeel van de pagina.</p>
+        <p>&lt;aside&gt; definitie voor content dat terzijde van andere content wordt geplaatst. Bijvoorbeeld: een
+            sidebar.</p>
+        <p>&lt;article&gt; defineert onafhankelijk content dat zichzelf defineert. Bijvoorbeeld: blog post, forum post
+            en nieuws bericht.</p>
+
+        <hr>
+
+    </section>
+
+    <section id="Headers">
+        <h3>HEADERS</h3>
+
+        <!-- VRAAG 11-->
+
+        <h4>11. Onderzoek en leg uit waarom headers zowel belangrijk zijn voor zoekmachines als voor de gebruikers.</h4>
+        <p> Het gebruik van Headers geeft aan welke delen van de content belangrijk zijn en geven aan hoe ze onderling
+            met elkaar verbonden zijn. Het is belangrijk dat je headers informatief zijn.
+            Door header tags te gebruiken creeer je kwalitatief betere teksten die eenvoudiger te lezen zijn.
+            <mark>Goede teksten zijn weer beter voor de lezer en daarom beter voor je SEO.</mark>
+        </p>
+
+        <!-- VRAAG 12-->
+
+        <h4>12. Onderzoek hoe je een text-header aanmaakt en reproduceer het volgende resultaat:</h4>
+
+        <a href="./Onderdeel 1/opdrachten_html/opdracht12.html">headers</a><br><br>
+
+        &lt;header>Headings opdracht&lt;/header&gt;<br>
+        &lt;h1&gt;Heading 1&lt;/h1&gt;<br>
+        &lt;h2&gt;Heading 2&lt;/h2&gt;<br>
+        &lt;h3&gt;Heading 3&lt;/h3&gt;<br>
+        &lt;h4&gt;Heading 4&lt;/h4&gt;<br>
+        &lt;h5&gt;Heading 5&lt;/h5&gt;<br>
+        &lt;h6&gt;Heading 6&lt;/h6&gt;<br>
+
+        <hr>
+
+    </section>
+
+    <!-- VRAAG 13 -->
+
+    <section id="Paragrafen">
+        <h3>PARAGRAFEN</h3>
+        <h4>13. Onderzoek wat een paragraaf tag is en hoe hij gebruikt wordt.
+            Geef hier een voorbeeld bij.</h4>
+        <p>Het &lt;p&gt; element is één van de meest gebruikte bouwstenen in HTML. <mark>Deze tag definieert een
+                alineascheiding in gewone tekst.</mark>
+            Na deze tag, creëert de browser automatisch wat ruimte boven en onder de inhoud.
+            Deze ruimte wordt toegepast door de ingebouwde style sheets van de browser.
+        </p>
+
+        <figure><img src="./src/par.png" alt="paragraaf"></figure>
+
+        <!-- VRAAG 14 -->
+
+        <h4>14. Onderzoek en leg het verschil tussen het stoppen van alle tekst in één paragraaf tag, en het
+            opsplitsen van de tekst in meerdere tags uit.</h4>
+        <p>Het &lt;br&gt; element (line break) begint een nieuwe regel. Dit element is nuttig wanneer de tekst op een
+            bepaalde plaats afgebroken moet worden.
+            Je kunt de &lt;br&gt; tag ook binnen een paragraaf gebruiken.</p>
+
+        <figure><img src="./src/src_htmlbr.png" alt="line break"></figure>
+
+        <!-- VRAAG 15 -->
+
+        <h3>15. Reproduceer het volgende resultaat door gebruik te maken van text-headers en de paragraaf tags.</h3>
+
+        <a href="./Onderdeel 1/opdrachten_html/opdracht15.html">headers & paragrafen</a>
+
+        <hr>
+
+    </section>
+
+    <section id="Horizontal">
+        <h3>HORIZONTAL RULE</h3>
+
+        <!-- VRAAG 16-->
+
+        <h4>16. Voeg een Horizontal rule toe en reproduceer het volgende resultaat.</h4>
+        <a href="./Onderdeel 1/opdrachten_html/opdracht16.html">Horizontal rule</a>
+        <p>The &lt;hr&gt; tag defineerd een thema break in een HTML pagina (bijv. een ander topic).<br>
+            The &lt;hr&gt; element wordt vaak getoond als horizontale lijn, om inhoud te scheiden in een HTML pagina.
+        </p>
+
+        <hr>
+
+    </section>
+
+    <section id="Link">
+        <h3>LINK TAGS</h3>
+
+        <!-- VRAAG 17-->
+
+        <h4>In onze footer willen we graag linken naar de TechGrounds website. Onderzoek hoe een link tag werkt.<br>
+            17. Voeg een link tag toe en reproduceer het volgende resultaat in de footer.
+        </h4>
+
+        <a href="./Onderdeel 1/opdrachten_html/opdracht17.html">Link Tag</a>
+
+        <p>Zodra een gebruiker op de link klikt wordt de pagina weergegeven in de huidige browser window. <mark>Door
+                gebruik
+                te maken van attributen kan de link geopend worden in bijvoorbeeld een nieuw tabblad.</mark> Voorbeelden
+            van HTML
+            attributen zijn bijvoorbeeld een image tag die een “alt” attribuut heeft.</p>
+
+        <!-- VRAAG 18-->
+
+        <h4>18. Onderzoek welke 4 attributen een link tag kan hebben, leg uit wat deze doen en voeg deze als voorbeeld
+            toe op je website.</h4>
+
+        <table>
+            <th>href</th>
+            <td>URL geeft de locatie aan van het gelinkte document</td>
+        </table>
+        <table>
+            <th>hreflang</th>
+            <td>Geeft de taal aan van de text van het gelinkte document</td>
+        </table>
+        <table>
+            <th>media</th>
+            <td>Geeft aan of wat voor aparaat het gelinkte document getoont wordt</td>
+        </table>
+        <table>
+            <th>type</th>
+            <td>Geeft aan wat voor media type het gelinkte document is</td>
+        </table>
+
+    </section>
+
+    <section id="Links">
+        <h3>HTML ELEMENTEN</h3>
+        <h3>LINKS</h3>
+        <p>HTML links zijn hyperlinks. Dit betekent dat de gebruiker door middel van een klik
+            van het ene document naar een ander document toe kan springen. Standaard
+            verandert de muispijl ook naar een muishand. <mark>Een link hoeft niet altijd tekst te zijn,
+            het kan ook een afbeelding zijn.</mark>De belangrijkste attribuut van een a element is de href attribuut. Dit definieert de
+            bestemming van de link.</p>
+
+            <p>Een veelgebruikte attribuut voor de link tag is de target attribuut. <mark>Met de target
+                attribuut kun je specificeren op welke manieren de webbrowser de link zal openen.</mark>
+                Als je deze attribuut niet definieert zal de browser de webpagina openen in de
+                huidige browser window. Als je dit wilt wijzigen kun je de target attribuut aanpassen.
+                Hieronder enkele voorbeelden met hoe je dit doet en de resultaten hiervan: <a href="./Onderdeel 1/opdrachten_html/Links.html">voorbeelden</a></p>
+
+            <figure><img src="./src/target.png" alt="target attribute"></figure>
+    </section>
+
+
+
+    
+    <script>
+        /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+
+        for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                    dropdownContent.style.display = "none";
+                } else {
+                    dropdownContent.style.display = "block";
+                }
+            });
+        }
+    </script>
+
+
+</body>
+
+</html>
