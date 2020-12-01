@@ -1,11 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        div>p {
+            background-color: yellow;
+        }
+
+        div+p {
+            background-color: yellow;
+        }
+
+        div~p {
+            background-color: yellow;
+        }
+    </style>
     <title>Document</title>
 </head>
+
 <body>
-    
+    <pre>
+     <code>
+    div > p {
+        background-color: yellow;
+    }
+</code>
+</pre>
+
+    <h2>Child Selector</h2>
+    <p>The child selector (>) selects all elements that are the children of a specified element.</p>
+
+    <div>
+        <p>Paragraph 1 in the div.</p>
+        <p>Paragraph 2 in the div.</p>
+        <section>
+            <p>Paragraph 3 in the div.</p>
+        </section> <!-- not Child but Descendant -->
+        <p>Paragraph 4 in the div.</p>
+    </div>
+
+    <p>Paragraph 5. Not in a div.</p>
+    <p>Paragraph 6. Not in a div.</p>
+
+    <hr>
+
+    <pre>
+        <code>
+            div + p {
+                background-color: yellow;
+              }
+
+        </code>
+    </pre>
+
+    <h2>Adjacent Sibling Selector</h2>
+    <p>The adjacent sibling selector (+) selects all elements that are the adjacent siblings of a specified element.</p>
+
+    <div>
+        <p>Paragraph 1 in the div.</p>
+        <p>Paragraph 2 in the div.</p>
+    </div>
+
+    <p>Paragraph 3. Not in a div.</p>
+    <p>Paragraph 4. Not in a div.</p>
+
+    <hr>
+
+    <pre>
+    <code>
+        div ~ p {
+            background-color: yellow;
+          }
+    </code>
+</pre>
+    <h2>General Sibling Selector</h2>
+    <p>The general sibling selector (~) selects all elements that are siblings of a specified element.</p>
+
+    <p>Paragraph 1.</p>
+
+    <div>
+        <p>Paragraph 2.</p>
+    </div>
+
+    <p>Paragraph 3.</p>
+    <code>Some code.</code>
+    <p>Paragraph 4.</p>
+
+
+
+
+
 </body>
+
 </html>

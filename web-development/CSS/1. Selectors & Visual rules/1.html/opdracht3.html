@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        h1 {
+            color: red;
+        }
+
+        div p {
+            background-color: yellow;
+        }
+
+        .intro {
+            background-color: yellow;
+        }
+    </style>
+
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h4>Type Selector</h4>
+    <pre>
+        h1 {
+            color: red;
+        }
+    </pre>
+
+    <h1>Header wordt weergegeven in het rood</h1>
+
+
+    <hr>
+
+    <h4>Descendant Selectors</h4>
+    <pre>
+        div p {
+            background-color: yellow;
+        }
+    </pre>
+    <div>
+        <p>Paragraph 1 in the div.</p>
+        <p>Paragraph 2 in the div.</p>
+        <section>
+            <p>Paragraph 3 in the div.</p>
+        </section>
+    </div>
+
+    <p>Paragraph 4. Not in a div.</p>
+    <p>Paragraph 5. Not in a div.</p>
+
+    <hr>
+
+    <h4>Class Selectors</h4>
+    <pre>
+        .intro {
+            background-color: yellow;
+        }
+    </pre>
+    <div class="intro">
+        <p>My name is Donald.</p>
+        <p>I live in Duckburg.</p>
+      </div>
+      
+      <p>My best friend is Mickey.</p>
+      
+      <p class="intro">My best friend is Mickey.</p>
+      
+</body>
+
+</html>

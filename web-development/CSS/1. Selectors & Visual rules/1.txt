@@ -43,3 +43,20 @@ selecteert <p class="my-class"> en <a class="my-class">
 <p>Hello, <b>world</b> </p>
 
 Maak van de bovengenoemde selectors voorbeelden. Geef in je antwoord ook aan wat de voordelen zijn van elke selector.
+
+
+
+
+Opdracht 6
+Verder heb je ook nog de volgende selectors: 
+
+child selectors:
+Bij child element-selectors gaat het om een beperking van de descendent element selectors. 
+De stijl wordt alleen aangehouden als het element een kind is van een ander element en niet bij relaties die verder weg liggen. 
+In de stijlregel wordt tussen de elementen het teken voor 'groter dan' (>) geplaatst, naar wens voorafgegaan en gevolgd door één of meer spaties.
+
+adjacent selectors
+general selectors
+
+Maak in een aparte html bestand voor elke selector een voorbeeld en maak een link in je antwoord naar dat html bestand. Geef in je antwoord ook aan wat de voordelen zijn van elk selector.
+

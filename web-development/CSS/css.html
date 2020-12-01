@@ -61,9 +61,9 @@
         </table>
         <table>
             <th>Extern</th>
-            <td>Dit is met behulp van één of meer externe CSS-bestanden.</td>
+            <td>Dit is met behulp van één of meer externe CSS-bestanden. Deze koppel je vervolgens aan een</td>
         </table>
-       
+
         <hr>
 
         <!-- VRAAG 2-->
@@ -85,21 +85,218 @@
             <td>Dit is de stijlwaarde die per eigenschap vele verschillende gedaantes kan aannemen
                 bijvoorbeeld: red</td>
         </table>
-       
+
         <hr>
 
         <!-- VRAAG 3-->
 
-        <h4>3. Er zijn verschillende selectors, bijvoorbeeld; type selectors, descendant selectors, class selectors.</h4>
-        <h4>Maak van de bovengenoemde selectors voorbeelden. Geef in je antwoord ook aan wat de voordelen zijn van elke selector.</h4>
-        <p><mark>type selector</mark> Alle HTML-elementen van het gekozen type. Dit is het meest eenvoudige type selector.</p>
-        <figure></figure>
-        <pre>
-            p {
-                color: red;
-             }
-        </pre>
-    </figure>
+        <h4>3. Er zijn verschillende selectors, bijvoorbeeld; type selectors, descendant selectors, class selectors.
+        </h4>
+        <h4>Maak van de bovengenoemde selectors voorbeelden. Geef in je antwoord ook aan wat de voordelen zijn van elke
+            selector.</h4>
+
+        <a href="./1. Selectors & Visual rules/1.html/opdracht3.html">voorbeelden</a>
+        <p><mark>type selector</mark> Alle HTML-elementen van het gekozen type. Dit is het meest eenvoudige type
+            selector.</p>
+        <p><mark>descendant selectors</mark> Deze matched alle elementen die afstammeling zijn van een specifiek
+            element.
+        </p>
+        <p><mark>class selector</mark>De .class selector selecteerd elementen met een specifiek class attribute.
+        </p>
+
+        <hr>
+
+        <!-- VRAAG 4-->
+
+        <h4>Opdracht 4</h4>
+        <a href="./1. Selectors & Visual rules/1.html/opdracht4.html">Opdracht 4</a>
+
+        <hr>
+
+        <!-- vraag 5-->
+
+        <h4>Opdracht 5</h4>
+        <a href="./1. Selectors & Visual rules/1.html/opdracht5.html">Opdracht 5</a>
+
+        <hr>
+
+        <!--vraag 6-->
+
+        <h4>6. Verder heb je ook nog de volgende selectors: child selectors, adjacent selectors & general selectors.
+        </h4>
+        <h4>Geef van elke selector een voorbeeld en geef aan wat de voordelen zij van elke selector.</h4>
+
+        <a href="./1. Selectors & Visual rules/1.html/opdracht6.html">Voorbeelden</a>
+
+        <p><mark>Child Selectors</mark> Deze selecteerd alle elementen die kinderen zijn van een specifiek element.</p>
+
+        <p><mark>Adjacent Selectors</mark>Hierbij worden alle elementen geselecteerd die volgen op een specifiek
+            element.</p>
+
+        <p><mark>General Selectors</mark>Hierbij worden alle elementen geselecteerd die siblings zijn na een specifiek
+            element.</p>
+
+        <hr>
+
+        <!--vraag 7-->
+
+        <h4>7. Geef een aantal voorbeelden van selectors.</h4>
+
+        <table>
+            <tr>
+                <td><a href="../CSS/1. Selectors & Visual rules/1.html/opdracht7.1.html">.class</a></td>
+                <td>.intro</td>
+                <td>Selecteerd alle elemten met class="intro"</td>
+            </tr>
+            <tr>
+                <td><a href="./1. Selectors & Visual rules/1.html/opdracht7.2.html">#id</a></td>
+                <td>.name1.name2</td>
+                <td>Selecteerd alle elemten met id="firstname"</td>
+            </tr>
+            <tr>
+                <td><a href="./1. Selectors & Visual rules/1.html/opdracht7.3.html">*</a></td>
+                <td>*</td>
+                <td>Selecteerd alle elemten</td>
+            </tr>
+            <tr>
+                <td><a href="./1. Selectors & Visual rules/1.html/opdracht7.4.html">element</a></td>
+                <td>p</td>
+                <td>Selecteerd alle <p> elemten</td>
+            </tr>
+            <tr>
+                <td><a href="./1. Selectors & Visual rules/1.html/opdracht7.5.html">element.class</a></td>
+                <td>p.intro</td>
+                <td>electeerd alle <p> elemten met class="intro"</td>
+            </tr>
+        </table>
+
+        <hr>
+
+        <!--vraag 8-->
+
+        <h4>8. Leg in eigen woorden uit wat met cascade en inheritance wordt bedoeld. Maak voorbeelden om je antwoord
+            uit te leggen.</h4>
+        <p><mark>Cascade</mark> Houdt in dat qua regels de volgorde wordt aangehouden (van boven naar
+            beneden);<br>wanneer twee regels worden toegepast is het de laatste regel die telt. <a
+                href="./1. Selectors & Visual rules/1.html/opdracht8.1.html">voorbeeld</a></p>
+        <p><mark>Inheritance</mark> Houdt in dat child elements values van de parent element erfen. <a
+                href="./1. Selectors & Visual rules/1.html/opdracht8.2.html">voorbeeld</a></p>
+
+        <hr>
+
+        <!-- THE BOXMODEL -->
+
+        <h3>2. Het box-model</h3>
+        <h4>1.Wat zijn de eigenschappen van block boxes en inline boxes?</h4>
+
+        <p>Eigenschappen van <mark>Block Boxes</mark></p>
+
+        <ul>
+            <li>line-break na een element, dus elementen kunnen niet naast elkaar staan</li>
+            <li>The box zal de hele regel vullen om de volledige ruimte in een container te vullen.</li>
+            <li>De width en height proporties kunnen toegepast worden</li>
+            <li>Padding, margin en border zullen ervoor zorgen dat andere elementen weggeduwd worden van de box.</li>
+        </ul>
+
+        <p>Eigenschappen van <mark>Inline Boxes</mark></p>
+        <ul>
+            <li>Geen line-break na een element, dus elementen kunnen naast elkaar staan</li>
+            <li>De width en height proporties kunnen niet toegepast worden</li>
+            <li>Verticale padding, margins, and borders kunnen toegepast worden,<br>maar zullen er niet voor zorgen dat
+                een andere inline box van de box afgeschoven worden.</li>
+            <li>Horizontale padding, margins, and borders kunnen toegepast worden en zorgen ervoor dat andere inline box
+                van de box weggeduwd worden.</li>
+        </ul>
+
+        <hr>
+
+        <!--vraag 2-->
+
+        <h4>Opdracht 2</h4>
+        <a href="./2. Het box-model/2.html/opdracht2.html">opdracht 2</a>
+
+        <hr>
+        <!--vraag 3-->
+        <h4>Opdracht 3</h4>
+        <a href="./2. Het box-model/2.html/opdracht3.html">opdracht 3</a>
+
+        <hr>
+        <!--vraag 4-->
+
+        <h4>4.Hieronder zie je een box-model</h4>
+        <img src="./src/padding.png" alt="">
+        <h4>Leg uit wat de volgende termen betekenen: content, padding, margin en border.</h4>
+        <p><mark>Content</mark> The content of the box, where text and images appear</p>
+        <p><mark>Padding</mark> Clears an area around the content. The padding is transparent</p>
+        <p><mark>Margin</mark> A border that goes around the padding and content</p>
+        <p><mark>Border</mark> Clears an area outside the border. The margin is transparent</p>
+
+        <hr>
+        <!--vraag 5-->
+
+        <h4>5. Als je ruimte wilt maken tussen de border en content, welke css property gebruik je dan? Maak een
+            voorbeeld in je antwoord.</h4>
+        <p>Hiervoor gebruik je de property padding; <a href="./2. Het box-model/2.html/opdracht5.html">zie voorbeeld</a></p>
+
+        <hr>
+
+        <!--vraag 6 -->
+
+        <h4>6. Als je ruimte wilt maken tussen de border en buiten de box, welke css property gebruik je dan? Maak een voorbeeld in je antwoord.</h4>
+        <p>Hiervoor gebruik je de property margin; <a href="./2. Het box-model/2.html/opdracht6.html">zie voorbeeld</a></p>
+
+        <hr>
+
+        <!--vraag 7 -->
+
+        <h4>7. Maak nu een blok met width: 100px, height: 100px, margin: 5px, padding 5px en border-width: 5px.</h4>
+
+        <a href="./2. Het box-model/2.html/opdracht7.html">Opdracht 7</a>
+
+        <h4>1. Hoe breed is de box?</h4>
+        <p>120px</p>
+            <h4>2. Hoe hoog is de box?</h4>
+            <p>120px</p>
+            <h4>3. Wat merk je op met width en height?</h4>
+            <p>Padding en border worden erbij opgeteld.</p>
+            </h4>
+
+        <hr>
+
+        <!--vraag 8 -->
+
+        <h4>8. Welke CSS property kun je gebruiken om ervoor te zorgen dat de waarde van width en height de totale breedte en hoogte is van het blok van de voorgaande opdracht?</h4>
+        <p>box-sizing: border-box;</p>
+
+        <!--vraag 9 -->
+
+        <h4>9. Maak een aantal voorbeelden van boxen en maak gebruik van steeds verschillende margin, padding en border properties.</h4>
+        <a href="./2. Het box-model/2.html/opdracht9.1.html">voorbeeld 1</a>
+        <a href="./2. Het box-model/2.html/opdracht9.2.html">voorbeeld 2</a>
+        <a href="./2. Het box-model/2.html/opdracht9.3.html">voorbeeld 3</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     </section>
 
