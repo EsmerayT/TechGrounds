@@ -16,9 +16,9 @@
             <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-container">
-            <a href="#S_V"> Selectors & Visual rules</a>
+            <a href="#SV"> Selectors & Visual rules</a>
             <a href="#Boxmodel"> Het box model</a>
-            <a href="#D_P">Display & positioning
+            <a href="#DP">Display & positioning
             </a>
             <a href="#Pseudo">Pseudo elements</a>
             <a href="#Flexbox">Flexbox</a>
@@ -38,7 +38,7 @@
 
     </div>
 
-    <section id="#S_V">
+    <section id="SV">
 
         <h3>Selectors & Visual rules</h3>
 
@@ -183,8 +183,11 @@
                 href="./1. Selectors & Visual rules/1.html/opdracht8.2.html">voorbeeld</a></p>
 
         <hr>
+    </section>
 
-        <!-- THE BOXMODEL -->
+    <!-- THE BOXMODEL -->
+
+    <section id="Boxmodel">
 
         <h3>2. Het box-model</h3>
         <h4>1.Wat zijn de eigenschappen van block boxes en inline boxes?</h4>
@@ -236,14 +239,17 @@
 
         <h4>5. Als je ruimte wilt maken tussen de border en content, welke css property gebruik je dan? Maak een
             voorbeeld in je antwoord.</h4>
-        <p>Hiervoor gebruik je de property padding; <a href="./2. Het box-model/2.html/opdracht5.html">zie voorbeeld</a></p>
+        <p>Hiervoor gebruik je de property padding; <a href="./2. Het box-model/2.html/opdracht5.html">zie voorbeeld</a>
+        </p>
 
         <hr>
 
         <!--vraag 6 -->
 
-        <h4>6. Als je ruimte wilt maken tussen de border en buiten de box, welke css property gebruik je dan? Maak een voorbeeld in je antwoord.</h4>
-        <p>Hiervoor gebruik je de property margin; <a href="./2. Het box-model/2.html/opdracht6.html">zie voorbeeld</a></p>
+        <h4>6. Als je ruimte wilt maken tussen de border en buiten de box, welke css property gebruik je dan? Maak een
+            voorbeeld in je antwoord.</h4>
+        <p>Hiervoor gebruik je de property margin; <a href="./2. Het box-model/2.html/opdracht6.html">zie voorbeeld</a>
+        </p>
 
         <hr>
 
@@ -255,39 +261,166 @@
 
         <h4>1. Hoe breed is de box?</h4>
         <p>120px</p>
-            <h4>2. Hoe hoog is de box?</h4>
-            <p>120px</p>
-            <h4>3. Wat merk je op met width en height?</h4>
-            <p>Padding en border worden erbij opgeteld.</p>
-            </h4>
+        <h4>2. Hoe hoog is de box?</h4>
+        <p>120px</p>
+        <h4>3. Wat merk je op met width en height?</h4>
+        <p>Padding en border worden erbij opgeteld.</p>
+        </h4>
 
         <hr>
 
         <!--vraag 8 -->
 
-        <h4>8. Welke CSS property kun je gebruiken om ervoor te zorgen dat de waarde van width en height de totale breedte en hoogte is van het blok van de voorgaande opdracht?</h4>
+        <h4>8. Welke CSS property kun je gebruiken om ervoor te zorgen dat de waarde van width en height de totale
+            breedte en hoogte is van het blok van de voorgaande opdracht?</h4>
         <p>box-sizing: border-box;</p>
 
         <!--vraag 9 -->
 
-        <h4>9. Maak een aantal voorbeelden van boxen en maak gebruik van steeds verschillende margin, padding en border properties.</h4>
+        <h4>9. Maak een aantal voorbeelden van boxen en maak gebruik van steeds verschillende margin, padding en border
+            properties.</h4>
         <a href="./2. Het box-model/2.html/opdracht9.1.html">voorbeeld 1</a>
         <a href="./2. Het box-model/2.html/opdracht9.2.html">voorbeeld 2</a>
         <a href="./2. Het box-model/2.html/opdracht9.3.html">voorbeeld 3</a>
 
+    </section>
+
+    <!-- Display & Positionin -->
+    <!--vraag 1 -->
+
+    <section id="DP">
+        <h3>3. Display & Positioning</h3>
+        <h4>1. Welke position properties zijn er? Leg voor elke position property uit wat het doet.<br>Geef ook aan
+            welke default position waarde elementen hebben die je gebruikt in html.
+        </h4>
+        <p><mark>Static</mark>
+            Het element wordt gepositioneerd volgens het normale verloop van het document.<br>De eigenschappen top,
+            right,
+            bottom, left en z-index hebben geen effect. Dit is de default value.</p>
+        <p><mark>Relative</mark>Hierbij wordt het element ook gepositioneerd volgens de normale stroom van het document
+            en vervolgens verschoven ten
+            opzichte van zichzelf op basis van de waarden top, right, bottom en left. Dit heeft geen invloed op de
+            positie van andere elementen.</p>
+        <p><mark>Absolute</mark> Het element wordt verwijderd uit de normale documentstroom en er wordt geen ruimte
+            gemaakt voor het element in
+            de paginalay-out.</p>
+        <p><mark>Fixed</mark> Het element blijft altijd op dezelfde plaats staan, zelfs als
+            de pagina wordt gescrolld.<br>De eigenschappen top, right, bottom en left worden gebruikt om het element te
+            positioneren.</p>
+        <p><mark>Sticky</mark>Het element wordt gepositioneerd op basis van de scrollpositie van de gebruiker.</p>
+
+        <hr>
+
+        <!--vraag 2 -->
+
+        <h4>2. Hoe zorg je er voor dat het &lt;h1&gt; element altijd 50px van de top en 50px van de rechterkant van het
+            scherm zichtbaar is. Maak het &lt;h1&gt; element rood door een RGB kleurcodering toe te passen.
+        </h4>
+        <p>Door gebruik te maken van margin-top, margin-right en <mark>position: fixed;</mark> <a
+                href="./3. Display & Positioning/3. html/opdracht2.html"> zie hier</a></p>
+
+        <hr>
+
+        <!--vraag 3 -->
+
+        <h4>3. Zorg er nu voor dat het &lt;h1&gt; element uit de voorgaande opdracht 20px links en 30px naar onder wordt
+            geplaatst, relatief t.o.v. diens normale positie.
+        </h4>
+        <p>Door gebruik te maken van margin-top, margin-left en <mark>position: relative;</mark> <a
+                href="./3. Display & Positioning/3. html/opdracht3.html"> zie hier</a></p>
+
+        <hr>
+
+        <!--vraag 4 -->
+
+        <h4>4. Zorg er nu voor dat het &lt;h1&gt; element uit opdracht 2 50px links en 100px van de top wordt geplaatst
+            relatief t.o.v. de HTML pagina.
+        </h4>
+        <p>Door gebruik te maken van margin-left, margin-top en <mark>position: Static;</mark> <a
+                href="./3. Display & Positioning/3. html/opdracht4.html"> zie hier</a></p>
+
+        <hr>
+
+        <!--vraag 5 -->
+
+        <h4>5. Positioneer het &lt;img&gt; element achter een tekst.</h4>
+        <a href="./3. Display & Positioning/3. html/opdracht5.html">Opdracht 5</a>
+
+        <hr>
+
+        <!--vraag 6 -->
+
+        <h4>6. Maak het onderstaande na door gebruik te maken van relative position. <br>De outer div block is 100px
+            breed en 100px hoog. De inner div block is 50px breed en 50px hoog.
+        </h4>
+        <a href="./3. Display & Positioning/3. html/opdracht6.html">Opdracht 6</a>
+        <br>
+        <br>
+        <img src="./3. Display & Positioning/src/blok.png" alt="">
 
 
+        <hr>
 
+        <!--vraag 7 -->
 
+        <h4>7. Zie de onderstaande image met tekst. Kun jij dit namaken? Gebruik zelf een foto van een zonnige
+            bestemming. Gebruik position, maar je mag geen z-index toepassen.
+        </h4>
+        <a href="./3. Display & Positioning/3. html/opdracht7.html">Opdracht 7</a>
+        <br>
+        <br>
+        <img src="./3. Display & Positioning/src/zonnig.png" alt="voorbeeld">
 
+        <hr>
 
+        <!--vraag 8 -->
 
+        <h4>8. Maak het onderstaande na. Je mag zelf een image zoeken en gebruiken.
+        </h4>
+        <a href="./3. Display & Positioning/3. html/opdracht8.html">Opdracht 8</a>
+        <br>
+        <br>
+        <img src="./3. Display & Positioning/src/voorbeeld2.png" alt="voorbeeld">
 
+        <hr>
 
+    </section>
 
+    <section id="Pseudo">
 
+        <h3>4. Pseudo elements
+        </h3>
+        <h4>1. Kun je enkele voorbeelden geven van pseudo-elementen (minimaal 4)?<br>Beschrijf met je eigen woorden wat
+            deze pseudo-elementen inhouden.
+        </h4>
+        <p><mark>::first-line</mark> Hiermee kan je een ​​speciale stijl toevoegen aan de eerste regel van een tekst.
+        </p>
+        <p><mark>p::first-letter</mark> Hiermee kan je een ​​speciale stijl toevoegen aan de eerste letter van een
+            tekst.</p>
+        <p><mark>::before</mark> Dit kan worden gebruikt om wat inhoud in te voegen vóór de inhoud van een element.</p>
+        <p><mark>::after</mark> Dit kan worden gebruikt om wat inhoud in te voegen na de inhoud van een element.</p>
 
+        <hr>
 
+        <h4>2. Er zijn 14 verschillende pseudo elementen. Je hebt in de voorgaande opdracht reeds 4 kunnen
+            benoemen.<br>Kun je de andere 10 ook benoemen en aangeven wat ze precies doen?
+        </h4>
+        <p><mark>::selection</mark> Het gedeelte van een element dat door een gebruiker is geselecteerd.</p>
+        <p><mark>::backdrop</mark> Een box die het volledige schermelement achter zich heeft, maar tegelijkertijd boven alle andere inhoud zit.</p>
+        <p><mark>::cue</mark> WebVTT-aanwijzingen (timed text tracks) binnen een geselecteerd element.</p>
+        <p><mark>::cue-region</mark> WebVTT-aanwijzingen binnen een geselecteerd element.</p>
+        <p><mark>::file-selector-button</mark> De knop van een input van type = "file".</p>
+        <p><mark>::grammar-error</mark> Een tekstsegment dat de user-agent als grammaticaal incorrect heeft gemarkeerd.</p>
+        <p><mark>::marker</mark> Selecteert het markeringsvak van een lijstitem, dat doorgaans een opsommingsteken of nummer bevat.</p>
+        <p><mark>::part</mark> Elk element binnen een schaduwboom met een overeenkomend onderdeelattribuut.</p>
+        <p><mark>::placeholder</mark> de tijdelijke aanduiding voor tekst in een input- of textarea-element.</p>
+        <p><mark>::selection</mark> Past stijlen toe op het deel van een document dat door de gebruiker is gemarkeerd.</p>
+
+        <hr>
+
+        <h4></h4></h4>
+
+      
 
 
 
@@ -299,6 +432,54 @@
 
 
     </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
