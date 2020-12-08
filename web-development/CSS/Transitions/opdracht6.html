@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .card {
+            display: inline-block;
+            width: 100px;
+            border-radius: 10%;
+            background-color: grey;
+            text-align: left;
+            color: white;
+            padding: 40px;
+            border: 1px solid black;
+            transition: margin-left 0.3s linear, transform 0.2s linear;
+        }
+
+        .card_date {
+            margin: -15px 0px 20px -10px;
+        }
+
+        .card_title {
+            margin: -15px 0px 30px -10px;
+        }
+
+        .card_author {
+            margin: 50px 0px -20px -10px;
+        }
+
+        .card~.card {
+            margin-left: -106px;
+        }
+
+        .card:hover~.card {
+            margin-left: 0;
+            color: red;
+            transform: translateY(50px);
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <br>
+    
+    <div class="card">
+        <p class="card_date">Article Sep 16, 2019</p>
+        <h2 class="card_title">Placeholder title</h2>
+        <p class="card_author">Author:<br> Kim Sing</p>
+    </div>
+    <div class="card">
+        <p class="card_date">Article Sep 16, 2019</p>
+        <h2 class="card_title">Placeholder title</h2>
+        <p class="card_author">Author:<br> Kim Sing</p>
+    </div>
+    <div class="card">
+        <p class="card_date">Article Sep 16, 2019</p>
+        <h2 class="card_title">Placeholder title</h2>
+        <p class="card_author">Author:<br> Kim Sing</p>
+    </div>
+    <div class="card">
+        <p class="card_date">Article Sep 16, 2019</p>
+        <h2 class="card_title">Placeholder title</h2>
+        <p class="card_author">Author:<br> Kim Sing</p>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <pre>
+        <code>
+            .card {
+                display: inline-block;
+                width: 100px;
+                border-radius: 10%;
+                background-color: grey;
+                text-align: left;
+                color: white;
+                padding: 40px;
+                border: 1px solid black;
+                transition: margin-left 0.3s linear, transform 0.2s linear;
+            }
+    
+            .card_date {
+                margin: -15px 0px 20px -10px;
+            }
+    
+            .card_title {
+                margin: -15px 0px 30px -10px;
+            }
+    
+            .card_author {
+                margin: 50px 0px -20px -10px;
+            }
+    
+            .card~.card {
+                margin-left: -80px;
+            }
+    
+            .card:hover~.card {
+                margin-left: 0;
+                color: red;
+                transform: translateY(100px);
+            }
+        </code>
+    </pre>
+    
+
+</body>
+
+</html>

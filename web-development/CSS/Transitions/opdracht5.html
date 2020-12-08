@@ -5,12 +5,119 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
+        section {
+            width: 500px;
+            height: 400px;
+            background-color: #faf4f5;
+            border: 3px solid black;
+        }
+
+        .cover {
+            position: absolute;
+            width: 210px;
+            height: 200px;
+            background-color: hsl(350, 59%, 84%);
+            z-index: 1;
+            transition: all 2s ease-in-out
+        }
+
+        .cover:hover {
+            transform: translate(100px, 120px) rotate(50deg);
+        }
+
+        .container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            width: 200px;
+            height: 200px;
+            border-left: 5px solid black;
+            border: 5px 8px 8px 5px solid black;
+            border-right: 8px solid black;
+            border-bottom: 8px solid black;
+        }
+
+        .container:hover {
+            background-color: rgba(255, 0, 0, 0.6); 
+        }
+
+        img {
+            position: relative;
+            top: 70px;
+            width: 60%;
+            height: 60%;
+        }
+
+        h1 {
+            top: -40px;
+            position: absolute;
+            font-size: 50px;
+        }
      
     </style>
     <title>Document</title>
 </head>
 
 <body>
+    <pre>
+        <code>
+            section {
+                width: 500px;
+                height: 400px;
+                background-color: #faf4f5;
+                border: 3px solid black;
+            }
+    
+            .cover {
+                position: absolute;
+                width: 210px;
+                height: 200px;
+                background-color: hsl(350, 59%, 84%);
+                z-index: 1;
+                transition: all 2s ease-in-out
+            }
+    
+            .cover:hover {
+                transform: translate(100px, 120px) rotate(50deg);
+            }
+    
+            .container {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                width: 200px;
+                height: 200px;
+                border-left: 5px solid black;
+                border: 5px 8px 8px 5px solid black;
+                border-right: 8px solid black;
+                border-bottom: 8px solid black;
+            }
+    
+            .container:hover {
+                background-color: rgba(255, 0, 0, 0.6); 
+            }
+    
+            img {
+                position: relative;
+                top: 70px;
+                width: 60%;
+                height: 60%;
+            }
+    
+            h1 {
+                top: -40px;
+                position: absolute;
+                font-size: 50px;
+            }
+        </code>
+    </pre>
+    <section>
+        <div class="cover"></div>
+        <div class=container>
+            <h1>HAHA</h1>
+            <img src="src/smiley.png" alt="smiley">
+        </div>
+    </section>
     
 
 </body>
