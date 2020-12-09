@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <pre>
+        <code>
+            /* RESPONSIVE */
+
+            @media (max-width: 480px) {
+                .page-title {
+                  width: 270px;
+                }
+              }
+            
+            @media (min-width: 320px) and (max-width: 480px) and (orientation: portrait) {
+                .gallery-item .thumbnail {
+                  width: 95%;
+                }
+              }
+              
+              @media (min-resolution: 150dpi) {
+                .logo {
+                    background-image: url("./src/spaceship2.png");
+                }
+              }
+              
+              @media (max-resolution: 150dpi) and (max-width: 480px) {
+                .page-description {
+                  font-size: 20px;
+                }
+              }
+              
+              @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+              } ;
+  
+        </code>
+    </pre>
+
+</body>
+
+</html>
