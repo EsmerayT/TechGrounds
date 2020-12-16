@@ -1,0 +1,57 @@
+Opdracht 1 
+We hebben nu zowel mixins als extends gezien die beiden styling kunnen overnemen. 
+Lees dit artikel en geef een uitleg wanneer we inheritance gebruiken en wanneer we mixins gebruiken. 
+
+Mixin
+Met een mixin kunt u groepen CSS-declaraties maken die u op uw hele site wilt hergebruiken. 
+U kunt zelfs waarden doorgeven om uw mix flexibeler te maken. 
+
+Om een ​​mixin te maken, gebruik je de @mixin-richtlijn en geef je deze een naam.
+Nadat u uw mixin hebt gemaakt, kunt u deze gebruiken als een CSS-declaratie die begint met @include gevolgd door de naam van de mixin.
+
+Hier kunnen nog waardes aan toegevoegd worden.
+
+Inheritance
+Met @extend kunt u een set CSS-eigenschappen van de ene selector naar de andere delen. 
+Het helpt je Sass erg DRY te houden.
+
+Een placeholder-klasse is een speciaal type klasse dat alleen wordt afgedrukt,
+wanneer deze wordt uitgebreid, en kan helpen om uw gecompileerde CSS netjes en schoon te houden.
+
+
+Opdracht 2
+
+SCSS
+
+$break-small: 320px;
+$break-large: 1200px;
+
+.profile-pic {
+  float: left;
+  width: 250px;
+  @media screen and (max-width: $break-small) {
+    width: 100px;
+    float: none;
+  }
+  @media screen and (min-width: $break-large) {
+    float: right;
+  }
+}
+
+CSS
+
+profile-pic {
+  float: left;
+  width: 250px;
+}
+@media screen and (max-width: 320px) {
+  .profile-pic {
+    width: 100px;
+    float: none;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .profile-pic {
+    float: right;
+  }
+}

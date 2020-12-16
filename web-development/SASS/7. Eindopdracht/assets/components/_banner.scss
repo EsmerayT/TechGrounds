@@ -1,0 +1,23 @@
+.banner {
+    @include mixin-banner;
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        height: 350px;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.3);
+        &.banner_content {
+            @include mixin-banner_content;
+            color: $accent-color;
+            &.banner_title {
+                font-size: $font-xl;
+            }            
+        }    
+    }
+}
+
+
+
+
+

@@ -1,0 +1,22 @@
+Opdracht 4 
+Nesten met de reference selector - the ampersand ( & ) De ‘&’ is een ontzettend handige feature in SASS. 
+Je gebruikt het bij het nesten. Het kan je veel tijd besparen bij het coderen. 
+Kun jij uitzoeken wat je met de ‘&’ kunt en wat de voordelen ervan zijn? 
+Laat met een voorbeeld zien dat je begrijpt wat het voordeel is van het gebruik van ‘&’ bij het nesten.
+
+De & is handig voor nesting en wanneer je meer specifieke selector wilt maken, zoals een element dat * beide * van twee klassen heeft, zoals dit:
+
+.some-class.another-class { }
+
+Je kan dit tijdens het nesten doen door de & te gebruiken.
+
+.some-class {
+  &.another-class {}
+}
+
+De & verwijst altijd naar de bovenliggende selector bij het nesten. 
+Beschouw de & als verwijderd en vervangen door de bovenliggende selector.
+
+https://css-tricks.com/the-sass-ampersand/
+
+https://i0.wp.com/css-tricks.com/wp-content/uploads/2016/01/scss-to-css.gif

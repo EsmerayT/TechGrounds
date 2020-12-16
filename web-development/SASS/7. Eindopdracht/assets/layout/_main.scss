@@ -1,0 +1,46 @@
+/* POPULAIRE GERECHTEN */
+.dishes {
+    justify-content: space-between;
+    display: flex;
+    max-width: 950px;
+    margin-left: 160px;
+    padding-top: 20px;
+}
+.dishes_title  {
+    padding: 20px 0px 20px 480px;
+    font-size: 40px;
+}
+.dish img {
+    width: 90%;
+}
+
+.dish {
+    flex-direction: column;
+    justify-content: center;
+    width: 200px;
+}
+
+.dish_name {
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.dish_price {
+    display: inline-block;
+    margin-left: 120px;
+    font-size: $font-xs;
+    padding-bottom: 5px;
+}
+
+.dish_description {
+    font-size: $font-xs;
+}
+
+.show {
+    display: flex;
+    justify-content: flex-end;
+    font-size: $font-xs;
+    padding-top: 10px;
+}
+
+

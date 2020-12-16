@@ -1,0 +1,33 @@
+footer {
+    @include mixin-footer;
+    background-color: $secondary-color;
+    color: $accent-color;
+    font-size: $font-xs;
+}
+
+#contact {
+  @include mixin-contact;
+}
+
+.navigation li, a {
+    color: $accent-color;
+    text-decoration: none;
+    list-style: none;
+    padding-right: -10px 40px;
+    .navigation h3 {
+        padding: 0px 10px;
+        .navigation p {
+            font-size: $font-m;
+        }
+    }
+
+}
+
+.contact h3 {
+    padding: 0px 0px 20px 0px;
+}
+
+.icons {
+    padding-top: 20px;
+    font-size: $font-s;
+}

@@ -1,0 +1,7 @@
+.navbar {
+    @include mixin-navbar;
+    a, li {
+        padding: 10px; 
+        color: $font-color;   
+    }
+}
