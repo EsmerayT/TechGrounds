@@ -120,7 +120,7 @@ body {
   }
 
   header {
-    background-image: url("./achtergrond.png");
+    background-image: url("../Website/src/achtergrond.png");
     width: 1100px;
     height: 700px;
     background-repeat: no-repeat;
