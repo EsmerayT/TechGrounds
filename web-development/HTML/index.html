@@ -30,7 +30,6 @@
             <a href="#Media">Media</a>
             <a href="#Section">Section</a>
             <a href="#Div">Div</a>
-            <a href="#Ltags">Link tags</a>
         </div>
         <button class="dropdown-btn">Forms & Tabellen
             <i class="fa fa-caret-down"></i>
@@ -359,21 +358,68 @@
         <p>HTML links zijn hyperlinks. Dit betekent dat de gebruiker door middel van een klik
             van het ene document naar een ander document toe kan springen. Standaard
             verandert de muispijl ook naar een muishand. <mark>Een link hoeft niet altijd tekst te zijn,
-            het kan ook een afbeelding zijn.</mark>De belangrijkste attribuut van een a element is de href attribuut. Dit definieert de
+                het kan ook een afbeelding zijn.</mark>De belangrijkste attribuut van een a element is de href
+            attribuut. Dit definieert de
             bestemming van de link.</p>
 
-            <p>Een veelgebruikte attribuut voor de link tag is de target attribuut. <mark>Met de target
+        <p>Een veelgebruikte attribuut voor de link tag is de target attribuut. <mark>Met de target
                 attribuut kun je specificeren op welke manieren de webbrowser de link zal openen.</mark>
-                Als je deze attribuut niet definieert zal de browser de webpagina openen in de
-                huidige browser window. Als je dit wilt wijzigen kun je de target attribuut aanpassen.
-                Hieronder enkele voorbeelden met hoe je dit doet en de resultaten hiervan: <a href="./Onderdeel 1/opdrachten_html/Links.html">voorbeelden</a></p>
+            Als je deze attribuut niet definieert zal de browser de webpagina openen in de
+            huidige browser window. Als je dit wilt wijzigen kun je de target attribuut aanpassen.
+            Hieronder enkele voorbeelden met hoe je dit doet en de resultaten hiervan: <a
+                href="./Onderdeel 1/opdrachten_html/Links.html">voorbeelden</a></p>
 
-            <figure><img src="./src/target.png" alt="target attribute"></figure>
+        <figure><img src="./src/target.png" alt="target attribute"></figure>
+    </section>
+
+    <section id="Media">
+        <h3>MEDIA</h3>
+        <h4>Multimedia op een
+            website is geluid, muziek, video’s, films, animaties en nog veel meer.</h4>
+
+        <p><mark>&lt;video&gt;</mark> De video tag wordt gebruikt om een video weer te geven op een website. De video
+            tag is een container tag waarin je een source element definieert waar je het video
+            formaat definieert.</p>
+
+        <p>Attributen:<br><mark>autoplay</mark> Wordt gebruikt om de video automatisch te starten</p>
+        <p><mark>width & height</mark> Wordt gebruikt om de width en height vast te stellen.</p>
+        <p><mark>controls</mark> Wordt gebruikt in de video tag om een afspeel, pauzeer en volume knop toe te
+            voegen.</p>
+        <p><mark>&lt;source&gt;</mark> src="movie.mp4"-Definieert het videobestand |
+            type="video/mp4" - Definieert het type bestand.</p>
+        <p><mark>&lt;audio&gt;</mark>Wordt gebruikt om audio af te spelen op een website door middel van de source tag.
+        </p>
+        <p><mark>&lt;iframe&gt;</mark>Een iframe, een inline
+            frame, is een HTML document of webpagina dat in een ander HTML document
+            geplaatst is.</p>
+        <p><mark>title</mark>Wordt gebruikt voor screenreaders om te zien wat de content van een iframe is.</p>
+        <p><mark>style</mark>Wordt gebruikt om de styling aan te passen.</p>
+        <p><mark>name</mark>&lt;iframe src="content.htm" name="iframe_a" title="Iframe Example">&lt;/iframe&gt; <br>
+            &lt;p&gt;&lt;a href="www.techgrounds.nl" target="iframe_a"&gt;/a&gt;Techgrounds.nl&lt;/a&gt;&lt;/p&gt;</p>
+    </section>
+
+    <section id="Section">
+        <h3>SECTION</h3>
+        <p>Een &lt;section&gt; representeert een alleenstaande sectie binnen een HTML document.
+            Vaak heeft een sectie zijn eigen heading. Door het gebruik maken van secties in je HTML
+            document kan je je <mark>webpagina opdelen in verschillende onderdelen.</mark></p>
+    </section>
+
+    <section id="Div">
+        <h3>DIV</h3>
+        <p>Door middel van het gebruiken van een div kan een website ook opgedeeld worden. <mark>Een
+            div verschilt van een section in dat deze opdeling geen semantic betekenis hoeft te
+            hebben.</mark> De opdeling wordt vaak opgesteld om onderdelen van de website te stylen of te
+            manipuleren via JavaScript.</p>
+    </section>
+
+    <section id="Ltags">
+
     </section>
 
 
 
-    
+
     <script>
         /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
         var dropdown = document.getElementsByClassName("dropdown-btn");

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Javascript</title>
+</head>
+
+<body>
+
+    <div class="sidenav">
+        <button class="home">Week 5, 6, 7</button>
+        <button class="dropdown-btn">Intro JS
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+            <a href="#Data_types">Data types</a>
+            <a href="#Variables">Variables</a>
+            <a href="#Built">Built in methods</a>
+            <a href="#Opdrachten">Opdrachten</a>
+        </div>
+        <button class="dropdown-btn">HTML Elementen
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+            <a href="#Links">Links</a>
+            <a href="#Media">Media</a>
+            <a href="#Section">Section</a>
+            <a href="#Div">Div</a>
+        </div>
+        <button class="dropdown-btn">Forms & Tabellen
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+            <a href="#HTML_Form">HTML Form</a>
+            <a href="#Elementen">HTML Form elementen</a>
+            <a href="#Input">HTML Form Input types</a>
+            <a href="#Tabellen">HTML Tabellen</a>
+            <a href="#Forms_Tables">HTML Forms & Tables</a>
+        </div>
+    </div>
+
+    <div class="main">
+        <header>
+            <img class="logo"
+                src="https://techgrounds.nl/wp-content/uploads/2020/10/cropped-TG_Logo.d5934b2d-1-300x53.png"
+                alt="TechGroundsLogo">
+            <img class="js_logo" src="https://seeklogo.com/images/J/javascript-logo-E967E87D74-seeklogo.com.png"
+                alt="js_logo">
+        </header>
+    </div>
+
+    <section id="Data_types">
+        <h4>DATA TYPES</h4>
+        <h4>In javascript zijn negen data types:</h4>
+        <p><mark>undefined</mark> De waarde undefined betekent dat er geen waarde aan de variable is
+            toegekend.</p>
+        <p><mark>Boolean</mark> De waarde is altijd true of false.</p>
+        <p><mark>String</mark> De waarde is altijd een tekst. Een tekst staat altijd tussen dubbele quotes (“”).
+            Bijvoorbeeld, “Dit is een tekst”</p>
+        <p><mark>Number</mark> De waarde van een Number is altijd een getal.</p>
+        <p><mark>BigInt</mark> Een BigInt lijkt heel veel op Number. De waarde van BigInt is een getal en
+            eindigt op n. Bijvoorbeeld 3n. Het grootste verschil tussen BigInt en Number is dat
+            BigInt oneindig getallen kan opslaan. Dit is niet nodig om te onthouden.</p>
+        <p><mark>Symbol</mark> Symbol wordt gebruikt om de waarde een unieke key van te maken. Dit wordt
+            heel weinig gebruikt en is niet nodig om te onthouden.</p>
+
+        <h4>Daarnaast heb je ook nog:</h4>
+        <p><mark>Null</mark> De waarde is een null als de waarde ook expliciet op null gezet wordt. Null wordt
+            vaak gebruikt om aan te duiden dat de waarde niet bestaat.</p>
+        <p><mark>Object</mark> Een object is een groepering van variables en functies. Je kan het zien dat
+            variables in een object de eigenschappen zijn en functies het gedrag van dat object.
+            Objecten zul je vaak tegenkomen, omdat je ook objecten kunt maken.</p>
+        <p><mark>Function</mark> Een functie is een set aan regels of acties die uitgevoerd worden. Aan een
+            functie kun je een leesbare naam geven. De naam representeert de actie die
+            uitgevoerd wordt.</p>
+        <p><mark></mark></p>
+    </section>
+
+    <section id="Variables">
+        <h4>VARIABLES</h4>
+        <h4>Variables houdt de waardes vast van een bepaalde data type. Variables kent drie varianten:</h4>
+        <p><mark>Var</mark> var is de voorganger van let en wordt door oudere browsers ondersteunt.
+            Tegenwoordig wordt var niet meer gebruikt en is het vervangen door let</p>
+        <p><mark>Let</mark> let is de nieuwe manier om waarde vast te houden. Wanneer je let gebruikt is de
+            waarde mutable. Dat wil zeggen dat je de waarde van de variable kan aanpassen.</p>
+        <p><mark>Const</mark> Const wordt ook gebruikt om waarde vast te houden. Het verschil tussen let
+            en const is dat const immutable is. Dat wil zeggen dat wanneer je een waarde hebt
+            toegekend aan een variable dat het dan ook niet meer te wijzigen is. Het niet
+            toewijzen van een waarde aan een variable zal een error geven.</p>
+    </section>
+
+    <section id="Built">
+        <h4>BUILT IN METHODS</h4>
+        <p>Built in methods houdt in dat er <mark>een set aan functies die al voorgedefinieerd
+                zijn</mark> die je kunt gebruiken. Een bekende voorbeeld met built in methods is de String. String is
+            een object. Dat kun je herkennen doordat String met een hoofdletter geschreven is. <mark>Het is
+                een geschreven regel dat objecten met een hoofdletter begint.</mark> Daardoor kun je het
+            herkennen dat het een object is. Binnen objecten heb je functies die je kunt gebruiken. Later
+            zullen wij onze eigen objecten maken met onze eigen functies.</p>
+        <a
+            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String</a>
+    </section>
+
+    <section id="Opdrachten">
+        <h4>OPDRACHTEN</h4>
+
+        <tr>Opdrachten over <mark>undefined</mark> en <mark>getallen</mark> aan variable toekennen</tr>
+        <td><a href="../Intro_JS/Opdracht1,2,3,4.html">zie uitwerking</a><br></td><br>
+        <tr>Opdrachten over de verschillende <mark>data types</mark> herkennen</tr>
+        <td><a href="../Intro_JS/Opdracht5,6.html">zie uitwerking</a><br></td><br>
+        <tr>Opdrachten wat je met <mark>Numbers</mark> kan doen</tr>
+        <td><a href="../Intro_JS/Opdracht7,8,9,10,11.html">zie uitwerking</a><br></td><br>
+        <tr>Opdrachten wat je met <mark>String</mark> kan doen</tr>
+        <td><a href="../Intro_JS/Opdracht12,13,14,15.html">zie uitwerking</a><br></td><br>
+        <tr>Opdrachten met <mark>built in methods</mark></tr>
+        <td><a href="../Intro_JS/Opdracht16.html">zie uitwerking</a><br></td><br>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+
+        for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                    dropdownContent.style.display = "none";
+                } else {
+                    dropdownContent.style.display = "block";
+                }
+            });
+        }
+    </script>
+
+
+</body>
+
+</html>
