@@ -2,19 +2,18 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
         .words button {
             position: relative;
             border: 1px solid black;
-            border-radius: .5em;
+            border-radius: 0.5em;
             background-color: white;
-            padding: .5em;
+            padding: 0.5em;
             cursor: pointer;
-            transition: background-color .3s ease-in-out;
+            transition: background-color 0.3s ease-in-out;
             z-index: 1;
         }
 
@@ -25,7 +24,7 @@
 
         .words .fg {
             position: absolute;
-            content: '';
+            content: "";
             display: flex;
             justify-content: center;
             align-items: center;
@@ -36,7 +35,7 @@
             border-radius: inherit;
             background-color: white;
             z-index: 2;
-            transition: width .3s ease-out;
+            transition: width 0.3s ease-out;
             overflow: hidden;
         }
 
@@ -61,31 +60,40 @@
     <section>
         <div class="words">
             <button onclick="guess(this)">
-                <div class="fg">Show</div><span>Together</span>
+                <div class="fg">Show</div>
+                <span>Together</span>
             </button>
             <button onclick="guess(this)">
-                <div class="fg">Show</div><span>Teamwork</span>
+                <div class="fg">Show</div>
+                <span>Teamwork</span>
             </button>
             <button onclick="guess(this)">
-                <div class="fg">Show</div><span>Scrum</span>
+                <div class="fg">Show</div>
+                <span>Scrum</span>
             </button>
             <button onclick="guess(this)">
-                <div class="fg">Show</div><span>Individual</span>
+                <div class="fg">Show</div>
+                <span>Individual</span>
             </button>
             <button onclick="guess(this)">
-                <div class="fg">Show</div><span>Moments</span>
+                <div class="fg">Show</div>
+                <span>Moments</span>
             </button>
             <button onclick="guess(this)">
-                <div class="fg">Show</div><span>Like</span>
+                <div class="fg">Show</div>
+                <span>Like</span>
             </button>
             <button onclick="guess(this)">
-                <div class="fg">Show</div><span>Dislike</span>
+                <div class="fg">Show</div>
+                <span>Dislike</span>
             </button>
             <button onclick="guess(this)">
-                <div class="fg">Show</div><span>Money</span>
+                <div class="fg">Show</div>
+                <span>Money</span>
             </button>
             <button onclick="guess(this)">
-                <div class="fg">Show</div><span>Important</span>
+                <div class="fg">Show</div>
+                <span>Important</span>
             </button>
         </div>
     </section>
@@ -94,18 +102,45 @@
         <p id="label"></p>
     </div>
     <script>
-        const words = ["Together", "Teamwork", "Scrum", "Individual", "Moments", "Like", "Dislike",
-            "Money", "Important"];
+        const words = [
+            "Together",
+            "Teamwork",
+            "Scrum",
+            "Individual",
+            "Moments",
+            "Like",
+            "Dislike",
+            "Money",
+            "Important",
+        ];
         const guessingWord = words[Math.round(Math.random() * 8)];
         console.log(guessingWord);
 
-        let count = 
-
-        
+        let count = document.getElementById("count").innerHTML;
+        const levens = 3;
+        const gewonnen = "You have guessed the correct word! ";
+        const verloren = "Game Over. The correct word is ";
 
         function guess(obj) {
+            let word = obj.querySelector('span').innertext
+            console.log(word)
+
+            if (word == guessingWord) {
+                alert(gewonnen + guessingWord);
+                location.reload();
+            } else {
+                count++;
+                document.getElementById('count').innerHTML = count;
+            } if (count == levens) {
+                alert(verloren + guessingWord);
+                location.reload();
+            }
         }
     </script>
 </body>
 
 </html>
+
+
+
+

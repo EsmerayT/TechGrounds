@@ -4,19 +4,24 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Opdracht 16</title>
 </head>
 
 <body>
-    <h3>Opdrachten met built in methods</h3>
-    <h3>Opdracht 16</h3>
     <pre>
         <code>
+            <h3>Opdrachten met built in methods</h3>
+            <h3>Opdracht 16</h3>
             //charAt()
             let text = "Hello";
             let result = text.charAt(0);
             console.log(result); 
             //H
+
+            <mark>Als er geen index is gegeven aan charAt(), dan is de standaard 0.</mark>
+            <mark>Met 0 wordt het eerste character weergeven, dus H.</mark>
+            <mark>charAt(1) index 1 weergeeft character e.</mark>
+
 
             //concat()
             let string = "Hello";
@@ -24,20 +29,29 @@
             console.log(string.concat(text)); 
             //Hello world!
 
+            <mark>De concat () methode wordt gebruikt om twee of meer strings samen te voegen.</mark>
+
             //slice()
             let string = "Hello world!";
             console.log(string.slice(0, 5));
             //Hello
+
+            <mark>De methode slice () extraheert delen van een string en retourneert de geëxtraheerde delen in een nieuwe string.</mark>
 
             //split()
             let string = "How are you doing today?";
             console.log(string.split(" ")); 
             //(5) ["How", "are", "you", "doing", "today?"]
 
+            <mark>De methode split () splitst een string in een lijst.</mark>
+
             //substr()
             let string = "Hello world!";
            console.log(string.substr(1, 4));
            //ello
+
+           <mark>De methode substr () extraheert delen van een tekenreeks, beginnend bij het teken op de opgegeven positie,</mark>
+           <mark>en retourneert het opgegeven aantal tekens.</mark>
         </code>
     </pre>
 

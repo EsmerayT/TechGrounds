@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Opdracht 1 t/m 8</title>
+</head>
+
+<body>
+  <input type="number" name="number" id="number" />
+  <button id="btn" onclick="checkNumber()">Button</button>
+
+  <div>
+    <span id="label"></span>
+  </div>
+
+  <pre>
+    <code>
+      <h3>Opdrachten over if statements met comparison operators</h3>
+      <h3>Opdracht 1, 2, 3, 4, 7</h3>
+
+      <mark>1. Als het ingevoerde getal is gelijk aan 3</mark>
+      <mark>2. Als het ingevoerde getal is groter dan 4</mark>
+      <mark>3. Als het ingevoerde getal is gelijk aan en is groter dan 11</mark>
+      <mark>4. Als het ingevoerde getal is kleiner dan 3</mark>
+      <mark>7. Als de conditie niet waar is dat de tekst van de label verwijdert wordt.</mark>
+
+      function checkNumber() {
+        let number = (document.getElementById("number").value);
+        if (number == 3) {
+          document.getElementById("label").innerHTML = "Het ingevoerde getal is gelijk aan 3"; //Opdracht 1
+        } else if (number < 3) {
+          document.getElementById("label").innerHTML = "Het ingevoerde getal is kleiner dan 3"; //Opdracht 2
+        } else if (number >= 11) {
+          document.getElementById("label").innerHTML =
+            "Het ingevoerde getal is gelijk of groter dan 11"; //Opdracht 3
+        } else if (number > 4) {
+          document.getElementById("label").innerHTML = "Het ingevoerde getal is groter dan 4"; //Opdracht 4
+        } if (!number) {
+          document.getElementById("label").innerHTML = ""; //Opdracht 7
+        }
+      }
+
+      <hr>
+
+      <h3>Opdracht 5</h3>
+      <mark>We hebben nu verschillende comparison operators gehad. Wat is het verschil tussen < en <= ?</mark>
+      <   minder dan
+      <=  minder dan of gelijk aan
+
+      <hr>
+
+      <h3>Opdracht 6</h3>
+      <mark>We hebben nog een comparison operator niet gehad, namelijk ! comparison.</mark>
+      <mark>Wat doet een ! comparison ? Maak een voorbeeld van een ! comparison</mark>
+      !=  niet gelijk
+      !== waarde en type niet gelijk 
+
+      Voorbeeld:  id="display" //true
+                
+                  let number = 5;
+                  document.getElementById("display").innerHTML = (number != 8);
+
+      <hr>
+
+      <h3>Opdracht 8</h3>
+      <mark>Wat is een strict equality comparison?</mark>
+      Hierbij wordt vergeleken of de value en de type gelijk zijn.
+
+    </code>
+  </pre>
+
+  <script>
+    function checkNumber() {
+      let number = (document.getElementById("number").value);
+      if (number == 3) {
+        document.getElementById("label").innerHTML = "Het ingevoeerde getal is gelijk aan 3"; //Opdracht 1
+      } else if (number < 3) {
+        document.getElementById("label").innerHTML = "Het ingevoerde getal is kleiner dan 3"; //Opdracht 2
+      } else if (number >= 11) {
+        document.getElementById("label").innerHTML =
+          "Het ingevoerde getal is gelijk of groter dan 11"; //Opdracht 3
+      } else if (number > 4) {
+        document.getElementById("label").innerHTML = "Het ingevoerde getal is groter dan 4"; //Opdracht 4
+      } if (!number) {
+        document.getElementById("label").innerHTML = ""; //Opdracht 7
+      }
+    }
+  </script>
+</body>
+
+</html>

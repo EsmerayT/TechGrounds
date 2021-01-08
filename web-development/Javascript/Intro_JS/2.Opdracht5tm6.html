@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Opdracht 5 t/m 6</title>
+</head>
+
+<body>
+  <pre>
+    <code>
+      <h3>Opdrachten over de verschillende data types herkennen</h3>
+
+      <h3>Opdracht 5</h3>      
+
+      <mark>De waarde is altijd true of false / yes of no</mark>
+          let datatype = true; false;
+          console.log("datatype " + typeof datatype);
+          //value true en false geven allebei, datatype boolean
+    
+      <hr>
+    
+      <h3>Opdracht 6.1</h3>   
+
+    <mark>De waarde is altijd een tekst. Een tekst staat altijd tussen aanhalingstekens.</mark>
+          
+
+          let datatype = "hello";
+          console.log("datatype " + typeof datatype);
+          //datatype string
+
+      <hr>
+    
+      <h3>Opdracht 6.2</h3>  
+
+      <mark>De waarde van een Number is altijd een getal</mark>
+
+          let datatype = 1;
+          console.log("datatype " + typeof datatype);
+          //datatype number
+    
+      <hr>
+    
+      <h3>Opdracht 6.3</h3>     
+
+      <mark>Een BigInt lijkt heel veel op Number. De waarde van BigInt is een getal en eindigt op n.</mark> 
+      <mark>Bijvoorbeeld 3n. Het grootste verschil tussen BigInt en Number is dat BigInt oneindig getallen kan opslaan.</mark>
+
+          let datatype = 1n;
+          console.log("datatype " + typeof datatype);
+          //datatype bigint
+    
+      <hr>
+      
+      <h3>Opdracht 6.4</h3>      
+
+      <mark>Symbol wordt gebruikt om de waarde een unieke key van te maken.</mark>
+      
+          let datatype = Symbol("Sym");
+          console.log("datatype " + typeof datatype);
+          //datatype symbol
+    </code>
+  </pre>
+
+  <script>
+    // Opdracht 5
+    let datatype = true;
+    console.log("datatype " + typeof datatype); //datatype boolean
+
+    let datatype = false;
+    console.log("datatype " + typeof datatype); //datatype boolean
+    // Opdracht 6
+    let datatype = " ";
+    console.log("datatype " + typeof datatype); //datatype1 string
+    // Opdracht 6.2
+    let datatype = 1;
+    console.log("datatype " + typeof datatype); //datatype number
+    // Opdracht 6.3
+    let datatype = 1n;
+    console.log("datatype " + typeof datatype); //datatype bigint
+    // Opdracht 6.4
+    let datatype = Symbol("Sym");
+    console.log("datatype " + typeof datatype); //datatype symbol
+  </script>
+
+</body>
+
+</html>

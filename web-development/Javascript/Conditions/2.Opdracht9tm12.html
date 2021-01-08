@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Opdracht 9 t/m 12</title>
+</head>
+
+<body>
+    <input type="number" name="number" id="number" />
+    <button id="btn" onclick="checkNumber()">Button</button>
+
+    <div>
+        <span id="label"></span>
+    </div>
+
+    <pre>
+    <code>
+        function checkNumber() {
+            let number = document.getElementById("number").value;
+            if (number > 5 && number < 10) {
+                document.getElementById("label").innerHTML = <mark>"Het ingevoerde getal is tussen 5 en 10"</mark>; //Opdracht 9
+            } if (number >= 11 && number <= 20) {
+                document.getElementById("label").innerHTML = <mark>"Het ingevoerde getal is gelijk aan 11 of groter dan 11 en is gelijk aan 20 of kleiner dan 20"</mark>; //Opdracht 10
+            } if (number == 21 || number == 23) {
+                document.getElementById("label").innerHTML = <mark>"Het ingevoerde getal is gelijk aan 21 of is gelijk aan 23"</mark>; //Opdracht 11
+            } if (number > 30  && number < 35 || number > 40 && number < 45 )
+                document.getElementById("label").innerHTML = <mark>"het getal is tussen 30 en 35 of het getal is tussen 40 en 45"</mark>; //Opdracht 12
+        }
+    </code>
+  </pre>
+
+    <script>
+        function checkNumber() {
+            let number = document.getElementById("number").value;
+            if (number > 5 && number < 10) {
+                document.getElementById("label").innerHTML = "Het ingevoerde getal is tussen 5 en 10"; //Opdracht 9
+            } if (number >= 11 && number <= 20) {
+                document.getElementById("label").innerHTML = "Het ingevoerde getal is gelijk aan 11 of groter dan 11 en is gelijk aan 20 of kleiner dan 20"; //Opdracht 10
+            } if (number == 21 || number == 23) {
+                document.getElementById("label").innerHTML = "Het ingevoerde getal is gelijk aan 21 of is gelijk aan 23"; //Opdracht 11
+            } if (number > 30 && number < 35 || number > 40 && number < 45)
+                document.getElementById("label").innerHTML = "het getal is tussen 30 en 35 of het getal is tussen 40 en 45"; //Opdracht 12
+        }
+    </script>
+</body>
+
+</html>
