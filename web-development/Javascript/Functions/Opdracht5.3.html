@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,
+initial-scale=1.0" />
+    <title>Opdracht 5.</title>
+</head>
+
+<body>
+    <div>
+        <button onclick="random()">randomName</button>
+        <p id="label"></p>
+    </div>
+    <script>
+        const names = [
+            "John",
+            "Olly",
+            "Mo",
+            "Hendrik",
+            "Tony",
+            "Irus",
+            "Jan",
+            "Peter",
+        ];
+
+        function random() {
+            const randomName = names[Math.round(Math.random() * 7)];
+            const bekend = randomName + " is een bekende van ons";
+            const onbekend = name + " is onbekend in ons systeem!";
+            
+            if (randomName == names) {
+                document.getElementById("label").innerHTML = randomName + " is een bekende van ons";
+            }
+            else {
+            document.getElementById("label").innerHTML = randomName + " is een bekende van ons";
+            }
+        }
+    </script>
+</body>
+
+</html>

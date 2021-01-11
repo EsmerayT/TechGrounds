@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            text-align: left;
+        }
+    </style>
+    <title>Opdracht 8</title>
+</head>
+
+<body>
+    <div class="vakken">
+        <table style="width:20%">
+            <tr>
+                <caption>Wiskunde</caption>
+                <th>Naam</th>
+                <th>Cijfer</th>
+            </tr>
+            <tr>
+                <td>Willem</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>Jan</td>
+                <td>7</td>
+            </tr>
+            <tr>
+                <td>Kim Sing</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>Samantha</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>Joyce</td>
+                <td>5.5</td>
+            </tr>
+            <tr>
+                <td>Gareth</td>
+                <td>1</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="vakken">
+        <table style="width:20%">
+            <tr>
+                <caption>Natuurkunde</caption>
+                <th>Naam</th>
+                <th>Cijfer</th>
+            </tr>
+            <tr>
+                <td>Willem</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>Jan</td>
+                <td>7</td>
+            </tr>
+            <tr>
+                <td>Kim Sing</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>Samantha</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>Joyce</td>
+                <td>5.5</td>
+            </tr>
+            <tr>
+                <td>Gareth</td>
+                <td>1</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="vakken">
+        <table style="width:20%">
+            <tr>
+                <caption>Nederlands</caption>
+                <th>Naam</th>
+                <th>Cijfer</th>
+            </tr>
+            <tr>
+                <td>Willem</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>Jan</td>
+                <td>7</td>
+            </tr>
+            <tr>
+                <td>Kim Sing</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>Samantha</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>Joyce</td>
+                <td>5.5</td>
+            </tr>
+            <tr>
+                <td>Gareth</td>
+                <td>1</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="vakken">
+        <table style="width:20%">
+            <tr>
+                <caption>Engels</caption>
+                <th>Naam</th>
+                <th>Cijfer</th>
+            </tr>
+            <tr>
+                <td>Willem</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>Jan</td>
+                <td>7</td>
+            </tr>
+            <tr>
+                <td>Kim Sing</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>Samantha</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>Joyce</td>
+                <td>5.5</td>
+            </tr>
+            <tr>
+                <td>Gareth</td>
+                <td>1</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="gemiddeld">
+        <table style="width:30%">
+            <tr>
+                <caption>Resultaat gemiddeld</caption>
+                <th>Naam</th>
+                <th>Cijfer</th>
+                <th>Beta vakken</th>
+                <th>Volgende klas? > 6.5</th>
+            </tr>
+            <tr>
+                <td>Willem</td>
+                <td>6.5</td>
+                <td>5</td>
+                <td>No</td>
+            </tr>
+            <tr>
+                <td>Jan</td>
+                <td>6.5</td>
+                <td>6</td>
+                <td>No</td>
+            </tr>
+            <tr>
+                <td>Kim Sing</td>
+                <td>4.5</td>
+                <td>9</td>
+                <td>Yes</td>
+            </tr>
+            <tr>
+                <td>Samantha</td>
+                <td>6</td>
+                <td>5</td>
+                <td>No</td>
+            </tr>
+            <tr>
+                <td>Joyce</td>
+                <td>6.5</td>
+                <td>7</td>
+                <td>Yes</td>
+            </tr>
+            <tr>
+                <td>Gareth</td>
+                <td>6</td>
+                <td>3</td>
+                <td>No</td>
+            </tr>
+        </table>
+    </div>
+
+    <script>
+        function checkVoldoende() {
+            let number = document.getElementById("number").value;
+            if (number >= 5.5) {
+                document.getElementById("number").style.backgroundcolor = "green";
+            } if (number <= 5.5) {
+                document.getElementById("number").style.color = "red";
+            } if (number >= 7.5) {
+                document.getElementById("number").style.color = "darkgreen";
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
