@@ -115,32 +115,25 @@
         ];
         const guessingWord = words[Math.round(Math.random() * 8)];
         console.log(guessingWord);
-
         let count = document.getElementById("count").innerHTML;
         const levens = 3;
-        const gewonnen = "You have guessed the correct word! ";
-        const verloren = "Game Over. The correct word is ";
+        const gewonnen = "You have guessed the correct word! " + guessingWord;
+        const verloren = "Game Over. The correct word is " + guessingWord;
 
         function guess(obj) {
-            let word = obj.querySelector('span').innertext
-            console.log(word)
-
-            if (word == guessingWord) {
-                alert(gewonnen + guessingWord);
-                location.reload();
+            let gekozen_woord = obj.children[1].innerHTML;
+            if (gekozen_woord == guessingWord) {
+                alert(gewonnen);
             } else {
                 count++;
-                document.getElementById('count').innerHTML = count;
-            } if (count == levens) {
-                alert(verloren + guessingWord);
-                location.reload();
+                document.getElementById("count").innerHTML = count;
+                if (count == levens) {
+                    alert(verloren);
+                    location.reload();
+                }
             }
         }
     </script>
 </body>
 
 </html>
-
-
-
-
