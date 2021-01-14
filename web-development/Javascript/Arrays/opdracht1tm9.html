@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <pre>
+        <code>
+            <h3>Opdracht 1 t/m 9</h3>
+            Opdracht 1
+            let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10,];
+            console.log(numbers);
+
+            <hr>
+    
+            Opdracht 2
+            let fruit = ['banaan', 'appel', 'kiwi', 'aardbei', 'peer'];
+            console.log(fruit);
+
+            <hr>
+    
+            Opdracht 3
+            console.log(fruit[1]);
+
+            <hr>
+    
+            Opdracht 4
+            console.log(fruit[3]);
+
+            <hr>
+    
+            Opdracht 5
+            let randomNumber = Math.floor(Math.random() * numbers.length);
+            console.log(randomNumber % 5)
+            console.log(fruit[randomNumber % 5]);
+
+            <hr>
+    
+            Opdracht 6
+            fruit.push('citroen') //(6) ["banaan", "appel", "kiwi", "aardbei", "peer", "citroen"]
+            <mark>PUSH - Toevoeging van een element aan het eind van de string</mark>
+    
+            fruit.pop() //(5) ["banaan", "appel", "kiwi", "aardbei", "peer"
+            <mark>POP - Verwijdering van een element aan het van de string</mark>
+    
+            fruit.shift() //(4) ["appel", "kiwi", "aardbei", "peer"]
+            <mark>SHIFT - Verwijdering van een element aan het begin van de string</mark>
+    
+            fruit.slice(1)
+            console.log(fruit) //(2) ["aardbei", "peer"]
+            <mark>SLICE - De elementen na index 2 worden weergegeven</mark>
+            fruit.slice(-1) //["peer"]
+            <mark>SLICE - Deze waarde geeft het laatste element van een string</mark>
+    
+            fruit.splice(1, 2)
+            console.log(fruit)  //(4) ["appel", "kiwi", "aardbei", "peer"] voor splice
+            //(3) ["appel", "aardbei", "peer"] na splice
+            <mark>SPLICE - Er wordt 1 element op index 1 verwijderd</mark>
+      
+            fruit.sort()
+            <mark>SORT - sorteert de items van een array</mark>
+
+            <hr>
+    
+            Opdracht 7
+            console.log(fruit.length) //2, want (2) ["appel", "peer"]
+
+            <hr>
+    
+            Opdracht 8
+            fruit[1] = 'Sinaasappel' //(2) ["appel", "Sinaasappel"]
+
+            <hr>
+    
+            Opdracht 9
+            let fruit2 = ['banaan', 'appel', 'kiwi', 'aardbei', 'peer', 'mandarijn'];
+            console.log(fruit2);
+    
+            fruit2[3] = fruit2[5];
+            fruit2[5] = "aardbei"
+    
+            console.log(fruit2);//(6) ["banaan", "appel", "kiwi", "aardbei", "peer", "mandarijn"]
+                                //(6) ["banaan", "appel", "kiwi", "mandarijn", "peer", "aardbei"]
+        </code>
+    </pre>
+    <script>
+        //Opdracht 1
+        let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10,];
+        console.log(numbers);
+
+        //Opdracht 2
+        let fruit = ['banaan', 'appel', 'kiwi', 'aardbei', 'peer'];
+        console.log(fruit);
+
+        //Opdracht 3
+        console.log(fruit[1]);
+
+        //Opdracht 4
+        console.log(fruit[3]);
+
+        //Opdracht 5
+        let randomNumber = Math.floor(Math.random() * numbers.length);
+        console.log(randomNumber % 5)
+        console.log(fruit[randomNumber % 5]);
+
+        //Opdracht 6
+        //PUSH
+        fruit.push('citroen') //(6) ["banaan", "appel", "kiwi", "aardbei", "peer", "citroen"]
+        //Toevoeging van een element aan het eind van de string
+
+        //POP
+        fruit.pop() //(5) ["banaan", "appel", "kiwi", "aardbei", "peer"]
+        //Verwijdering van een element aan het van de string
+
+        //SHIFT
+        fruit.shift() //(4) ["appel", "kiwi", "aardbei", "peer"]
+        //Verwijdering van een element aan het begin van de string
+
+        //SLICE
+        fruit.slice(1)
+        console.log(fruit) //(2) ["aardbei", "peer"]
+        //De elementen na index 2 worden weergegeven
+        fruit.slice(-1) //["peer"]
+        //Deze waarde geeft het laatste element van een string
+
+        //SPLICE
+        fruit.splice(1, 2)
+        console.log(fruit)  //(4) ["appel", "kiwi", "aardbei", "peer"] voor splice
+        //(3) ["appel", "aardbei", "peer"] na splice
+        //Er wordt 1 element op index 1 verwijderd 
+
+        //SORT
+        fruit.sort()
+        //sorteert de items van een array
+
+        //Opdracht 7
+        console.log(fruit.length) //2, want (2) ["appel", "peer"]
+
+        //Opdracht 8
+        fruit[1] = 'Sinaasappel' //(2) ["appel", "Sinaasappel"]
+
+        //Opdracht 9
+        let fruit2 = ['banaan', 'appel', 'kiwi', 'aardbei', 'peer', 'mandarijn'];
+        console.log(fruit2);
+
+        fruit2[3] = fruit2[5];
+        fruit2[5] = "aardbei"
+
+        console.log(fruit2);//(6) ["banaan", "appel", "kiwi", "aardbei", "peer", "mandarijn"]
+                            //(6) ["banaan", "appel", "kiwi", "mandarijn", "peer", "aardbei"]
+
+    </script>
+</body>
+
+</html>

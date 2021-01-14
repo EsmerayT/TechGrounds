@@ -35,7 +35,32 @@
             <a href="#Functions">Intro</a>
             <a href="#Opdracht_functions">Opdrachten</a>
         </div>
+        <button class="dropdown-btn">Scopes
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+            <a href="#Scopes">Intro</a>
+            <a href="#Opdracht_scopes">Opdrachten</a>
+        </div>
+        <button class="dropdown-btn">Arrays
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+            <a href="#Arrays">Intro</a>
+            <a href="#Opdracht_arrays">Opdrachten</a>
+        </div>
+        <button class="dropdown-btn">Loops
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+            <a href="#Loops">Intro</a>
+            <a href="#Opdracht_loops">Opdrachten</a>
+        </div>
     </div>
+
+
+
+
 
     <div class="main">
         <header>
@@ -72,9 +97,10 @@
             functie kun je een leesbare naam geven. De naam representeert de actie die
             uitgevoerd wordt.</p>
         <p><mark></mark></p>
-    </section>
 
-    <hr>
+        <hr>
+        
+    </section>
 
     <section id="Variables">
         <h4>VARIABLES</h4>
@@ -99,9 +125,8 @@
             zullen wij onze eigen objecten maken met onze eigen functies.</p>
         <a
             href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String</a>
+        <hr>
     </section>
-
-    <hr>
 
     <section id="Opdrachten">
         <h4>OPDRACHTEN</h4>
@@ -133,9 +158,10 @@
                 <td><a href="../Intro_JS/5.Opdracht16.html">Opdracht 16</a></td>
             </tr>
         </table>
-    </section>
 
-    <hr>
+        <hr>
+
+    </section>
 
     <section id="Conditions">
         <h4>CONDITIONS</h4>
@@ -161,9 +187,10 @@
             <li>Switch conditions</li>
             <li>Ternary conditions</li>
         </ul>
-    </section>
 
-    <hr>
+        <hr>
+
+    </section>
 
     <section id="Opdrachten_conditions">
         <h4>OPDRACHTEN</h4>
@@ -183,9 +210,10 @@
                     <a href="../Conditions/5.Opdracht15.html">Opdracht 15</a></td>
             </tr>
         </table>
-    </section>
 
-    <hr>
+        <hr>
+
+    </section>
 
     <section id="Functions">
         <h3>Functions</h3>
@@ -193,8 +221,8 @@
         <p>Functions zijn coding blocks die uitgevoerd worden. <mark>Het idee achter functies zijn het
                 uitvoeren van specifieke taken.</mark> Er zijn aantal regels die je moet kennen om de kracht uit
             functies uit te halen. Door goed gebruik te maken van functies is je code veel leesbaarder.</p>
-        
-            <img src="./src/functions.png" alt="" width="100%">
+
+        <img src="./src/functions.png" alt="" width="100%">
 
         <h4>Wat is belangrijk om mee te nemen bij het schrijven van een function</h4>
         <ol>
@@ -215,6 +243,155 @@
             <li>Returns</li>
         </ul>
 
+        <hr>
+
+        <h3>OPDRACHTEN</h3>
+
+        <table>
+            <tr>
+                <td>Opdrachten over <mark>undefined</mark> en <mark>getallen</mark> aan variable toekennen</td>
+                <td colspan="2"></td>
+                <td><a href="../Intro_JS/1.Opdracht1tm4.html">Opdracht 1 t/m 4</a></td>
+            </tr>
+            <tr>
+                <td>Opdrachten over de verschillende <mark>data types</mark> herkennen</td>
+                <td colspan="2"></td>
+                <td><a href="../Intro_JS/2.Opdracht5tm6.html">Opdracht 5 en 6</a></td>
+            </tr>
+            <tr>
+                <td>Opdrachten wat je met <mark>Numbers</mark> kan doen</td>
+                <td colspan="2"></td>
+                <td><a href="../Intro_JS/3.Opdracht7tm11.html">Opdracht 7 t/m 11</a></td>
+            </tr>
+            <tr>
+                <td>Opdrachten wat je met <mark>String</mark> kan doen</td>
+                <td colspan="2"></td>
+                <td><a href="../Intro_JS/4.Opdracht12tm15.html">Opdracht 12 t/m 15</a></td>
+            </tr>
+            <tr>
+                <td>Opdrachten met <mark>built in methods</mark></td>
+                <td colspan="2"></td>
+                <td><a href="../Intro_JS/5.Opdracht16.html">Opdracht 16</a></td>
+            </tr>
+        </table>
+
+        <hr>
+
+    </section>
+
+    <section id="Scopes">
+        <h4>SCOPES</h4>
+
+        <p>Scopes geeft de context aan waar de variables gedeclareerd worden. Dit geeft de
+            toegankelijkheid van de variables aan. Afhankelijk van de scope kan je dus toegang krijgen
+            tot de waarde van de variable.</p>
+
+        <ul>
+            <li>Global scopes</li>
+            <li>Block scopes</li>
+        </ul>
+
+        <br>
+
+        <p><mark>Global Scopes</mark> Als een variabele buiten alle functies of curly braces ({})<br>
+            wordt gedeclareerd, wordt deze gedefinieerd in global scope</p>
+
+        <img src="./src/scopes1.png" alt="voorbeeld_globalscopes">
+
+        <p>Nadat een global variabele is gedeclareerd, kan je de variabele overal in de code gebruiken, zelfs in
+            functies.</p>
+
+        <img src="./src/scopes2.png" alt="voorbeeld_gobalscopes">
+
+        <br>
+
+        <p><mark>Block Scopes</mark> Als je een variabele declareert met const of let binnen een curly braces ({}),
+            <br>heb je alleen toegang tot deze variabele binnen de curly braces</p>
+
+        <p>In het onderstaande voorbeeld kun je zien dat hallo zich uitstrekt tot de curly braces</p>
+
+        <img src="./src/scopes3.png" alt="voorbeeld_blockscopes">
+
+        <br>
+
+        <p><mark>Meer informatie over Global Scopes, Block Scopes & Closures<br></mark> <a
+                href="https://css-tricks.com/javascript-scope-closures/">https://css-tricks.com/javascript-scope-closures/</a><br>
+            <a
+                href="https://www.youtube.com/watch?v=71AtaJpJHw0&ab_channel=techsith">https://www.youtube.com/watch?v=71AtaJpJHw0&ab_channel=techsith</a>
+        </p>
+
+        <hr>
+
+    </section>
+
+    <section id="Opdracht_scopes">
+
+        <h3>OPDRACHTEN</h3>
+
+        <table>
+            <tr>
+                <td>Opdrachten met Gobal Scopes, Block Scopes & Closures</mark></td>
+                <td colspan="2"></td>
+                <td><a href="../Scopes/Opdracht1tm4.html">Opdracht 1 t/m 4</a></td>
+            </tr>
+        </table>
+
+        <hr>
+
+    </section>
+
+    <section id="Arrays">
+
+        <h3>ARRAYS</h3>
+
+        <h4>Arrays is ook een data type. Arrays is een collectie met elementen. Het houdt een lijst met waardes bij.
+            <br>De waardes van de array kunnen van verschillende data types zijn.</h4>
+
+        <img src="./src/voorbeeldarrays1.png" alt="arrays" width="95%">
+
+        <br>
+        <br>
+
+        <hr>
+
+        <p>Hieronder zie je stapsgewijs hoe je een array kan aanmaken, hoe je de array kan vullen en
+            hoe je een value kan benaderen. <mark>Om de waarde uit de array te lezen gebruiken we index. De
+            index geeft de positie van de array aan. De telling van een array begint bij 0.</mark> Anders dan wat
+            wij gewend zijn om de telling bij 1 te beginnen. Neem je tijd om te bestuderen hoe arrays
+            werkt.</p>
+
+        <br>
+
+        <img src="./src/voorbeeldarray3.png" alt="array" width="95%">
+
+        <H4>leerdoelen</H4>
+        <ul>
+            <li>Aanmaken van arrays</li>
+            <li>Arrays functies gebruiken</li>
+            <li>De waardes van een array uitlezen</li>
+            <li>De indexes</li>
+        </ul>
+
+        <hr>
+    </section>
+    <section id="Opdracht_arrays">
+        <h3>OPDRACHTEN</h3>
+        <a href="../Arrays/opdracht1tm9.html">zie uitwerking opdracht 1 t/m 9</a>
+        
+    <hr>
+    </section>
+
+    <section id="Loops">
+        <h3>LOOPS & ITERATORS</h3>
+
+        <H4>leerdoelen</H4>
+        <ul>
+            <li>For loops</li>
+            <li>For in loops</li>
+            <li>For of loops</li>
+            <li>While loops</li>
+            <li>Do while loops</li>
+        </ul>
 
     </section>
 

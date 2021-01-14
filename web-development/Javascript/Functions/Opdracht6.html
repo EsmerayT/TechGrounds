@@ -20,23 +20,43 @@ initial-scale=1.0" />
             "Mo",
             "Hendrik",
             "Tony",
+        ];
+
+        const onbekendNames = [
             "Irus",
             "Jan",
             "Peter",
         ];
 
         random = () => {
-            const randomName = names[Math.round(Math.random() * 7)];
+            const randomName = names [Math.round(Math.random() * 4)];
             const bekend = randomName + " is een bekende van ons";
-            const onbekend = name + " is onbekend in ons systeem!";
-            
-            if (randomName == names) {
+            const onbekend = randomName + " is onbekend in ons systeem!";
+
+            if (randomName == names[0]) {
+                document.getElementById("label").innerHTML = randomName + " is een bekende van ons";
+            } 
+             if (randomName == names[1]){    
                 document.getElementById("label").innerHTML = randomName + " is een bekende van ons";
             }
-            else {
-            document.getElementById("label").innerHTML = randomName + " is een bekende van ons";
+             if (randomName == names[2]){    
+                document.getElementById("label").innerHTML = randomName + " is een bekende van ons";
+            }
+             if (randomName == names[3]){    
+                document.getElementById("label").innerHTML = randomName + " is een bekende van ons";
+            }
+             if (randomName == names[4]){    
+                document.getElementById("label").innerHTML = randomName + " is een bekende van ons";
+            }
+             if (randomName == names[5]){    
+                document.getElementById("label").innerHTML = randomName + " is een bekende van ons";
+            }
+            else { 
+                document.getElementById("label").innerHTML = randomName + " is een bekende van ons";
             }
         }
+
+
     </script>
 </body>
 

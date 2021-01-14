@@ -11,116 +11,160 @@
             border: 1px solid black;
             border-collapse: collapse;
             text-align: left;
+            width: 200px;
+            margin: 40px;
+        }
+
+        caption {
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .flex {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .gemiddeld>table {
+            width: 550px;
+            margin-top: -5px;
+        }
+
+        .flex_gemiddeld {
+            display: flex;
+            justify-content: center;
         }
     </style>
     <title>Opdracht 8</title>
 </head>
 
 <body>
-    <div class="vakken">
-        <table style="width:20%">
-            <tr>
+    <pre>
+        <code>
+            OPDRACHT 8
+
+            Wij gaan een applicatie maken om de cijfers van de studenten bij te houden. De leraar wilt op
+            een pagina de cijfers kunnen invullen en controleren of de studenten over kunnen gaan naar
+            de volgende klas. Met deze applicatie zorg je ervoor dat de leraar niet handmatig hoeft te
+            berekenen wat de gemiddelde cijfers zijn per student. Hiermee heeft de leraar een compleet
+            overzicht van de studenten. Dat scheelt tijd voor de leraar! 
+            
+            <mark>Wat moet de applicatie kunnen?</mark>
+            ● Voor de vakken wiskunde, natuurkunde, nederlands en engels een tabel met 
+            studenten waarbij de cijfers bijgehouden worden.
+            ● Als de cijfer lager dan 5.5 is, dan is het veld rood.
+            ● Als de cijfer hoger of gelijk aan 5.5 is, dan is het veld groen.
+            ● Als de cijfer hoger of gelijk aan 7.5 is, dan is het veld donker groen.
+            ● Als je op de cijfer klikt kan de cijfer aangepast worden. Zodra het cijfer aangepast is,
+            dan wordt er opnieuw gekeken welke kleur het veld heeft (rood, groen of donker groen)
+            ● Naast de vakken heb je nog een tabel waarmee je de gemiddelde cijfer berekent van
+            de vakken per student. De tabel houdt bij wat de gemiddelde cijfer is van de talen
+            (nederlands en engels) en de gemiddelde cijfer van de bètavakken (wiskunde en natuurkunde).
+            ● Als de gemiddelde van de talen en de gemiddelde van de bètavakken gemiddeld
+            boven de 6.5 ligt, dan gaat de student over naar volgende klas.
+        </code>
+    </pre>
+    <div class="flex">
+        <div class="wiskunde">
+            <table>
                 <caption>Wiskunde</caption>
-                <th>Naam</th>
-                <th>Cijfer</th>
-            </tr>
-            <tr>
-                <td>Willem</td>
-                <td>3</td>
-            </tr>
-            <tr>
-                <td>Jan</td>
-                <td>7</td>
-            </tr>
-            <tr>
-                <td>Kim Sing</td>
-                <td>10</td>
-            </tr>
-            <tr>
-                <td>Samantha</td>
-                <td>4</td>
-            </tr>
-            <tr>
-                <td>Joyce</td>
-                <td>5.5</td>
-            </tr>
-            <tr>
-                <td>Gareth</td>
-                <td>1</td>
-            </tr>
-        </table>
-    </div>
-
-    <div class="vakken">
-        <table style="width:20%">
-            <tr>
+                <tr>
+                    <th>Naam</th>
+                    <th>Cijfer</th>
+                </tr>
+                <tr>
+                    <td>Willem</td>
+                    <td><input type="number" class="cijfer w1" id="cijfer" onchange="color();" /></td>
+                </tr>
+                <tr>
+                    <td>Jan</td>
+                    <td><input type="number" class="cijfer w2" id="cijfer" onchange="color();" /></td>
+                </tr>
+                <tr>
+                    <td>Kim Sing</td>
+                    <td><input type="number" class="cijfer w3" id="cijfer" onchange="color();" /></td>
+                </tr>
+                <tr>
+                    <td>Samantha</td>
+                    <td><input type="number" class="cijfer w4" id="cijfer" onchange="color();" /></td>
+                </tr>
+                <tr>
+                    <td>Joyce</td>
+                    <td><input type="number" class="cijfer w5" id="cijfer" onchange="color();" /></td>
+                </tr>
+                <tr>
+                    <td>Gareth</td>
+                    <td><input type="number" class="cijfer w6" id="cijfer" onchange="color();" /></td>
+                </tr>
+            </table>
+        </div>
+        <div class="natuurkunde">
+            <table>
                 <caption>Natuurkunde</caption>
-                <th>Naam</th>
-                <th>Cijfer</th>
-            </tr>
-            <tr>
-                <td>Willem</td>
-                <td>3</td>
-            </tr>
-            <tr>
-                <td>Jan</td>
-                <td>7</td>
-            </tr>
-            <tr>
-                <td>Kim Sing</td>
-                <td>10</td>
-            </tr>
-            <tr>
-                <td>Samantha</td>
-                <td>4</td>
-            </tr>
-            <tr>
-                <td>Joyce</td>
-                <td>5.5</td>
-            </tr>
-            <tr>
-                <td>Gareth</td>
-                <td>1</td>
-            </tr>
-        </table>
-    </div>
-
-    <div class="vakken">
-        <table style="width:20%">
-            <tr>
+                <tr>
+                    <th>Naam</th>
+                    <th>Cijfer</th>
+                </tr>
+                <tr>
+                    <td>Willem</td>
+                    <td><input type="number" class="cijfer n1" id="cijfer" onchange="color();" /></td>
+                </tr>
+                <tr>
+                    <td>Jan</td>
+                    <td><input type="number" id="cijfer" onchange="color();" /></td>
+                </tr>
+                <tr>
+                    <td>Kim Sing</td>
+                    <td><input type="number" id="cijfer" onchange="color();" /></td>
+                </tr>
+                <tr>
+                    <td>Samantha</td>
+                    <td><input type="number" id="cijfer" onchange="color();" /></td>
+                </tr>
+                <tr>
+                    <td>Joyce</td>
+                    <td><input type="number" id="cijfer" onchange="color();" /></td>
+                </tr>
+                <tr>
+                    <td>Gareth</td>
+                    <td><input type="number" id="cijfer" onchange="color();" /></td>
+                </tr>
+            </table>
+        </div>
+        <div class="nederlands">
+            <table>
                 <caption>Nederlands</caption>
-                <th>Naam</th>
-                <th>Cijfer</th>
-            </tr>
-            <tr>
-                <td>Willem</td>
-                <td>3</td>
-            </tr>
-            <tr>
-                <td>Jan</td>
-                <td>7</td>
-            </tr>
-            <tr>
-                <td>Kim Sing</td>
-                <td>10</td>
-            </tr>
-            <tr>
-                <td>Samantha</td>
-                <td>4</td>
-            </tr>
-            <tr>
-                <td>Joyce</td>
-                <td>5.5</td>
-            </tr>
-            <tr>
-                <td>Gareth</td>
-                <td>1</td>
-            </tr>
-        </table>
-    </div>
-
-    <div class="vakken">
-        <table style="width:20%">
+                <tr>
+                    <th>Naam</th>
+                    <th>Cijfer</th>
+                </tr>
+                <tr>
+                    <td>Willem</td>
+                    <td><input type="number" id="cijfer" onchange="color();" /></td>
+                </tr>
+                <tr>
+                    <td>Jan</td>
+                    <td><input type="number" id="cijfer" onchange="color();" /></td>
+                </tr>
+                <tr>
+                    <td>Kim Sing</td>
+                    <td><input type="number" id="cijfer" onchange="color();" /></td>
+                </tr>
+                <tr>
+                    <td>Samantha</td>
+                    <td><input type="number" id="cijfer" onchange="color();" /></td>
+                </tr>
+                <tr>
+                    <td>Joyce</td>
+                    <td><input type="number" id="cijfer" onchange="color();" /></td>
+                </tr>
+                <tr>
+                    <td>Gareth</td>
+                    <td><input type="number" id="cijfer" onchange="color();" /></td>
+                </tr>
+            </table>
+        </div>
+        <table>
             <tr>
                 <caption>Engels</caption>
                 <th>Naam</th>
@@ -128,93 +172,112 @@
             </tr>
             <tr>
                 <td>Willem</td>
-                <td>3</td>
+                <td><input type="number" id="cijfer" onchange="color();" /></td>
             </tr>
             <tr>
                 <td>Jan</td>
-                <td>7</td>
+                <td><input type="number" id="cijfer" onchange="color();" /></td>
             </tr>
             <tr>
                 <td>Kim Sing</td>
-                <td>10</td>
+                <td><input type="number" id="cijfer" onchange="color();" /></td>
             </tr>
             <tr>
                 <td>Samantha</td>
-                <td>4</td>
+                <td><input type="number" id="cijfer" onchange="color();" /></td>
             </tr>
             <tr>
                 <td>Joyce</td>
-                <td>5.5</td>
+                <td><input type="number" id="cijfer" onchange="color();" /></td>
             </tr>
             <tr>
                 <td>Gareth</td>
-                <td>1</td>
+                <td><input type="number" id="cijfer" onchange="color();" /></td>
             </tr>
         </table>
+    </div>
     </div>
 
-    <div class="gemiddeld">
-        <table style="width:30%">
-            <tr>
-                <caption>Resultaat gemiddeld</caption>
-                <th>Naam</th>
-                <th>Cijfer</th>
-                <th>Beta vakken</th>
-                <th>Volgende klas? > 6.5</th>
-            </tr>
-            <tr>
-                <td>Willem</td>
-                <td>6.5</td>
-                <td>5</td>
-                <td>No</td>
-            </tr>
-            <tr>
-                <td>Jan</td>
-                <td>6.5</td>
-                <td>6</td>
-                <td>No</td>
-            </tr>
-            <tr>
-                <td>Kim Sing</td>
-                <td>4.5</td>
-                <td>9</td>
-                <td>Yes</td>
-            </tr>
-            <tr>
-                <td>Samantha</td>
-                <td>6</td>
-                <td>5</td>
-                <td>No</td>
-            </tr>
-            <tr>
-                <td>Joyce</td>
-                <td>6.5</td>
-                <td>7</td>
-                <td>Yes</td>
-            </tr>
-            <tr>
-                <td>Gareth</td>
-                <td>6</td>
-                <td>3</td>
-                <td>No</td>
-            </tr>
-        </table>
+    <div class="flex_gemiddeld">
+        <div class="gemiddeld">
+            <table>
+                <table>
+                    <caption>Resultaat gemiddeld</caption>
+                    <tr>
+                        <th>Naam</th>
+                        <th>Talen</th>
+                        <th>Beta vakken</th>
+                        <th>Volgende klas? > 6.5</th>
+                    </tr>
+                    <tr>
+                        <td>Willem</td>
+                        <td><span id="talen" onchange="color2();"></span></td>
+                        <td><span id="beta" onchange="color2();"></span></td>
+                        <td><span id="over" onchange="color2();"></span></td>
+                    </tr>
+                    <tr>
+                        <td>Jan</td>
+                        <td><span id="talen" onchange="color2();"></span></td>
+                        <td><span id="beta" onchange="color2();"></span></td>
+                        <td><span id="over" onchange="color2();"></span></td>
+                    </tr>
+                    <tr>
+                        <td>Kim Sing</td>
+                        <td><span id="talen" onchange="color2();"></span></td>
+                        <td><span id="beta" onchange="color2();"></span></td>
+                        <td><span id="over" onchange="color2();"></span></td>
+                    </tr>
+                    <tr>
+                        <td>Samantha</td>
+                        <td><span id="talen" onchange="color2();"></span></td>
+                        <td><span id="beta" onchange="color2();"></span></td>
+                        <td><span id="over" onchange="color2();"> </span></td>
+                    </tr>
+                    <tr>
+                        <td>Joyce</td>
+                        <td><span id="talen" onchange="color2();"></span></td>
+                        <td><span id="beta" onchange="color2();"></span></td>
+                        <td><span id="over" onchange="color2();"></span></td>
+                    </tr>
+                    <tr>
+                        <td>Gareth</td>
+                        <td><span id="talen" onchange="color2();"></span></td>
+                        <td><span id="beta" onchange="color2();"></span></td>
+                        <td><span id="over" onchange="color2();"></span></td>
+                    </tr>
+                </table>
+        </div>
     </div>
+
 
     <script>
-        function checkVoldoende() {
-            let number = document.getElementById("number").value;
-            if (number >= 5.5) {
-                document.getElementById("number").style.backgroundcolor = "green";
-            } if (number <= 5.5) {
-                document.getElementById("number").style.color = "red";
-            } if (number >= 7.5) {
-                document.getElementById("number").style.color = "darkgreen";
+        // COLOR
+        function color() {        
+            const input = document.getElementsByClassName("cijfer")
+            console.log("input");
+
+    
+
+            if (input.value >= 1 && input.value < 5.5) {
+                input.style.backgroundColor = "red";
+            } else if (input.value > 7.5) {
+                cijferInput.style.backgroundColor = "darkgreen";
+            } else if (input.value > 5.5) {
+                input.style.backgroundColor = "green";
             }
         }
 
-    </script>
+        color();
 
+        // GEMIDDELDE
+
+
+
+
+        // OVER
+
+
+    </script>
 </body>
 
 </html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <pre>
+        <code>
+            <h3>Opdracht 1 t/m 4</h3>
+            // Opdracht 1
+            function printCar() {
+                const carBrand = "Volvo";
+            }
+            console.log(carBrand); //Uncaught ReferenceError: carBrand is not defined - BLOCK SCOPE
+
+            <mark>carBrand wordt niet gelogt, omdat deze binnen een Block Scope staat</mark>
+
+    
+            //Opdracht 2
+            let carName;
+            function printCar() {
+                carBrand = "Volvo";
+            }
+            console.log(carBrand); //Uncaught ReferenceError: carBrand is not defined - GLOBAL SCOPE
+
+            <mark>carBrand wordt niet gelogt. omdat de variabele carName buiten de global scope staat, namelijk erboven.</mark>
+
+    
+            //Opdracht 3
+            function printCar() {
+                carBrand = "Volvo";
+            }
+            printCar();
+            console.log(carBrand); //Volvo - BLOCK SCOPE 
+
+            <mark>carBrand wordt gelogt, omdat het een Block Scope is en de variable binnen de curly braces staat</mark>
+
+
+            // Opdracht 4
+            function printCar() {
+            carBrand = "Volvo";
+            return function (type) {
+                console.log(carBrand + " " + type);
+                }
+            }
+            const car = printCar();
+            car("v40"); //Volvo v40
+
+            <mark>Volvo v40 wordt gelogt, omdat de functie in een variabele zit en vervolgens weer opgeroepen wordt met Parameters.</mark>
+            <mark>Het verschil is dat hier sprake is van een functie binnen een funtie.</mark>
+            <mark>De eerste functie returned een functie, deze funtie returned een value</mark>
+            
+        </code>
+    </pre>
+
+    <script>
+        // Opdracht 1
+        function printCar() {
+            const carBrand = "Volvo";
+        }
+        console.log(carBrand); //Uncaught ReferenceError: carBrand is not defined BLOCK SCOPE
+
+        //Opdracht 2
+        let carName;
+        function printCar() {
+            carBrand = "Volvo";
+        }
+        console.log(carBrand); //Uncaught ReferenceError: carBrand is not defined GLOBAL SCOPE
+
+        //Opdracht 3
+        function printCar() {
+            carBrand = "Volvo";
+        }
+        printCar();
+        console.log(carBrand); //Volvo BLOCK SCOPE 
+
+        // Opdracht 4
+        function printCar() {
+            carBrand = "Volvo";
+            return function (type) {
+                console.log(carBrand + " " + type);
+            }
+        }
+        const car = printCar();
+        car("v40"); //Volvo v40
+    </script>
+
+</body>
+
+</html>
