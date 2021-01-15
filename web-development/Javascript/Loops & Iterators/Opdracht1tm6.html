@@ -23,7 +23,7 @@ initial-scale=1.0">
         }
 
         //Opdracht 2
-        for (let i = 0; i < 20; i += 2) {
+        for (let i = 0; i <= 20; i += 2) {
             console.log(i)
         }
 
@@ -33,19 +33,39 @@ initial-scale=1.0">
             console.log(sports[i]);
         }
 
-        //Opdracht 4
+        //Opdracht 4 WHILE LOOP
         let i = 0;
         while (i < sports.length) {
             console.log(sports[i]);
             i++;
         }
 
-        //Opdracht 5
+        //Opdracht 5 FOR...IN LOOP
+        let x;
+
+        for (x in sports) {
+            console.log(sports[x]);
+        }
+
+        //Opdracht 6 FOR...OF LOOP
+        for(let sport of sports){
+            console.log(sport)
+        }
 
 
 
 
-       
+
+
+
+
+
+
+
+
+
+
+
 
 
     </script>
