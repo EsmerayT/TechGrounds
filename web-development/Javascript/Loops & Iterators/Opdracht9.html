@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <a href="https://www.youtube.com/watch?v=IJf5f2LsIEA&ab_channel=CraigRamey">voorbeeld</a>
+
+    <script>
+        let x = [2, 7, 5, 10, 4, 9, 3, 1, 8, 6];
+        function bubbleSort() {
+            let swapp;
+            do {
+                swapp = false;
+                for (let i = 0; i < x.length - 1; i++) {
+                    if (x[i] > [i + 1]) {
+                        let temp = x[i];
+                        x[i] = x[i + 1];
+                        x[i + 1] = temp;
+                        swapp = true;
+                    }
+                }
+            } while (swapp);
+            return x;
+        }
+
+        console.log(bubbleSort(x));
+    </script>
+
+</body>
+
+</html>
