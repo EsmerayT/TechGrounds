@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,
+initial-scale=1.0">
+    <title>Opdracht 1, 2, 3</title>
+</head>
+
+<body>
+    <div id="clubs" class="clubs"></div>
+    <script>
+        //Opdracht 1 & 2
+        let clubInfo = {
+            naamClub: 'fc Dordrecht',
+            typeSport: 'voetbal',
+            aantalLeden: 16,
+            contactGegevens: {
+                adres: 'Krommedijk 210',
+                telNr: 01234567,
+                contactPersoon: 'Maik van den Kieboom',
+            }
+        };
+
+        console.log(clubInfo);
+
+        //Opdracht 3
+        function Club (naam, typeSport, aantalLeden){
+            this.naam = naam;
+            this.typeSport = typeSport;
+            this.aantalLeden = aantalLeden;
+            // this.updateNaam = function() {
+            //     return ++this.naam;
+            // }
+        };
+
+        let club1 = new Club("Sparta", "voetbal", 44);
+        let club2 = new Club("Feyenoord", "voetbal", 35);
+        let club3 = new Club("Ajax", "voetbal", 22);
+        let club4 = new Club("ADO Den Haag", "voetbal", 18);
+
+        console.log(club1.naam, club2.naam, club3.naam, club4.naam);
+
+    </script>
+</body>
+
+
+</html>

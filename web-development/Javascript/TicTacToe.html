@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .board {
+        display: flex;
+        flex-wrap: wrap;
+        width: 900px;
+        border: 1px solid black;
+    }
+
+    .box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 300px;
+        height: 300px;
+        font-size: 72px;
+        border: 1px solid black;
+        box-sizing: border-box;
+    }
+</style>
+
+<body>
+    <div class="board">
+        <div id="1" class="box" onclick="play(1)"></div>
+        <div id="2" class="box" onclick="play(2)"></div>
+        <div id="3" class="box" onclick="play(3)"></div>
+        <div id="4" class="box" onclick="play(4)"></div>
+        <div id="5" class="box" onclick="play(5)"></div>
+        <div id="6" class="box" onclick="play(6)"></div>
+        <div id="7" class="box" onclick="play(7)"></div>
+        <div id="8" class="box" onclick="play(8)"></div>
+        <div id="9" class="box" onclick="play(9)"></div>
+    </div>
+    <script>
+        const board = {
+            player1: "X",
+            player2: "O",
+            currentTurn: "X"
+        }
+
+        const winningConditions = [
+            [1, 2, 3],
+            [4, 5, 6],
+            [7, 8, 9],
+            [1, 4, 7],
+            [2, 5, 8],
+            [3, 6, 9],
+            [1, 5, 9],
+            [3, 5, 7]
+        ]
+
+        function play(tileNr) {
+            console.log(tileNr);
+            if (board.currentTurn === board.player1) {
+                document.getElementById(tileNr).innerText = "X";
+                board.currentTurn = board.player2;
+            } else {
+                document.getElementById(tileNr).innerText = "O";
+                board.currentTurn = board.player1;
+            }
+            //controleren of iemand gewonnen heeft.
+            for (let i = 0; i < winningConditions.length; i++) {
+                console.log(winningConditions[i]);
+                if (document.getElementById(winningConditions[i][0]) === board.player1 &&
+                    document.getElementById(winningConditions[i][1]) === board.player1 &&
+                    document.getElementById(winningConditions[i][2]) === board.player1) {
+
+                }
+            }
+        }
+
+    </script>
+</body>
+
+</html>

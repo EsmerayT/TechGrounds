@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    body {
+        background-color: lightgrey;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    h1 {
+        display: flex;
+        justify-content: center;
+        font-size: 65px;
+    }
+
+    .selections {
+        display: flex;
+        justify-content: center;
+        justify-content: space-evenly;
+    }
+
+    .selection {
+        font-size: 150px;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    .results {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: space-between;
+        font-size: 50px;
+        text-align: center;
+    }
+
+    .result-score {
+        color: #444040;
+    }
+</style>
+
+<body>
+    <h1>&emsp;Rock&emsp; &ensp;&emsp;Paper&emsp; &emsp;Scissors</h1>
+    <div class="selections">
+        <button class="selection" data-selection="rock">✊🏽</button>
+        <button class="selection" data-selection="paper">✋🏽</button>
+        <button class="selection" data-selection="scissors">✌🏽</button>
+    </div>
+    <div class="results">
+        <div>
+            You
+            <span class="result-score" data-your-score>0</span>
+        </div>
+        <div data-final-column>
+            Computer
+            <span class="result-score" data-computer-score>0</span>
+        </div>
+        <!-- <div class="result-selection winner">✊🏽/div>
+    <div class="result-selection">✌</div> -->
+    </div>
+
+    <script>
+        const selectionButtons = document.querySelectorAll('[data-selection]')
+        const finalColumn = document.querySelector('[data-final-column]')
+        const computerScoreSpan = document.querySelector('[data-computer-score]')
+        const yourScoreSpan = document.querySelector('[data-your-score]')
+        const turns = 3;
+        const SELECTIONS = [
+            {
+                name: 'rock',
+                emoji: '✊🏽',
+                beats: 'scissors'
+            },
+            {
+                name: 'paper',
+                emoji: '✋🏽',
+                beats: 'rock'
+            },
+            {
+                name: 'scissors',
+                emoji: '✌🏽',
+                beats: 'paper'
+            }
+        ]
+
+        selectionButtons.forEach(selectionButton => {
+            selectionButton.addEventListener('click', e => {
+                const selectionName = selectionButton.dataset.selection
+                const selection = SELECTIONS.find(selection => selection.name === selectionName)
+                makeSelection(selection)
+            })
+        })
+
+        function makeSelection(selection) {
+            const computerSelection = randomSelection()
+            const yourWinner = isWinner(selection, computerSelection)
+            const computerWinner = isWinner(computerSelection, selection)
+
+            addSelectionResult(computerSelection, computerWinner)
+            addSelectionResult(selection, yourWinner)
+
+            if (yourWinner) incrementScore(yourScoreSpan)
+            if (computerWinner) incrementScore(computerScoreSpan)
+        }     
+
+        function addSelectionResult(selection, winner) {
+            const div = document.createElement('div')
+            div.innerText = selection.emoji
+            div.classList.add('result-selection')
+            if (winner) div.classList.add('winner')
+            finalColumn.after(div)
+        }
+
+        function incrementScore(scoreSpan) {
+            scoreSpan.innerText = parseInt(scoreSpan.innerText) + 1
+            if (scoreSpan.innerText == turns) {
+                location.reload();
+            }
+        }
+
+        function isWinner(selection, opponentSelection) {
+            return selection.beats === opponentSelection.name
+        }
+
+        function randomSelection() {
+            const randomIndex = Math.floor(Math.random() * SELECTIONS.length)
+            return SELECTIONS[randomIndex]
+        }
+
+
+    </script>
+
+</body>
+
+</html>

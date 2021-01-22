@@ -12,19 +12,26 @@
             <code>
             <h3>Opdracht 8</h3>
             Maak een for loop die van 0 t/m 50 itereert. Een hele bekende oefening is de fibonacci
-            reeks. Lees je in hoe fibonacci reeks werkt:
-            https://www.fibonicci.com/nl/rij-van-fibonacci/.
+            reeks. Lees je in hoe fibonacci reeks werkt: https://www.fibonicci.com/nl/rij-van-fibonacci/.
             Neem zelf eerst de tijd om dit uit te coderen, want op internet staat letterlijk het
-            antwoord.
-            Het gaat hier om het aanleren van bepaalde denkwijze om dit op te lossen. Maak hiervoor
-            een stappenplan en werkt dit uit in code.
+            antwoord. Het gaat hier om het aanleren van bepaalde denkwijze om dit op te lossen. 
+            Maak hiervoor een stappenplan en werkt dit uit in code.
             </code>
         </pre>
 
     <div id="answer"></div>
-    <script>
-       
+    <script>      
+        let a = 1;
+        let b = 0;
+        let result = b;
 
+
+        for (i = 0; i <= 10; i++) {
+            console.log(result);
+            result = a + b;
+            a = b;
+            b = result;
+        }        
     </script>
 </body>
 

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opdracht 4</title>
+</head>
+
+<body>
+    <script>
+        class Person {
+            constructor(name, age) {
+                this.name = name;
+                this.age = age;
+            }
+        }
+        const persons = [
+            new Person("Jan", 24),
+            new Person("Klaas", 15),
+            new Person("Yanis", 42),
+            new Person("Rupel", 55),
+            new Person("Hendrik", 32),
+            new Person("Mono", 28),
+            new Person("West", 23),
+        ]
+
+        const sortByAge = persons.sort(function (a, b) {
+            return a.age - b.age;
+
+        });
+
+        console.log(sortByAge);
+
+
+        // class Rectangle {
+        //     constructor(height, width) {
+        //         this.height = height;
+        //         this.width = width;
+        //     }
+        //     // Getter
+        //     get area() {
+        //         return this.calcArea();
+        //     }
+        //     // Method
+        //     calcArea() {
+        //         return this.height * this.width;
+        //     }
+        // }
+
+        // const square = new Rectangle(10, 10);
+
+        // console.log(square.area); // 100
+    </script>
+</body>
+
+</html>

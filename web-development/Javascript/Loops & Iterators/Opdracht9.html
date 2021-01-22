@@ -8,29 +8,31 @@
 </head>
 
 <body>
-    <a href="https://www.youtube.com/watch?v=IJf5f2LsIEA&ab_channel=CraigRamey">voorbeeld</a>
-
     <script>
-        let x = [2, 7, 5, 10, 4, 9, 3, 1, 8, 6];
-        function bubbleSort() {
-            let swapp;
-            do {
-                swapp = false;
-                for (let i = 0; i < x.length - 1; i++) {
-                    if (x[i] > [i + 1]) {
-                        let temp = x[i];
-                        x[i] = x[i + 1];
-                        x[i + 1] = temp;
-                        swapp = true;
-                    }
+        let numbers = [2, 7, 5, 10, 4, 9, 3, 1, 8, 6];
+        let swapped;
+        function bubbleSort(a) {
+            swapped = false;
+            let end = a.length - 1;
+            for (let i = 0; i < end; i++) {
+                if (a[i] > a[i + 1]) {
+                    swapped = true;
+                    // let temp = a[i];
+                    // a[i] = a[i+1];
+                    // a[i+1] = temp;
+
+                    // let temp = arr[i + 1];
+                    [a[i], a[i + 1]] = [a[i + 1], a[i]];
                 }
-            } while (swapp);
-            return x;
+            }
+            end--;
         }
+        do {
+            bubbleSort(numbers);
+        } while (swapped);
 
-        console.log(bubbleSort(x));
+        console.log(numbers);
     </script>
-
 </body>
 
 </html>
