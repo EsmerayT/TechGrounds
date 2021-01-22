@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+​
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>7. Rock Paper Scissors</title>
 </head>
-
 <style>
     body {
         background-color: lightgrey;
@@ -19,123 +19,107 @@
         font-size: 65px;
     }
 
-    .selections {
+    span {
+        display: flex;
+        justify-content: center;
+        font-size: 30px;
+    }
+
+    .select {
         display: flex;
         justify-content: center;
         justify-content: space-evenly;
     }
 
-    .selection {
+    button {
         font-size: 150px;
         background: none;
         border: none;
         cursor: pointer;
     }
-
-    .results {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        justify-content: space-between;
-        font-size: 50px;
-        text-align: center;
-    }
-
-    .result-score {
-        color: #444040;
-    }
 </style>
+​
 
 <body>
     <h1>&emsp;Rock&emsp; &ensp;&emsp;Paper&emsp; &emsp;Scissors</h1>
-    <div class="selections">
-        <button class="selection" data-selection="rock">✊🏽</button>
-        <button class="selection" data-selection="paper">✋🏽</button>
-        <button class="selection" data-selection="scissors">✌🏽</button>
+    <div class="select">
+        <button class="knop" onclick="steen()">✊🏽</button>
+        <button class="knop" onclick="papier()">✋🏽</button>
+        <button class="knop" onclick="schaar()">✌🏽</button>
     </div>
-    <div class="results">
-        <div>
-            You
-            <span class="result-score" data-your-score>0</span>
-        </div>
-        <div data-final-column>
-            Computer
-            <span class="result-score" data-computer-score>0</span>
-        </div>
-        <!-- <div class="result-selection winner">✊🏽/div>
-    <div class="result-selection">✌</div> -->
-    </div>
-
+    <!-- <button class="knop" onclick="keuzeTegenstander()">Tegenstander</button> -->
+    <br><br>
+    <span class="result"> </span>
+    ​
+    ​
     <script>
-        const selectionButtons = document.querySelectorAll('[data-selection]')
-        const finalColumn = document.querySelector('[data-final-column]')
-        const computerScoreSpan = document.querySelector('[data-computer-score]')
-        const yourScoreSpan = document.querySelector('[data-your-score]')
-        const turns = 3;
-        const SELECTIONS = [
-            {
-                name: 'rock',
-                emoji: '✊🏽',
-                beats: 'scissors'
-            },
-            {
-                name: 'paper',
-                emoji: '✋🏽',
-                beats: 'rock'
-            },
-            {
-                name: 'scissors',
-                emoji: '✌🏽',
-                beats: 'paper'
-            }
-        ]
+        const keuze = ["steen ✊🏽", "papier ✋🏽", "schaar ✌🏽"];
+        const steen1 = keuze[0];
+        const papier1 = keuze[1];
+        const schaar1 = keuze[2];
+        const result = document.querySelector(".result").innerHTML
 
-        selectionButtons.forEach(selectionButton => {
-            selectionButton.addEventListener('click', e => {
-                const selectionName = selectionButton.dataset.selection
-                const selection = SELECTIONS.find(selection => selection.name === selectionName)
-                makeSelection(selection)
-            })
-        })
-
-        function makeSelection(selection) {
-            const computerSelection = randomSelection()
-            const yourWinner = isWinner(selection, computerSelection)
-            const computerWinner = isWinner(computerSelection, selection)
-
-            addSelectionResult(computerSelection, computerWinner)
-            addSelectionResult(selection, yourWinner)
-
-            if (yourWinner) incrementScore(yourScoreSpan)
-            if (computerWinner) incrementScore(computerScoreSpan)
-        }     
-
-        function addSelectionResult(selection, winner) {
-            const div = document.createElement('div')
-            div.innerText = selection.emoji
-            div.classList.add('result-selection')
-            if (winner) div.classList.add('winner')
-            finalColumn.after(div)
+        function keuzeTegenstander() {
+            let randomKeuze = keuze[~~(Math.random() * keuze.length)];
+            return randomKeuze;
         }
 
-        function incrementScore(scoreSpan) {
-            scoreSpan.innerText = parseInt(scoreSpan.innerText) + 1
-            if (scoreSpan.innerText == turns) {
-                location.reload();
+        console.log();
+
+        function steen() {
+            console.log(keuze[0]);
+            let uitkomst = keuzeTegenstander();
+            if (uitkomst == papier1) {
+                console.log("you lost");
+                document.querySelector(".result").innerHTML = `De tegenstander koos ${uitkomst} Jij hebt verloren 😩`;
+            }
+            if (uitkomst == schaar1) {
+                console.log("you won");
+                document.querySelector(".result").innerHTML = `De tegenstander koos ${uitkomst} Jij hebt gewonnen 😃`;
+            }
+            if (uitkomst == steen1) {
+                console.log("gelijk spel");
+                document.querySelector(".result").innerHTML = `De tegenstander koos ${uitkomst} Het is een gelijkspel 😑`;
+            }
+            // console.log(`test${a}`);
+        }
+
+        function papier() {
+            console.log(keuze[1]);
+            let uitkomst = keuzeTegenstander();
+            if (uitkomst == schaar1) {
+                console.log("you lost");
+                document.querySelector(".result").innerHTML = `De tegenstander koos ${uitkomst} Jij hebt verloren 😩`;
+            }
+            if (uitkomst == steen1) {
+                console.log("you won");
+                document.querySelector(".result").innerHTML = `De tegenstander koos ${uitkomst} Jij hebt gewonnen 😃`;
+            }
+            if (uitkomst == papier1) {
+                console.log("gelijk spel");
+                document.querySelector(".result").innerHTML = `De tegenstander koos ${uitkomst} Het is een gelijkspel 😑`;
             }
         }
 
-        function isWinner(selection, opponentSelection) {
-            return selection.beats === opponentSelection.name
+        function schaar() {
+            console.log(keuze[2]);
+            let uitkomst = keuzeTegenstander();
+            if (uitkomst == steen1) {
+                console.log("you lost");
+                document.querySelector(".result").innerHTML = `De tegenstander koos ${uitkomst} Jij hebt verloren 😩`;
+            }
+            if (uitkomst == papier1) {
+                console.log("you won");
+                document.querySelector(".result").innerHTML = `De tegenstander koos ${uitkomst} Jij hebt gewonnen 😃`;
+            }
+            if (uitkomst == schaar1) {
+                console.log("gelijk spel");
+                document.querySelector(".result").innerHTML = `De tegenstander koos ${uitkomst} Het is een gelijkspel 😑`;
+            }
         }
-
-        function randomSelection() {
-            const randomIndex = Math.floor(Math.random() * SELECTIONS.length)
-            return SELECTIONS[randomIndex]
-        }
-
-
     </script>
-
+    ​
 </body>
+​
 
 </html>
