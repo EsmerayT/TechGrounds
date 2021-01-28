@@ -1,0 +1,66 @@
+.rekenmachine{
+    display: flex;
+    position: relative;
+    background-color: black;
+    border-radius: 15px 15px 0px 0px ;
+    width: 400px;
+    height: 600px;
+} 
+
+.scherm{
+    position: absolute;
+    background-color: rgb(61, 61, 61);
+    border-radius: 15px 15px 0px 0px ;
+    width: 396px;
+    height: 20%;
+    margin: 2px 2px 0px 2px;
+}
+
+.knoppen{
+    position:absolute;
+    top: 22%;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+button{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    outline: none;
+    border: none;
+    margin: 3px;
+    background-color:grey;
+    font-weight: bold;
+}
+
+.knop0{
+    width: 170px;
+    border-radius: 40px;
+}
+ .orange{
+     background-color: orange;
+     color: whitesmoke;
+ }
+
+.offWhite{
+    background-color: whitesmoke;
+}
+
+.scherm{
+    position: relative;
+    text-align: right;
+}
+
+.som{
+    position: absolute;
+    font-size: 60px;
+    color: whitesmoke;
+    top: 25px;
+    right: 35px;
+}
+
+/* span{
+    max-width: 90%;
+} */

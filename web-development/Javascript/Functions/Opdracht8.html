@@ -252,11 +252,11 @@
 
     <script>
         // COLOR
-        function color() {        
+        function color() {
             const input = document.getElementsByClassName("cijfer")
             console.log("input");
 
-    
+
 
             if (input.value >= 1 && input.value < 5.5) {
                 input.style.backgroundColor = "red";
@@ -271,7 +271,12 @@
 
         // GEMIDDELDE
 
-
+        function change() // no ';' here
+        {
+            let button = document.getElementById("ac");
+            if (button.value == "AC") button.value = "C";
+            else button.value = "AC";
+        }
 
 
         // OVER

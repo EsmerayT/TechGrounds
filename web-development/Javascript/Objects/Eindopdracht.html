@@ -1,126 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="Eindopdracht.css">
+
 </head>
-<style>
-   .rekenmachine{
-    display: flex;
-    position: relative;
-    background-color: black;
-    border-radius: 15px 15px 0px 0px ;
-    width: 400px;
-    height: 600px;
-} 
 
-.scherm{
-    position: absolute;
-    background-color: rgb(61, 61, 61);
-    border-radius: 15px 15px 0px 0px ;
-    width: 396px;
-    height: 20%;
-    margin: 2px 2px 0px 2px;
-
-}
-
-.knoppen{
-    position:absolute;
-    top: 22%;
-    flex-direction: column;
-    justify-content: space-between;
-    margin: 20px;
-}
-
-button{
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    outline: none;
-    border: none;
-    margin: 3px;
-    background-color:grey;
-
-}
-
-.knop0{
-    width: 170px;
-    border-radius: 40px;
-}
- .orange{
-     background-color: orange;
-     color: whitesmoke;
- }
-
-.offWhite{
-    background-color: whitesmoke;
-}
-
-.scherm{
-    position: relative;
-    text-align: right;
-    
-}
-
-.som{
-    position: absolute;
-    font-size: 60px;
-    color: whitesmoke;
-    top: 25px;
-    right: 35px;
-}
-
-</style>
 <body>
     <h1>Eindopdracht</h1>
 
     <div class="rekenmachine">
         <div class="scherm">
-            <span class="som"></span>
+            <span class="som" id="idSom"></span>
         </div>
 
         <div class="knoppen">
-            <button class="knop offWhite" id="ac">AC</button>
-            <button class="knop offWhite" id="plusMin">+/-</button>
-            <button class="knop offWhite" id="modulo">%</button>
-            <button class="knop orange" id="delen">/</button>
-            <button class="knop" id="7">7</button>
-            <button class="knop" id="8">8</button>
-            <button class="knop" id="9">9</button>
-            <button class="knop orange" id="keer">X</button>
-            <button class="knop" id="4">4</button>
-            <button class="knop" id="5">5</button>
-            <button class="knop" id="6">6</button>
-            <button class="knop orange" id="min">-</button>
-            <button class="knop" id="1">1</button>
-            <button class="knop" id="2">2</button>
-            <button class="knop" id="3">3</button>
-            <button class="knop orange" id="plus">+</button>
-            <button class="knop knop0" id="0" onclick="input0()">0</button>
-            <button class="knop" id="punt">.</button>
-            <button class="knop orange" id="is">=</button>
-
+            <button class="knop offWhite" id="ac" onclick="inputAC()"> AC</button>
+            <button class="knop offWhite" id="plusMin" onclick="inputPlusMin()">+/-</button>
+            <button class="knop offWhite" id="modulo" onclick="inputModulo()">%</button>
+            <button class="knop orange" id="delen" onclick="inputDelen()"> /</button>
+            <button class="knop" id="7" onclick="input7()"> 7</button>
+            <button class="knop" id="8" onclick="input8()"> 8</button>
+            <button class="knop" id="9" onclick="input9()"> 9</button>
+            <button class="knop orange" id="keer" onclick="inputKeer()"> X</button>
+            <button class="knop" id="4" onclick="input4()"> 4</button>
+            <button class="knop" id="5" onclick="input5()"> 5</button>
+            <button class="knop" id="6" onclick="input6()"> 6</button>
+            <button class="knop orange" id="min" onclick="inputMin()"> -</button>
+            <button class="knop" id="1" onclick="input1()"> 1</button>
+            <button class="knop" id="2" onclick="input2()"> 2</button>
+            <button class="knop" id="3" onclick="input3()"> 3</button>
+            <button class="knop orange" id="plus" onclick="inputPlus()"> +</button>
+            <button class="knop knop0" id="0" onclick="input0()"> 0</button>
+            <button class="knop" id="punt" onclick="inputPunt()"> .</button>
+            <button class="knop orange" id="is" onclick="inputIs()"> =</button>
         </div>
-        
-
-
     </div>
 
 
     <script>
-        // let span = document.getElementById("span").innerHTML
-        // let knop0 = document.getElementById("0").value
-        // log(input0);
-        // function input0(){
-        //     console.log(knop0);
-        // }
-        function input0(){
-            console.log(0);
-            document.querySelector(".som").innerHTML = "test";
 
+        document.querySelectorAll('.orange').forEach(function (obj) {
+            obj.addEventListener('mousedown', function () {
+                this.style.backgroundColor = "whitesmoke";
+                this.style.color = "orange";
+            })
+            obj.addEventListener('mouseup', function () {
+                this.style.backgroundColor = "orange";
+                this.style.color = "whitesmoke";
+
+            })
+        });
+
+        function getal() {
+            document.getElementById("ac").innerText = "C";
+            return document.getElementById("idSom").innerHTML;
+        };
+
+        function input0() {
+            document.querySelector(".som").innerHTML = getal() + "0";
         }
+
+        function input1() {
+            document.querySelector(".som").innerHTML = getal() + "1";
+        }
+
+        function input2() {
+            document.querySelector(".som").innerHTML = getal() + "2";
+        }
+
+        function input3() {
+            document.querySelector(".som").innerHTML = getal() + "3";
+        }
+
+        function input4() {
+            document.querySelector(".som").innerHTML = getal() + "4";
+        }
+
+        function input5() {
+            document.querySelector(".som").innerHTML = getal() + "5";
+        }
+
+        function input6() {
+            document.querySelector(".som").innerHTML = getal() + "6";
+        }
+
+        function input7() {
+            document.querySelector(".som").innerHTML = getal() + "7";
+        }
+
+        function input8() {
+            document.querySelector(".som").innerHTML = getal() + "8";
+        }
+
+        function input9() {
+            document.querySelector(".som").innerHTML = getal() + "9";
+        }
+
+        function inputPunt() {
+            document.querySelector(".som").innerHTML = getal() + ".";
+        }
+
+        function inputAC() {
+            document.querySelector(".som").innerHTML = null;
+            document.getElementById("ac").innerText = "AC";
+        }
+
+        function inputPlusMin() {
+            document.querySelector(".som").innerHTML = getal() - getal() * 2;
+        }
+
+        function inputModulo() {
+            document.querySelector(".som").innerHTML = getal() + "%";
+        }
+
+        function inputDelen() {
+            document.querySelector(".som").innerHTML = getal() + "/";
+        }
+
+        function inputKeer() {
+            document.querySelector(".som").innerHTML = getal() + "*";
+        }
+
+        function inputMin() {
+            document.querySelector(".som").innerHTML = getal() + "-";
+        }
+
+        function inputPlus() {
+            document.querySelector(".som").innerHTML = getal() + "+";
+            // console.log("+")
+        }
+
+        function inputIs() {
+            document.querySelector(".som").innerHTML = getal();
+            // let firstChar = document.querySelector(".som").innerHTML.slice(1)
+            // console.log(firstChar)
+            document.querySelector(".som").innerHTML = getal();
+            let lastChar = document.querySelector(".som").innerHTML.slice(-1)
+            console.log(lastChar)
+            if (lastChar == "+") {
+                return getal() * 2;
+            }
+        }
+
     </script>
 
 </body>
+
 </html>
