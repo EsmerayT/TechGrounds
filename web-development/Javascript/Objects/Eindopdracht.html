@@ -134,17 +134,23 @@
             // console.log("+")
         }
 
-        function inputIs() {
-            document.querySelector(".som").innerHTML = getal();
-            // let firstChar = document.querySelector(".som").innerHTML.slice(1)
-            // console.log(firstChar)
-            document.querySelector(".som").innerHTML = getal();
-            let lastChar = document.querySelector(".som").innerHTML.slice(-1)
-            console.log(lastChar)
-            if (lastChar == "+") {
-                return getal() * 2;
-            }
+         function inputIs() {
+            document.querySelector(".som").innerHTML = parseFloat(eval(getal()).toFixed(2));
         }
+
+        // const regex = /"+"/"-"/ /g
+
+        // function inputIs() {
+        //     document.querySelector(".som").innerHTML = getal();
+        //     // let firstChar = document.querySelector(".som").innerHTML.slice(1)
+        //     // console.log(firstChar)
+        //     document.querySelector(".som").innerHTML = getal();
+        //     let lastChar = document.querySelector(".som").innerHTML.slice(-1)
+        //     console.log(lastChar)
+        //     if (lastChar == "+") {
+        //         return getal() * 2;
+        //     }
+        // }
 
     </script>
 

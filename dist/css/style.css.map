@@ -1,8 +1,11 @@
 {
     "version": 3,
-    "mappings": "AAYA,AAAA,IAAI,CAAC;EACD,UAAU,EAbE,IAAI;EAchB,KAAK,EAZI,KAAK;EAad,WAAW,EATH,GAAG;CAUd;;AAED,AAAA,KAAK,CAAC;EACF,KAAK,EAAE,GAAG;EACV,MAAM,EAAE,MAAM;CACjB",
+    "mappings": "ACEA,AAAA,MAAM,CAAC;EACH,UAAU,ECDC,KAAK;EDEhB,KAAK,ECHS,KAAK;CDOtB;;AAND,AAGI,MAHE,AAGD,MAAM,CAAC;EACJ,UAAU,ECHG,GAAG;CDInB",
     "sources": [
-        "../../web-development/SASS/scss/style.scss"
+        "../../web-development/SASS/3. Partials and Modules/style.scss",
+        "../../web-development/SASS/3. Partials and Modules/_button.scss",
+        "../../web-development/SASS/3. Partials and Modules/_colors.scss",
+        "../../web-development/SASS/3. Partials and Modules/_colors.scss"
     ],
     "names": [],
     "file": "style.css"

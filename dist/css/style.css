@@ -1,11 +1,9 @@
-body {
-  background: grey;
+button {
+  background: green;
   color: white;
-  font-weight: 700;
 }
 
-.main {
-  width: 80%;
-  margin: 0 auto;
+button:hover {
+  background: red;
 }
 /*# sourceMappingURL=style.css.map */
