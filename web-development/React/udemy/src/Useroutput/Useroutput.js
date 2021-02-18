@@ -1,12 +1,12 @@
 import React from 'react';
 
-const Useroutput = (props) => {
+const userOutput = (props) => {
     return (
         <div>
-            <p>Hi! Ik ben {props.username}</p>  
-            <p>en ik ben 30 jaar</p>         
+            <p>(username: {props.userName})</p>  
+            <p>I hope I'll be overwritten!</p>         
         </div>
-    )
-}
+    );
+};
 
-export default Useroutput;
+export default userOutput;

@@ -1,42 +1,25 @@
 import React, { Component } from 'react';
 import './App.css';
-import Userinput from './Userinput/Userinput';
-import Useroutput from './Useroutput/Useroutput';
+import UserInput from './UserInput/UserInput';
+import UserOutput from './UserOutput/UserOutput';
 
 class App extends Component {
   state = {
-    Useroutput: [
-      { username: 'Esmeray' },
-    ]
-  };
-
-  nameChangedHandler = (event) => {
-    this.setState({
-      Userinput: [
-        { username: event.target.value },
-      ]
-    })
+    username:'Esmeray_Tasgit'
   }
 
+  inputUsername = (event) => {
+    this.setState({username: event.target.value})
+  }
   render() {
-    // const style = {
-    //   backgroundColor: 'white',
-    //   font: 'inherit',
-    //   border: '1px solid blue',
-    //   padding: '8px',
-    //   cursor: 'pointer',
-    // };
-
-
     return (
       <div className="App">
-        <Useroutput
-          username={this.state.Useroutput[0].username}
-          changed={this.nameChangedHandler}
-        />
+        <UserInput input={this.inputUsername} />
+        <UserOutput userName={this.state.username} />
+        <UserOutput userName={this.state.username} />
+        <UserOutput userName="Esmeray" />
       </div>
     );
-    // return React.createElement('div', {className: 'App'}, React.createElement('h1', null, 'Does this work now?'));
   }
 }
 
