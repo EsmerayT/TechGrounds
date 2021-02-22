@@ -1,24 +1,26 @@
 import React, { Component } from 'react';
 import './App.css';
-import UserInput from './UserInput/UserInput';
-import UserOutput from './UserOutput/UserOutput';
+import Validation from './Validation/Validation';
+
 
 class App extends Component {
   state = {
-    username:'Esmeray_Tasgit'
+    userInput: ''
+  }
+  inputChangeHandler = (event) => {
+    this.setState({userInput: event.target.value});
+
   }
 
-  inputUsername = (event) => {
-    this.setState({username: event.target.value})
-  }
   render() {
     return (
       <div className="App">
-        <UserInput input={this.inputUsername}
-        currentName={this.state.username} />
-        <UserOutput userName={this.state.username} />
-        <UserOutput userName={this.state.username} />
-        <UserOutput userName="Esmeray" />
+        <input 
+        type = "text" 
+        onChange={this.inputChangeHandler} 
+        value={this.state.userInput}></input>
+        <p>{this.state.userInput}</p>
+        <Validation inputLength={this.state.userInput.length} />
       </div>
     );
   }
