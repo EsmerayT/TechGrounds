@@ -1,134 +1,63 @@
-import React from 'react'
-import './App.css';
-import Calendar from 'react-calendar'
+import React, { useState } from "react";
+import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
-
+import './App.css';
+import Todo from './Components/Todo/Todo'
+import Form from './Components/Todo/Form'
+import {nanoid} from "nanoid";
 
 function App(props) {
-  return (
-    <div className="todoapp stack-large">
-      <Calendar />
-      <h1>Todolist</h1>
-      <form>
-        <input
-          type="text"
-          id="new-todo-input"
-          className="input input__lg"
-          name="text"
-          autoComplete="off"
-        />
-      </form>
-      <button type="submit" className="btn btn__primary btn__lg">
-        Add task to my ToDolist
-        </button>
-      <ul
-        role="list"
-        className="todo-list stack-large stack-exception"
-        aria-labelledby="list-heading"
-      >
-        <li className="todo stack-small">
-          <div className="c-cb">
-            <input id="todo-0" type="checkbox" defaultChecked={true} />
-            <label className="todo-label" htmlFor="todo-0">
-              Huiswerk
-            </label>
-            <button type="button" className="btn btn__danger">
-              X <span className="visually-hidden"></span>
-            </button>
-          </div>
-        </li>
+  const [tasks, setTasks] = useState(props.tasks);
 
+  function toggleTaskCompleted(id){
+    const updatedTasks = tasks.map(task => {
+      if (id === task.id) {
+        return {...task, completed: !task.completed}
+      }
+      return task;
+    })
+    setTasks(updatedTasks);
+    console.log(updatedTasks);
+  }
 
-        <li className="todo stack-small">
-          <div className="c-cb">
-            <input id="todo-0" type="checkbox" defaultChecked={true} />
-            <label className="todo-label" htmlFor="todo-0">
-              Schoonmaken
-            </label>
-            <button type="button" className="btn btn__danger">
-              X <span className="visually-hidden"></span>
-            </button>
-          </div>
-        </li>
+  function deleteTask(id) {
+    const remainingTasks = tasks.filter(task => id !== task.id);
+    setTasks(remainingTasks);
+  }
 
-
-        <li className="todo stack-small">
-          <div className="c-cb">
-            <input id="todo-0" type="checkbox" defaultChecked={true} />
-            <label className="todo-label" htmlFor="todo-0">
-              Toneelspelen
-            </label>
-            <button type="button" className="btn btn__danger">
-              X <span className="visually-hidden"></span>
-            </button>
-          </div>
-        </li>
-
-
-        <li className="todo stack-small">
-          <div className="c-cb">
-            <input id="todo-0" type="checkbox" defaultChecked={true} />
-            <label className="todo-label" htmlFor="todo-0">
-              Slapen
-            </label>
-            <button type="button" className="btn btn__danger">
-              X <span className="visually-hidden"></span>
-            </button>
-          </div>
-        </li>
-
-
-        <li className="todo stack-small">
-          <div className="c-cb">
-            <input id="todo-0" type="checkbox" defaultChecked={true} />
-            <label className="todo-label" htmlFor="todo-0">
-              Test
-            </label>
-            <button type="button" className="btn btn__danger">
-              X <span className="visually-hidden"></span>
-            </button>
-          </div>
-        </li>
-
-
-
-
-        {/* <li className="todo stack-small">
-          <div className="c-cb">
-            <input id="todo-1" type="checkbox" />
-            <label className="todo-label" htmlFor="todo-1">
-              Sleep
-            </label>
-          </div>
-          <div className="btn-group">
-            <button type="button" className="btn">
-              Edit <span className="visually-hidden">Sleep</span>
-            </button>
-            <button type="button" className="btn btn__danger">
-              Delete <span className="visually-hidden">Sleep</span>
-            </button>
-          </div>
-        </li>
-        <li className="todo stack-small">
-          <div className="c-cb">
-            <input id="todo-2" type="checkbox" />
-            <label className="todo-label" htmlFor="todo-2">
-              Repeat
-            </label>
-          </div>
-          <div className="btn-group">
-            <button type="button" className="btn">
-              Edit <span className="visually-hidden">Repeat</span>
-            </button>
-            <button type="button" className="btn btn__danger">
-              Delete <span className="visually-hidden">Repeat</span>
-            </button>
-          </div>
-        </li> */}
-      </ul>
-    </div>
+  const taskList = tasks.map(task => (
+  <Todo
+  id={task.id}
+  name={task.name}
+  completed={task.completed}
+  key={task.id}
+  toggleTaskCompleted={toggleTaskCompleted}
+  deleteTask={deleteTask}
+  />
+  )
   );
 
+  function addTask(name) {
+    const newTask = {id:"todo-" + nanoid(), name: name, completed: false};
+    setTasks([...tasks, newTask]);
+  }
+
+  return (
+
+    <div className="todoapp stack-large">
+          <Calendar />
+      <Form addTask={addTask} />
+      {/* <h1>ToDolist</h1> */}
+ 
+    <ul
+      role="list"
+      className="todo-list stack-large stack-exception"
+      aria-labelledby="list-heading"
+    >
+      {taskList}
+      </ul>
+      </div>
+  );
 }
 
 export default App;
