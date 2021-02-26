@@ -1,4 +1,23 @@
-.background {
+.App {
   background-color: lightgreen;
 }
+
+body {
+  background-color: lightgreen;
+  display: block;
+}
+
+
+/* .components {
+  display: flex;
+  flex-direction: row;
+  padding: 100px;
+} */
+
+/* form {
+  display: block;
+  margin-left: 100px;
+} */
+
+
 
