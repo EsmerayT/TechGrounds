@@ -58,7 +58,7 @@ function App(props) {
     setTasks([...tasks, newTask]);
   }
 
- 
+
 
 
 
@@ -71,12 +71,15 @@ function App(props) {
 
   // };
 
-
+// const onChange = date =>{setDate(date);};
 
 
   return (
     <div>
-      <Calendar  />
+      <Calendar tileContent={({ activeStartDate, date, view }) => view === 'month' && date.getDate() === 1 && date.getMonth() === 0 ? <p>NewYearsEve</p> : null}
+    // onChange={this.onChange} value={date}
+      />
+
       <div className="todoapp stack-large">
         <Form addTask={addTask} />
         <ul
