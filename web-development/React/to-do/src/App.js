@@ -71,13 +71,13 @@ function App(props) {
 
   // };
 
-// const onChange = date =>{setDate(date);};
+  // const onChange = date =>{setDate(date);};
 
 
   return (
     <div>
       <Calendar tileContent={({ activeStartDate, date, view }) => view === 'month' && date.getDate() === 1 && date.getMonth() === 0 ? <p>NewYearsEve</p> : null}
-    // onChange={this.onChange} value={date}
+      // onChange={this.onChange} value={date}
       />
 
       <div className="todoapp stack-large">
