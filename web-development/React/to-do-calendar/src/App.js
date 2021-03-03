@@ -3,34 +3,27 @@ import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import Holidays from './Components/Calendar/Holidays'
 
-export default function App() {
-  const holidays = Holidays
-  const i = 0
-  console.log(Holidays[i].date.length)
-  console.log(Holidays[i].name)
+function App() {
+
+  const tileContent = ({ activeStartDate, date, view }) => {
+    return Holidays.map((el) => {
+      const datum = new Date (el.date);
+      const naam  = el.name.charAt(0);
+      return view === "month" && 
+      date.getDate() === datum.getDate() &&
+      date.getMonth() ===datum.getMonth() ? ( 
+      <p>{naam}</p>
+      ) : null
+    });
+  };
+
+
   
-
-  // const datums = JSON.parse(holidays)
-  // console.log(datums)
-
-  const checkMonth = holidays.map((holiday) => parseInt(holiday.date.slice(0, 2).replace('-', '')));
-
-  const checkDay = holidays.map((holiday) => parseInt(holiday.date.slice(2, -5).replace('-', '')));
-
-  console.log(checkDay)
-  console.log(checkMonth)
-  
-
-//  return(
-//    checkMonth.map((el)=>{'test'})
-//  )
-
   return (
     <div>
-      <Calendar tileContent={({ activeStartDate, date, view }) => view === 'month' && date.getMonth() === parseInt(checkMonth[0] - 1) && date.getDate() === parseInt(checkDay[0]) ? <p> hoi</p> : null} />
-
-
-
+      <Calendar tileContent={tileContent} />
     </div>
   );
 }
+
+export default App;
