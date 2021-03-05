@@ -10,12 +10,17 @@ function App() {
       const datum = new Date (el.date);
       const naam  = el.name.charAt(0);
       return view === "month" && 
-      date.getDate() === datum.getDate() &&
+      date.getDate() === datum.getDate() && 
       date.getMonth() ===datum.getMonth() ? ( 
-      <p>{naam}</p>
+        
+      <p className="react-calendar__tile--holiday" style={{background: 'lightgreen', padding: '0.75em 0.5em'}}>{naam}</p>
       ) : null
     });
   };
+
+
+
+
 
 
   
