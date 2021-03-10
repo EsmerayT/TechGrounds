@@ -1,6 +1,7 @@
 import React from 'react';
 
 const Weather = (props) => {
+    
     return (
         <div className="container">
             <div className="cards">
@@ -10,7 +11,7 @@ const Weather = (props) => {
                 </h1>
                 <h5 className="icons">
                 {/* <img src={`http://openweathermap.org/img/wn/${props.icon}@2x.png`} alt=""/> */}
-                    <img src="http://openweathermap.org/img/wn/02d@2x.png" />
+                    <img src="http://openweathermap.org/img/wn/02d@2x.png" alt="" />
                 </h5>
                 <h1 className="temp">{Math.floor(props.temp)}&deg;</h1>
                 {minmaxTemp(Math.floor(props.temp_min), Math.floor(props.temp_max))}

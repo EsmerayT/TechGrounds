@@ -7,6 +7,9 @@ window.jQuery = $;
 window.$ = $;
 global.jQuery = $;
 
+let i = 0;
+const city = ["Dordrecht", "Bali"];
+
 class App extends React.Component {
   constructor() {
     super();
@@ -25,20 +28,21 @@ class App extends React.Component {
   }
 
   getWeather = async () => {
-    const city = ["Amsterdam", "Dordrecht"]
 
     const api_call = await fetch(
-      `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&lang=nl&appid=${process.env.REACT_APP_WEATHER_API_KEY}`
+      `http://api.openweathermap.org/data/2.5/weather?q=${city[i]}&units=metric&lang=nl&appid=${process.env.REACT_APP_WEATHER_API_KEY}`
     );
 
     const response = await api_call.json();
 
     console.log(response);
+    // console.log(city[0]);
+    // console.log(city[1]);
+  
     
 
     this.setState({
       city: response.name,
-      // city: ["Amsterdam", "Dordrecht"],
       // country: response.sys.country,
       temp: response.main.temp,
       temp_min: response.main.temp_min,
@@ -54,7 +58,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <Weather 
-        city={this.state.city}
+        city={city[0]}
         // city="Amsterdam"
         // country={this.state.country} 
         temp={this.state.temp} 
@@ -64,7 +68,7 @@ class App extends React.Component {
         icon={this.state.icon} 
         />
         <Weather
-         city={this.state.city}
+         city={city[1]}
         //  city="Dordrecht"
          // country={this.state.country} 
          temp={this.state.temp} 
