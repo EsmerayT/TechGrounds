@@ -30,7 +30,7 @@ class App extends React.Component {
   getWeather = async () => {
 
     const api_call = await fetch(
-      `http://api.openweathermap.org/data/2.5/weather?q=${city[i]}&units=metric&lang=nl&appid=${process.env.REACT_APP_WEATHER_API_KEY}`
+      `http://api.openweathermap.org/data/2.5/weather?q=${city[i++]}&units=metric&lang=nl&appid=${process.env.REACT_APP_WEATHER_API_KEY}`
     );
 
     const response = await api_call.json();
