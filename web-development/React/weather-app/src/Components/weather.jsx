@@ -6,7 +6,7 @@ const Weather = (props) => {
         <div className="container">
             <div className="cards">
                 <h1>
-                    {props.city},
+                    {props.city}
                     {/* {props.country} */}
                 </h1>
                 <h5 className="icons">
