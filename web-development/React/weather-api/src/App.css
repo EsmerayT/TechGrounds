@@ -1,0 +1,19 @@
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+
+
+}
+
+body{
+  color: white;
+}
+
+.container {
+  background-image: url("https://wallpaperaccess.com/full/2860353.jpg") ;
+  width: fit-content;
+  padding: 50px;
+  /* background-repeat: no-repeat;
+  background-size: cover;  */
+}

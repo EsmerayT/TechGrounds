@@ -9,13 +9,18 @@ global.jQuery = $;
 
 
 const city = ["Dordrecht", "Bali"];
+let i = 0;
 
 
-// for (let i = 0; i < city.length; i++) {
-//   console.log(city[i]);
-// }
+for (let i = 0; i < city.length; i++) {
+  console.log(city[i]);
+}
 
-city.forEach(element => console.log(element));
+// city.forEach(element => console.log(element));
+
+
+
+
 
 
 class App extends React.Component {
