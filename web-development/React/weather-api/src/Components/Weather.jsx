@@ -10,6 +10,7 @@ const Weather = ({ city }) => {
         url: `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&lang=nl&appid=${process.env.REACT_APP_WEATHER_API_KEY}`
       })
       .then((response) => {
+        console.log(response.data);
         setWeather(response.data.main);
         setWeatherIcon(response.data.weather[0]);
       })
