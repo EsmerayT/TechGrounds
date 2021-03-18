@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import Collapsible from 'react-collapsible';
 
-let i = 0;
 
 const WeatherDetail = ({ lat, lon }) => {
-    const [details, setDetails] = useState('');
     const [date, setDate] = useState([]);
     useEffect(() => {
         axios({
@@ -13,68 +12,53 @@ const WeatherDetail = ({ lat, lon }) => {
         })
             .then((response) => {
                 console.log(response);
-                setDetails(response.data);
                 setDate(response.data.daily);
             })
             .catch((error) => console.log(error));
     }, [lat, lon]);
     console.log(date);
 
-    // let d = new Date(date * 1000).toLocaleDateString();
-    // console.log(d)
 
-    // const d = new Date(date * 1000);
-    // let newDate = d.toLocaleDateString();
-    // console.log(newDate);
-    // console.log(details)
+    return (
 
+        <div className='weatherdetails'>
+            <h1 className="city">Dordrecht Details</h1>
 
+            {date &&
+                date.map((datum, index) => {
+                    const d = new Date(datum.dt * 1000);
+                    const n = d.toLocaleDateString();
+                    console.log(d, n);
 
-    // const realDate = date.map((datum) =>
-    //     new Date(datum.dt * 1000).toLocaleDateString()
-    // );
-    // console.log(realDate);
+                    return (
 
-    // let i = 0;
-
-    // for (let i = 0; i < date.length; i++) {
-    //     console.log(date[i].dt);
-    // }
-
-
-    // const forecast = new Date(date * 1000);
-    // let newDate = forecast.toLocaleDateString();
-    // console.log(newDate);
-    // console.log(details)
-
-
-    const realDate = date.map((datum) =>
-        new Date(datum.dt * 1000).toLocaleDateString()
-    );
-
-    if (details === "") {
-        return <p>loading</p>
-    } else {
-        return (
-            <div className="details">
-                {
-                    <div>
-                        {realDate.map((datum) => (
-                            <div>{datum}</div>
-                        ))}
-                    </div>
-                }
-                <h1>Dordrecht</h1>
-                {/* <p>{newDate}</p> */}
-                <img src={`http://openweathermap.org/img/wn/${details.daily[0].weather[0].icon}@2x.png`} alt="" />
-                <p>{Math.floor(details.daily[0].temp.min)}/{Math.floor(details.daily[0].temp.max)}&deg;C</p>
-                <p>Temperature</p>
-                <p>Morning: {Math.floor(details.daily[0].temp.morn)}&deg;C</p>
-                <p>Afternoon: {Math.floor(details.daily[0].temp.day)}&deg;C</p>
-                <p>Evening: {Math.floor(details.daily[0].temp.eve)}&deg;C</p>
-                <p>Night: {Math.floor(details.daily[0].temp.night)}&deg;C</p>
-            </div>
-        )
-    }
+                        <Collapsible trigger={<div className="datum"> {n} <img
+                            src={`http://openweathermap.org/img/wn/${datum.weather[0].icon}.png`} alt='icon' ></img>
+                            {Math.floor(datum.temp.min)}/{Math.floor(datum.temp.max)}&deg;C</div>}
+                        >
+                            <div className='table'>
+                                <table>
+                                    <tr>
+                                        <td></td>
+                                        <td>Morning</td>
+                                        <td>Afternoon</td>
+                                        <td>Evening</td>
+                                        <td>Night</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Temperature</td>
+                                        <td>{Math.floor(datum.temp.morn)}&deg;C</td>
+                                        <td>{Math.floor(datum.temp.day)}&deg;C</td>
+                                        <td>{Math.floor(datum.temp.eve)}&deg;C</td>
+                                        <td>{Math.floor(datum.temp.night)}&deg;C</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </Collapsible>
+                    );
+                })}
+        </div >
+    )
 }
+
 export default WeatherDetail;
