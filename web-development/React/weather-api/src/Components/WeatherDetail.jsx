@@ -15,14 +15,14 @@ const WeatherDetail = ({ lat, lon, city }) => {
                 setDate(response.data.daily);
             })
             .catch((error) => console.log(error));
-    }, [lat, lon]);
+    }, [lat, lon, city]);
     console.log(date);
 
 
     return (
 
         <div className='weatherdetails'>
-            <h1 className="city">{city} Details</h1>
+            <h1 className="city">{city} details</h1>
 
             {date &&
                 date.map((datum, index) => {
@@ -47,6 +47,7 @@ const WeatherDetail = ({ lat, lon, city }) => {
                                     </tr>
                                     <tr>
                                         <td>Temperature</td>
+
                                         <td>{Math.floor(datum.temp.morn)}&deg;C</td>
                                         <td>{Math.floor(datum.temp.day)}&deg;C</td>
                                         <td>{Math.floor(datum.temp.eve)}&deg;C</td>

@@ -5,7 +5,7 @@ import WeatherDetail from './WeatherDetail';
 const WeatherCard = ({ city }) => {
   const [weather, setWeather] = useState({});
   const [weatherIcon, setWeatherIcon] = useState({});
-  const [toggleDetails, setToggleDetails] = useState();
+  const [toggleDetails, setToggleDetails] = useState(null);
   const [lat, setLat] = useState();
   const [lon, setLon] = useState();
 
@@ -46,6 +46,7 @@ const WeatherCard = ({ city }) => {
         {minmaxTemp(Math.floor(weather.temp_min), Math.floor(weather.temp_max))}
         <h4>Vochtigheid</h4>
         <h4 className="humidity">{weather.humidity}%</h4>
+        
         <button onClick={toggle}>weather forecast</button>
         <div className='toggle'>
           {toggleDetails ? <WeatherDetail lat={lat} lon={lon} city={city}  /> : null}

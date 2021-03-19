@@ -1,10 +1,4 @@
-.App {
-  text-align: center;
-  display: flex;
-  flex-direction: row;
-}
-
-.toggle {
+/* .toggle {
   background: none;
 	color: inherit;
 	border: none;
@@ -12,71 +6,46 @@
 	font: inherit;
 	cursor: pointer;
 	outline: inherit;
-}
+} */
 
 body{
   color: white;
   background-image: url("https://source.unsplash.com/hgGplX3PFBg/1600x900") ;
 }
 
-.city {
-  color: black;
-}
+/* WEATHER DETAILS */
 
-.details {
-  color: black;
+.datum {
+  margin-bottom: 10px;
 }
-
 
 .datum > img {
-  margin-bottom: -20px;
-  margin-left: 30px;
-  /* display: inline-block;
-  justify-content: space-between; */
-  /* line-height: 0; */
+  margin: 0 0 -20px 30px;
 }
 
 .table {
-  /* background-color: grey; */
   padding: 5px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   display: inline-block;
   justify-content: center;
-  color: black;
 }
 
 td {
   padding :5px;
   font-size: 12px;
-
 }
-
-.container {
-  /* background-image: url("https://source.unsplash.com/hgGplX3PFBg/1600x900") ; */
-  /* background-image: url("https://wallpaperaccess.com/full/2860353.jpg") ; */
-  width: fit-content;
-  padding: 50px;
-  background-repeat: no-repeat;
-  background-size: cover;  
-}
-
 
 /* COLLAPSIBLE */
 
 .Collapsible {
-  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
  }
 
 .Collapsible__contentInner {
   padding: 10px;
-  border: 1px solid #ebebeb;
-  border-top: 0; }
-  .Collapsible__contentInner p {
-    margin-bottom: 10px;
-    font-size: 14px;
-    line-height: 20px; }
-    .Collapsible__contentInner p:last-child {
-      margin-bottom: 0; }
+  /* border: 1px solid #ebebeb; */
+  border-top: 0; 
+}
 
 .Collapsible__trigger {
   display: block;
@@ -85,11 +54,10 @@ td {
   text-decoration: none;
   color: #333333;
   position: relative;
-  border: 1px solid white;
   padding: 10px;
-  background: lightgray;
-  /* background-image: url("https://source.unsplash.com/hgGplX3PFBg/1600x900") ; */
-  color: white; }
+  color: white; 
+}
+
   .Collapsible__trigger:after {
     font-family: 'FontAwesome';
     content: '\25BC';		
@@ -97,13 +65,19 @@ td {
     right: 10px;
     top: 10px;
     display: block;
-    transition: transform 300ms; }
+    transition: transform 300ms; 
+  }
+
   .Collapsible__trigger.is-open:after {
-    transform: rotateZ(180deg); }
+    transform: rotateZ(180deg); 
+  }
+
   .Collapsible__trigger.is-disabled {
     opacity: 0.5;
-    background-color: grey; }
-
-
-
+    background-color: grey; 
+  }
+  
+  .weatherdetails {
+  display: block;
+  }
 
