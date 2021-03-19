@@ -1,4 +1,47 @@
-/* .toggle {
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+}
+
+body{
+  color: white;
+  background-image: url("https://source.unsplash.com/hgGplX3PFBg/1600x900") ;
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  width: 540px;
+  margin-left: 95px;
+}
+
+.temp {
+  font-size: 100px;
+}
+
+.city {
+  margin-top: 80px;
+  margin-left: 20px;
+  font-size: 50px;
+}
+
+.icons {
+  margin-top: 60px;
+}
+
+.minmax {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  top: 130px;
+  left: -240px;
+  font-size: 12px;
+}
+
+/* WEATHER DETAILS */
+
+button {
   background: none;
 	color: inherit;
 	border: none;
@@ -6,21 +49,24 @@
 	font: inherit;
 	cursor: pointer;
 	outline: inherit;
-} */
-
-body{
-  color: white;
-  background-image: url("https://source.unsplash.com/hgGplX3PFBg/1600x900") ;
+  position: relative;
+  right: 205px;
+  bottom: 15px;
+  font-weight: 800;
 }
 
-/* WEATHER DETAILS */
+.toggle {
+  position: absolute;
+  top: 180px;
+}
 
 .datum {
   margin-bottom: 10px;
+  font-size: 14px;
 }
 
 .datum > img {
-  margin: 0 0 -20px 30px;
+  margin: 0 0 -20px 45px;
 }
 
 .table {
@@ -35,6 +81,15 @@ td {
   font-size: 12px;
 }
 
+.weatherdetails {
+  display: block;
+}
+
+/* .blur {
+   filter: blur(8px);
+  -webkit-filter: blur(8px);
+} */
+
 /* COLLAPSIBLE */
 
 .Collapsible {
@@ -43,7 +98,6 @@ td {
 
 .Collapsible__contentInner {
   padding: 10px;
-  /* border: 1px solid #ebebeb; */
   border-top: 0; 
 }
 
@@ -58,26 +112,19 @@ td {
   color: white; 
 }
 
-  .Collapsible__trigger:after {
-    font-family: 'FontAwesome';
-    content: '\25BC';		
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    display: block;
-    transition: transform 300ms; 
-  }
-
-  .Collapsible__trigger.is-open:after {
-    transform: rotateZ(180deg); 
-  }
-
-  .Collapsible__trigger.is-disabled {
-    opacity: 0.5;
-    background-color: grey; 
-  }
-  
-  .weatherdetails {
+.Collapsible__trigger:after {
+  font-family: 'FontAwesome';
+  content: '\25BC';		
+  font-size: 12px;
+  position: absolute;
+  right: 10px;
+  top: 25px;
   display: block;
-  }
+  transition: transform 300ms; }
+.Collapsible__trigger.is-open:after {
+  transform: rotateZ(180deg); }
+.Collapsible__trigger.is-disabled {
+  opacity: 0.5;
+}
+
 

@@ -22,7 +22,7 @@ const WeatherDetail = ({ lat, lon, city }) => {
     return (
 
         <div className='weatherdetails'>
-            <h1 className="city">{city} details</h1>
+            {/* <h1 className="city">{city} details</h1> */}
 
             {date &&
                 date.map((datum, index) => {
@@ -56,6 +56,7 @@ const WeatherDetail = ({ lat, lon, city }) => {
                                 </table>
                             </div>
                         </Collapsible>
+
                     );
                 })}
         </div >

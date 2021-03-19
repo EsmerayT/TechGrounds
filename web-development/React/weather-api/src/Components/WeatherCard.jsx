@@ -34,19 +34,21 @@ const WeatherCard = ({ city }) => {
   return (
     <div className="container">
       <div className="cards">
+      <h1 className="temp">{Math.floor(weather.temp)}&deg;</h1>
         <div>
-          <h1>
+          <h1 className="city">
             {city}
           </h1>
         </div>
         <h5 className="icons">
           <img src={`http://openweathermap.org/img/wn/${weatherIcon.icon}@2x.png`} alt="" />
         </h5>
-        <h1 className="temp">{Math.floor(weather.temp)}&deg;</h1>
-        {minmaxTemp(Math.floor(weather.temp_min), Math.floor(weather.temp_max))}
-        <h4>Vochtigheid</h4>
-        <h4 className="humidity">{weather.humidity}%</h4>
-        
+        < div className="minmaxhumidity">
+        {minmaxhumidityTemp(Math.floor(weather.temp_min), Math.floor(weather.temp_max), (weather.humidity))}
+        </ div>
+        {/* <h4>Vochtigheid</h4>
+        <h4 className="humidity">{(weather.humidity)}%</h4>
+         */}
         <button onClick={toggle}>weather forecast</button>
         <div className='toggle'>
           {toggleDetails ? <WeatherDetail lat={lat} lon={lon} city={city}  /> : null}
@@ -56,11 +58,12 @@ const WeatherCard = ({ city }) => {
   );
 };
 
-function minmaxTemp(min, max) {
+function minmaxhumidityTemp(min, max, humidity) {
   return (
-    <h3>
+    <h3 className="minmax">
       <span>Min:{min}&deg;</span>&emsp;
-      <span>Max:{max}&deg;</span>
+      <span>Max:{max}&deg;</span>&emsp;
+      <span>Humidity:{humidity}%</span>
     </h3>
   );
 
