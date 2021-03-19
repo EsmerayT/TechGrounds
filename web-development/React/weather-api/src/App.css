@@ -2,21 +2,31 @@
   text-align: center;
   display: flex;
   flex-direction: row;
+}
 
-
+.toggle {
+  background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
 }
 
 body{
   color: white;
+  background-image: url("https://source.unsplash.com/hgGplX3PFBg/1600x900") ;
+}
+
+.city {
+  color: black;
 }
 
 .details {
   color: black;
 }
 
-.accordion {
-  color: black;
-}
 
 .datum > img {
   margin-bottom: -20px;
@@ -25,8 +35,6 @@ body{
   justify-content: space-between; */
   /* line-height: 0; */
 }
-
-
 
 .table {
   /* background-color: grey; */
@@ -44,24 +52,16 @@ td {
 }
 
 .container {
-  background-image: url("https://wallpaperaccess.com/full/2860353.jpg") ;
+  /* background-image: url("https://source.unsplash.com/hgGplX3PFBg/1600x900") ; */
+  /* background-image: url("https://wallpaperaccess.com/full/2860353.jpg") ; */
   width: fit-content;
   padding: 50px;
-  /* background-repeat: no-repeat;
-  background-size: cover;  */
+  background-repeat: no-repeat;
+  background-size: cover;  
 }
 
-/* .Collapsible {
-  background-color: grey;
-  display: flex;
-  justify-content: space-around;
-  padding: 20px;
-}
 
-.Collapsible__trigger {
-  color: white;
-} */
-
+/* COLLAPSIBLE */
 
 .Collapsible {
   background-color: white;
@@ -79,7 +79,6 @@ td {
       margin-bottom: 0; }
 
 .Collapsible__trigger {
-  /* content: url("http://openweathermap.org/img/wn/10d@2x.png"); */
   display: block;
   display: flex;
   font-weight: 400;
@@ -89,11 +88,11 @@ td {
   border: 1px solid white;
   padding: 10px;
   background: lightgray;
+  /* background-image: url("https://source.unsplash.com/hgGplX3PFBg/1600x900") ; */
   color: white; }
   .Collapsible__trigger:after {
     font-family: 'FontAwesome';
     content: '\25BC';		
-    /* content: url("http://openweathermap.org/img/wn/10d@2x.png"); */
     position: absolute;
     right: 10px;
     top: 10px;
@@ -105,188 +104,6 @@ td {
     opacity: 0.5;
     background-color: grey; }
 
-.CustomTriggerCSS {
-  background-color: lightcoral;
-  transition: background-color 200ms ease; }
-
-.CustomTriggerCSS--open {
-  background-color: darkslateblue; }
-
-.Collapsible__custom-sibling {
-  padding: 5px;
-  font-size: 12px;
-  background-color: #CBB700;
-  color: black; }
 
 
 
-
-
-
-/* ACCORDION */
-
-  .collapse-css-transition {
-    transition: height 290ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  
-  * {
-    box-sizing: border-box;
-  }
-  
-  :root {
-    font-size: 10px;
-    scroll-behavior: smooth;
-  }
-  
-  body {
-    font: 1.6rem/1.5 "Montserrat", sans-serif;
-    margin: 0;
-    min-height: 100vh;
-    overflow-y: scroll;
-  }
-  
-  a {
-    color: black;
-    font-size: inherit;
-  }
-  
-  button {
-    font-size: inherit;
-    box-shadow: none;
-    background: transparent;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    border: 1px solid #ccc;
-    padding: 0.5rem;
-    border-radius: 3px;
-  }
-  
-  .icon {
-    width: 1em;
-    height: 1em;
-    transition: transform 290ms cubic-bezier(0, 1, 0, 1), fill 290ms cubic-bezier(0.4, 0, 0.2, 1);
-    will-change: transform;
-    fill: #aaa;
-  }
-  .icon--expanded {
-    transform: rotateZ(-179.99deg);
-  }
-  
-  .app {
-    margin: 0 auto;
-    font-size: 1.6rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    max-width: 600px;
-    padding: 3rem 1rem 1rem;
-  }
-  .app__title {
-    margin-top: 0;
-    font-size: inherit;
-    width: 100%;
-    font-weight: normal;
-  }
-  .app__text {
-    width: 100%;
-    margin: 0 0 1rem;
-  }
-  .app__content {
-    border: 1px solid #fff;
-    padding: 1rem 0;
-    margin-bottom: 1rem;
-    transition: 290ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .app__content.collapsing {
-    transform: translateY(-6px);
-  }
-  .app__content.collapsed {
-    transform: translateY(-6px);
-  }
-  .app__collapse {
-    margin-bottom: 2rem;
-    max-width: 100%;
-  }
-  .app__toggle {
-    width: 100%;
-    margin: 1rem 0;
-    border: 1px solid transparent;
-    padding: 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 2px;
-    box-shadow: 0 2px 4px #aaa;
-    background-color: #fff;
-    transition: background-color 300ms;
-    outline: none;
-  }
-  .app__toggle--active {
-    background-color: #fafafa;
-  }
-  .app__toggle:focus .icon {
-    fill: #ff6bb5;
-  }
-  .app__toggle-text {
-    font-size: inherit;
-    position: relative;
-  }
-  .app__button {
-    display: block;
-    max-width: 100%;
-    width: 20rem;
-    margin: 0 auto;
-    padding: 1rem;
-  }
-  .app__image {
-    display: block;
-    margin-bottom: 1rem;
-    max-width: 100%;
-    height: auto;
-  }
-  
-  .rotate90 {
-    transform: rotateZ(90deg);
-  }
-  
-  .title {
-    transition: transform 290ms cubic-bezier(0.4, 0, 0.2, 1);
-    will-change: transform;
-    flex-wrap: wrap;
-    display: flex;
-  }
-  .title span {
-    display: inline-block;
-    font-size: 20px;
-    width: 0.85em;
-    transition: color 290ms cubic-bezier(0.4, 0, 0.2, 1), transform 290ms cubic-bezier(0.4, 0, 0.2, 1);
-    letter-spacing: 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: "Montserrat", sans-serif;
-  }
-  .title span:nth-child(1), .title span:nth-child(4) {
-    color: #ff6bb5;
-  }
-  .title span:nth-child(2), .title span:nth-child(3) {
-    transition-duration: 800ms;
-    color: #ff6bb5;
-  }
-  .title--active {
-    transform: rotate(-180deg);
-  }
-  .title--active span:nth-child(2), .title--active span:nth-child(3) {
-    transform: scale(0);
-  }
-  .title--active span:nth-child(1) {
-    transform: translateX(200%);
-  }
-
-
-
-
-
-  .city {
-    color: black;
-  }

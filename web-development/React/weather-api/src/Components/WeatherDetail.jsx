@@ -3,7 +3,7 @@ import axios from "axios";
 import Collapsible from 'react-collapsible';
 
 
-const WeatherDetail = ({ lat, lon }) => {
+const WeatherDetail = ({ lat, lon, city }) => {
     const [date, setDate] = useState([]);
     useEffect(() => {
         axios({
@@ -22,7 +22,7 @@ const WeatherDetail = ({ lat, lon }) => {
     return (
 
         <div className='weatherdetails'>
-            <h1 className="city">Dordrecht Details</h1>
+            <h1 className="city">{city} Details</h1>
 
             {date &&
                 date.map((datum, index) => {

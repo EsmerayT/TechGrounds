@@ -11,10 +11,8 @@ function App() {
     <div className="App">
       <WeatherCard
         city="Dordrecht" />
-      {/* <WeatherCard
-        city="Bali" /> */}
-      <WeatherDetail lat="51.81" lon="4.6736" />
-
+      <WeatherCard
+        city="Bali" />
     </div>
   );
 }
