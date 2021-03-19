@@ -1,6 +1,5 @@
 import React from "react";
 import WeatherCard from './Components/WeatherCard'
-import WeatherDetail from "./Components/WeatherDetail"
 import './App.css';
 
 
