@@ -35,7 +35,7 @@ body{
   flex-direction: row;
   position: relative;
   top: 130px;
-  left: -240px;
+  right: 240px;
   font-size: 12px;
 }
 
